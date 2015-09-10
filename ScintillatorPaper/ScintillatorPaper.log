@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 SEP 2015 04:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  10 SEP 2015 04:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,13 +331,15 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
 
-No file ScintillatorPaper.toc.
+(./ScintillatorPaper.toc)
 \tf@toc=\write3
 \openout3 = `ScintillatorPaper.toc'.
 
+ [1]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
-[1] [2] [3] <graphs/Diagram_Darkbox.png, id=105, 642.4pt x 481.8pt>
+ [2] [3] [4]
+<graphs/Diagram_Darkbox.png, id=172, 642.4pt x 481.8pt>
 File: graphs/Diagram_Darkbox.png Graphic file (type png)
 
 <use graphs/Diagram_Darkbox.png>
@@ -345,10 +347,10 @@ Package pdftex.def Info: graphs/Diagram_Darkbox.png used on input line 142.
 (pdftex.def)             Requested size: 385.44298pt x 289.08221pt.
 
 
-LaTeX Warning: Citation `|' on page 4 undefined on input line 149.
+LaTeX Warning: Citation `|' on page 5 undefined on input line 149.
 
-[4]
-<graphs/14August2013_toluene_5gL_PPO_processed_waveform_paper.pdf, id=122, 569.
+[5 <./graphs/Diagram_Darkbox.png>]
+<graphs/14August2013_toluene_5gL_PPO_processed_waveform_paper.pdf, id=183, 569.
 12625pt x 392.46625pt>
 File: graphs/14August2013_toluene_5gL_PPO_processed_waveform_paper.pdf Graphic 
 file (type pdf)
@@ -357,17 +359,18 @@ file (type pdf)
 Package pdftex.def Info: graphs/14August2013_toluene_5gL_PPO_processed_waveform
 _paper.pdf used on input line 163.
 (pdftex.def)             Requested size: 341.47838pt x 235.48155pt.
- [5 <./graphs/Diagram_Darkbox.png>] [6 <./graphs/14August2013_toluene_5gL_PPO_p
-rocessed_waveform_paper.pdf, page is rotated 90 degrees>]
-<graphs/toluene_5gL_PPO_Floats_final.pdf, id=190, 569.12625pt x 385.44pt>
+ [6]
+[7 <./graphs/14August2013_toluene_5gL_PPO_processed_waveform_paper.pdf, page is
+ rotated 90 degrees>]
+<graphs/toluene_5gL_PPO_Floats_final.pdf, id=243, 569.12625pt x 385.44pt>
 File: graphs/toluene_5gL_PPO_Floats_final.pdf Graphic file (type pdf)
 
 <use graphs/toluene_5gL_PPO_Floats_final.pdf>
 Package pdftex.def Info: graphs/toluene_5gL_PPO_Floats_final.pdf used on input 
 line 193.
 (pdftex.def)             Requested size: 341.47838pt x 231.26578pt.
-
-<graphs/Light_Yield/PC_Light_Yield.png, id=198, 542.025pt x 542.025pt>
+ [8 <./graphs/toluene_5gL_PPO_Floats_final.pdf, page is rotated 90 degrees>]
+<graphs/Light_Yield/PC_Light_Yield.png, id=299, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/PC_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/PC_Light_Yield.png>
@@ -375,7 +378,7 @@ Package pdftex.def Info: graphs/Light_Yield/PC_Light_Yield.png used on input li
 ne 229.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/LAB_Light_Yield.png, id=199, 542.025pt x 542.025pt>
+<graphs/Light_Yield/LAB_Light_Yield.png, id=300, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/LAB_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/LAB_Light_Yield.png>
@@ -383,7 +386,7 @@ Package pdftex.def Info: graphs/Light_Yield/LAB_Light_Yield.png used on input l
 ine 230.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/PXE_Light_Yield.png, id=200, 542.025pt x 542.025pt>
+<graphs/Light_Yield/PXE_Light_Yield.png, id=301, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/PXE_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/PXE_Light_Yield.png>
@@ -391,7 +394,7 @@ Package pdftex.def Info: graphs/Light_Yield/PXE_Light_Yield.png used on input l
 ine 231.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/DIN_Light_Yield.png, id=201, 542.025pt x 542.025pt>
+<graphs/Light_Yield/DIN_Light_Yield.png, id=302, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/DIN_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/DIN_Light_Yield.png>
@@ -399,7 +402,7 @@ Package pdftex.def Info: graphs/Light_Yield/DIN_Light_Yield.png used on input l
 ine 232.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/DIN_HP_Light_Yield.png, id=202, 542.025pt x 542.025pt>
+<graphs/Light_Yield/DIN_HP_Light_Yield.png, id=303, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/DIN_HP_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/DIN_HP_Light_Yield.png>
@@ -407,7 +410,7 @@ Package pdftex.def Info: graphs/Light_Yield/DIN_HP_Light_Yield.png used on inpu
 t line 233.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/PCH_Light_Yield.png, id=203, 542.025pt x 542.025pt>
+<graphs/Light_Yield/PCH_Light_Yield.png, id=304, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/PCH_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/PCH_Light_Yield.png>
@@ -415,7 +418,7 @@ Package pdftex.def Info: graphs/Light_Yield/PCH_Light_Yield.png used on input l
 ine 234.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
 
-<graphs/Light_Yield/Toluene2014_Light_Yield.png, id=206, 406.51875pt x 406.5187
+<graphs/Light_Yield/Toluene2014_Light_Yield.png, id=307, 406.51875pt x 406.5187
 5pt>
 File: graphs/Light_Yield/Toluene2014_Light_Yield.png Graphic file (type png)
  <use graphs/Light_Yield/Toluene2014_Light_Yield.png>
@@ -423,19 +426,18 @@ Package pdftex.def Info: graphs/Light_Yield/Toluene2014_Light_Yield.png used on
  input line 242.
 (pdftex.def)             Requested size: 121.95656pt x 121.95656pt.
 
-<graphs/Light_Yield/QDots_Light_Yield.png, id=209, 542.025pt x 542.025pt>
+<graphs/Light_Yield/QDots_Light_Yield.png, id=310, 542.025pt x 542.025pt>
 File: graphs/Light_Yield/QDots_Light_Yield.png Graphic file (type png)
 
 <use graphs/Light_Yield/QDots_Light_Yield.png>
 Package pdftex.def Info: graphs/Light_Yield/QDots_Light_Yield.png used on input
  line 253.
 (pdftex.def)             Requested size: 162.60875pt x 162.60875pt.
- [7] [8 <./graphs/toluene_5gL_PPO_Floats_final.pdf, page is rotated 90 degrees>
-]
+
 
 LaTeX Warning: Citation `?' on page 9 undefined on input line 270.
 
-<graphs/Emission_Absorption/NN_Labs_Abs.png, id=281, 542.025pt x 542.025pt>
+<graphs/Emission_Absorption/NN_Labs_Abs.png, id=318, 542.025pt x 542.025pt>
 File: graphs/Emission_Absorption/NN_Labs_Abs.png Graphic file (type png)
 
 <use graphs/Emission_Absorption/NN_Labs_Abs.png>
@@ -443,7 +445,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/NN_Labs_Abs.png used on inp
 ut line 279.
 (pdftex.def)             Requested size: 157.18321pt x 157.18321pt.
 
-<graphs/Emission_Absorption/mkNano_Abs.png, id=282, 542.025pt x 542.025pt>
+<graphs/Emission_Absorption/mkNano_Abs.png, id=319, 542.025pt x 542.025pt>
 File: graphs/Emission_Absorption/mkNano_Abs.png Graphic file (type png)
 
 <use graphs/Emission_Absorption/mkNano_Abs.png>
@@ -451,7 +453,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/mkNano_Abs.png used on inpu
 t line 280.
 (pdftex.def)             Requested size: 157.18321pt x 157.18321pt.
 
-<graphs/Emission_Absorption/Ocean_NanoTech_Abs.png, id=283, 542.025pt x 542.025
+<graphs/Emission_Absorption/Ocean_NanoTech_Abs.png, id=320, 542.025pt x 542.025
 pt>
 File: graphs/Emission_Absorption/Ocean_NanoTech_Abs.png Graphic file (type png)
 
@@ -460,14 +462,14 @@ Package pdftex.def Info: graphs/Emission_Absorption/Ocean_NanoTech_Abs.png used
  on input line 281.
 (pdftex.def)             Requested size: 157.18321pt x 157.18321pt.
 
-<graphs/Emission_Absorption/Crystalplex_Abs.png, id=284, 542.025pt x 542.025pt>
+<graphs/Emission_Absorption/Crystalplex_Abs.png, id=321, 542.025pt x 542.025pt>
 File: graphs/Emission_Absorption/Crystalplex_Abs.png Graphic file (type png)
 <use graphs/Emission_Absorption/Crystalplex_Abs.png>
 Package pdftex.def Info: graphs/Emission_Absorption/Crystalplex_Abs.png used on
  input line 282.
 (pdftex.def)             Requested size: 157.18321pt x 157.18321pt.
-
-<graphs/Emission_Absorption/NNLabs_360nm_Emi.png, id=287, 542.025pt x 542.025pt
+ [9]
+<graphs/Emission_Absorption/NNLabs_360nm_Emi.png, id=337, 542.025pt x 542.025pt
 >
 File: graphs/Emission_Absorption/NNLabs_360nm_Emi.png Graphic file (type png)
  <use graphs/Emission_Absorption/NNLabs_360nm_Emi.png>
@@ -475,7 +477,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/NNLabs_360nm_Emi.png used o
 n input line 289.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/NNLabs_400nm_Emi.png, id=288, 542.025pt x 542.025pt
+<graphs/Emission_Absorption/NNLabs_400nm_Emi.png, id=338, 542.025pt x 542.025pt
 >
 File: graphs/Emission_Absorption/NNLabs_400nm_Emi.png Graphic file (type png)
  <use graphs/Emission_Absorption/NNLabs_400nm_Emi.png>
@@ -483,7 +485,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/NNLabs_400nm_Emi.png used o
 n input line 290.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/mkNano_360nm_Emi.png, id=289, 542.025pt x 542.025pt
+<graphs/Emission_Absorption/mkNano_360nm_Emi.png, id=339, 542.025pt x 542.025pt
 >
 File: graphs/Emission_Absorption/mkNano_360nm_Emi.png Graphic file (type png)
  <use graphs/Emission_Absorption/mkNano_360nm_Emi.png>
@@ -491,7 +493,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/mkNano_360nm_Emi.png used o
 n input line 291.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/mkNano_380nm_Emi.png, id=290, 542.025pt x 542.025pt
+<graphs/Emission_Absorption/mkNano_380nm_Emi.png, id=340, 542.025pt x 542.025pt
 >
 File: graphs/Emission_Absorption/mkNano_380nm_Emi.png Graphic file (type png)
  <use graphs/Emission_Absorption/mkNano_380nm_Emi.png>
@@ -499,7 +501,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/mkNano_380nm_Emi.png used o
 n input line 292.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/mkNano_400nm_Emi.png, id=291, 542.025pt x 542.025pt
+<graphs/Emission_Absorption/mkNano_400nm_Emi.png, id=341, 542.025pt x 542.025pt
 >
 File: graphs/Emission_Absorption/mkNano_400nm_Emi.png Graphic file (type png)
  <use graphs/Emission_Absorption/mkNano_400nm_Emi.png>
@@ -507,7 +509,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/mkNano_400nm_Emi.png used o
 n input line 293.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/Ocean_NanoTech_400nm_Emi.png, id=292, 542.025pt x 5
+<graphs/Emission_Absorption/Ocean_NanoTech_400nm_Emi.png, id=342, 542.025pt x 5
 42.025pt>
 File: graphs/Emission_Absorption/Ocean_NanoTech_400nm_Emi.png Graphic file (typ
 e png)
@@ -516,7 +518,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/Ocean_NanoTech_400nm_Emi.pn
 g used on input line 294.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/Ocean_NanoTech_425nm_Emi.png, id=293, 542.025pt x 5
+<graphs/Emission_Absorption/Ocean_NanoTech_425nm_Emi.png, id=343, 542.025pt x 5
 42.025pt>
 File: graphs/Emission_Absorption/Ocean_NanoTech_425nm_Emi.png Graphic file (typ
 e png)
@@ -525,7 +527,7 @@ Package pdftex.def Info: graphs/Emission_Absorption/Ocean_NanoTech_425nm_Emi.pn
 g used on input line 295.
 (pdftex.def)             Requested size: 151.76596pt x 151.76596pt.
 
-<graphs/Emission_Absorption/Crystalplex_Emi.png, id=294, 542.025pt x 542.025pt>
+<graphs/Emission_Absorption/Crystalplex_Emi.png, id=344, 542.025pt x 542.025pt>
 File: graphs/Emission_Absorption/Crystalplex_Emi.png Graphic file (type png)
 <use graphs/Emission_Absorption/Crystalplex_Emi.png>
 Package pdftex.def Info: graphs/Emission_Absorption/Crystalplex_Emi.png used on
@@ -535,31 +537,28 @@ Package pdftex.def Info: graphs/Emission_Absorption/Crystalplex_Emi.png used on
 
 LaTeX Warning: Float too large for page by 100.92685pt on input line 299.
 
-[9] [10] [11] [12 <./graphs/Light_Yield/PC_Light_Yield.png> <./graphs/Light_Yie
-ld/LAB_Light_Yield.png> <./graphs/Light_Yield/PXE_Light_Yield.png> <./graphs/Li
-ght_Yield/DIN_Light_Yield.png> <./graphs/Light_Yield/DIN_HP_Light_Yield.png> <.
-/graphs/Light_Yield/PCH_Light_Yield.png>] [13 <./graphs/Light_Yield/Toluene2014
-_Light_Yield.png> <./graphs/Light_Yield/QDots_Light_Yield.png>] [14 <./graphs/E
-mission_Absorption/NN_Labs_Abs.png> <./graphs/Emission_Absorption/mkNano_Abs.pn
-g> <./graphs/Emission_Absorption/Ocean_NanoTech_Abs.png> <./graphs/Emission_Abs
-orption/Crystalplex_Abs.png>] [15 <./graphs/Emission_Absorption/NNLabs_360nm_Em
-i.png> <./graphs/Emission_Absorption/NNLabs_400nm_Emi.png> <./graphs/Emission_A
-bsorption/mkNano_360nm_Emi.png> <./graphs/Emission_Absorption/mkNano_380nm_Emi.
-png> <./graphs/Emission_Absorption/mkNano_400nm_Emi.png> <./graphs/Emission_Abs
-orption/Ocean_NanoTech_400nm_Emi.png> <./graphs/Emission_Absorption/Ocean_NanoT
-ech_425nm_Emi.png> <./graphs/Emission_Absorption/Crystalplex_Emi.png>]
+[10] [11] [12 <./graphs/Light_Yield/PC_Light_Yield.png> <./graphs/Light_Yield/L
+AB_Light_Yield.png> <./graphs/Light_Yield/PXE_Light_Yield.png> <./graphs/Light_
+Yield/DIN_Light_Yield.png> <./graphs/Light_Yield/DIN_HP_Light_Yield.png> <./gra
+phs/Light_Yield/PCH_Light_Yield.png>] [13 <./graphs/Light_Yield/Toluene2014_Lig
+ht_Yield.png> <./graphs/Light_Yield/QDots_Light_Yield.png>] [14 <./graphs/Emiss
+ion_Absorption/NN_Labs_Abs.png> <./graphs/Emission_Absorption/mkNano_Abs.png> <
+./graphs/Emission_Absorption/Ocean_NanoTech_Abs.png> <./graphs/Emission_Absorpt
+ion/Crystalplex_Abs.png>] [15 <./graphs/Emission_Absorption/NNLabs_360nm_Emi.pn
+g> <./graphs/Emission_Absorption/NNLabs_400nm_Emi.png> <./graphs/Emission_Absor
+ption/mkNano_360nm_Emi.png> <./graphs/Emission_Absorption/mkNano_380nm_Emi.png>
+ <./graphs/Emission_Absorption/mkNano_400nm_Emi.png> <./graphs/Emission_Absorpt
+ion/Ocean_NanoTech_400nm_Emi.png> <./graphs/Emission_Absorption/Ocean_NanoTech_
+425nm_Emi.png> <./graphs/Emission_Absorption/Crystalplex_Emi.png>]
 (./ScintillatorPaper.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3212 strings out of 493089
- 44258 string characters out of 6134842
- 105482 words of memory out of 5000000
+ 3214 strings out of 493089
+ 44302 string characters out of 6134842
+ 105329 words of memory out of 5000000
  6473 multiletter control sequences out of 15000+600000
  89015 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -577,10 +576,10 @@ onts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on ScintillatorPaper.pdf (16 pages, 297402 bytes).
+Output written on ScintillatorPaper.pdf (16 pages, 299925 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
+ 481 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
  105 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
