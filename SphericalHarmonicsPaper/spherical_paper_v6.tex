@@ -37,7 +37,7 @@
 \vspace*{-3.5cm}
 \begin{flushright}
 Draft for NIMA\\
-version 6\\
+version 6.1\\
 \today
 \end{flushright}
 
@@ -108,7 +108,7 @@ $\B$ solar neutrino interactions produce only one electron. In a liquid scintill
 
 In this paper we propose to use spherical harmonics to analyze distributions of the early photo-electrons (PE) for discrimination between $\B$ background and $\vbb$-decay signal.
 
-Section~\ref{sec:detector_description} describes our detector model. Section~\ref{sec:spherical_harmonics} introduces spherical harmonics analysis. Performance and experimental challenges are discussed in Sec.~\ref{sec:performance_and_challenges}
+Section~\ref{sec:detector_description} describes our detector model. Section~\ref{sec:topology_and_harmonics} introduces spherical harmonics analysis. Performance and experimental challenges are discussed in Sec.~\ref{sec:performance_and_challenges}
 
 
 \section{Detector Model}
@@ -136,22 +136,22 @@ line) are compared. The black vertical line illustrates a time cut at 33.5 ns. (
 \end{figure}
 
 
-\section{Spherical Harmonics Analysis}
-\label{sec:spherical_harmonics}
-
-\subsection{Event Toplology and Spherical Harmonics}
+\section{Event Topology and Spherical Harmonics Analysis}
 \label{sec:topology_and_harmonics}
-Signature of the $\vbb$-decay is two electrons with total kinetic energy equal to the isotope Q-value (e.g., 2.529~MeV for $\Te$). These two electrons are often above Cherenkov threshold and therefore will produce two (fuzzy) rings of Cherenkov light on top of isotropic scintillation light. $\B$ background events have only one electron producing one Cherenkov ring.
 
-In the detector regions where Cherenkov and scintillation light overlap the Cherenkov light on average arrives earlier due to a time delay in emission and a shorter wavelengths of the scintillation light. Therefore, while a vast majority of light produced in $\vbb$-decay events consists of scintillation photons, timing information can be used to select a sample of photons with high fraction of Cherenkov light.
+\subsection{Topology of $\vbb$-decay and $\B$ Events}
+\label{subsec:topology}
+%Signature of the $\vbb$-decay is two electrons with total kinetic energy equal to the isotope Q-value (e.g., 2.529~MeV for $\Te$). Therefore all $\vbb$-decay searches are designed to look for an excess of events in the energy spectrum around Q-value over the predicted number of background events. Backgrounds such as $\B$ solar neutrinos have distinct event topology that can be used to improve experimental sensitivity to the the $\vbb$-decay signal.
 
-Due to directional nature of the Cherenkov light the spatial distribution of early photons on the detector sphere will be different for the $\vbb$-decay signal and the background from $\B$ events. 
+Electrons in the energy range around Q-value of all isotopes considered for $\vbb$-decay searches are above Cherenkov threshold in liquid scintillators. Each electron above the threshold will produce a fuzzy Cherenkov ring in the detector. The fuzziness of the ring depends on electron scattering and in most cases the Cherenkov rings from low energy electrons degrade to randomly shaped clusters of Cherenkov photons around the direction of the electron track. 
+
+Large fraction of $\vbb$-decay events will have two Cherenkov clusters~\footnote{Only one Cherenkov cluster is produced when either the angle between the two $\vbb$-decay electrons is too small or when the energy is split between the electrons in such a way that one electron falls below the Cherenkov threshold.} as opposed to one cluster from $\B$ events. Therefore the separation of $\vbb$-decay signal from $\B$ background depends on ability to identify topology of the Cherenkov light on the detector sphere on top of the uniformly distributed scintillation light. We show that analysis of spherical harmonics of the early photons allows to achieve noticeable separation between $\vbb$-decay and $\B$ events.
 
 
 
-The simplest case for spherical harmonics analysis are events with the vertex located exactly in the center of the detector. For such event Cherenkov and scintillation light can be separated by applying a time cut on the photon arrival time as demonstrated in~\cite{Directionality}. To introduce the technique of spherical harmonics analysis we will follow the same strategy as in~\cite{Directionality} and use central events with a slightly different cut on the photon arrival time of 33.5~ns.
+%The simplest case for spherical harmonics analysis are events with the vertex located exactly in the center of the detector. For such event Cherenkov and scintillation light can be separated by applying a time cut on the photon arrival time as demonstrated in~\cite{Directionality}. To introduce the technique of spherical harmonics analysis we will follow the same strategy as in~\cite{Directionality} and use central events with a slightly different cut on the photon arrival time of 33.5~ns.
 
-In order to illustrate the difference between different event topologies we introduce three event topologies: two electrons produced back-to-back at 180$^{\circ}$ angle, two electrons at 90$^{\circ}$ angle, and a single electron. The two former are representative topologies of the $\vbb$-decay signal events and the latter represents $\B$ background events. Figure~\ref{fig:Display_top_5MeV} shows Cherenkov photon distributions of 5~MeV electrons for each of the three topology. 100 events are overlayed in order to make Cherenkov rings visible.
+In order to illustrate differences between different event topologies we introduce three event topologies: two electrons produced back-to-back at 180$^{\circ}$ angle, two electrons at 90$^{\circ}$ angle, and a single electron. The two former are representative topologies of the $\vbb$-decay signal events and the latter represents $\B$ background events. Figure~\ref{fig:Display_top_5MeV} shows Cherenkov photon distributions of 5~MeV electrons for each of the three topology. Overlay of 100 events with no QE applied is shown in order to make Cherenkov rings visible.
 
 \begin{figure}[htb]
 \centering
@@ -162,8 +162,7 @@ In order to illustrate the difference between different event topologies we intr
 \label{fig:Display_top_5MeV}
 \end{figure}
 
-In practice Cherenkov rings from low energy electrons are not clearly visible. Figure~\ref{fig:Display_top_2p5MeV} shows photons distribution for individual events from three topologies with total kinetic energy of 2.529~MeV (Q-value of Te130). Event topology can be identified by looking at clusters of Cherenkov photons in different segments of the sphere.
-
+Cherenkov clusters that form at lower energies are shown in Fig.~\ref{fig:Display_top_2p5MeV}. All Cherenkov photons produced in a single event are shown for the three event topologies with total kinetic energy of 2.529~MeV that corresponds to Q-value of $\Te$. One can try to guess the event topology by comparing different segments of the detector sphere.
 
 \begin{figure}[htb]
 \centering
@@ -174,25 +173,25 @@ In practice Cherenkov rings from low energy electrons are not clearly visible. F
 \label{fig:Display_top_2p5MeV}
 \end{figure}
 
-Examples of three $\Te$ $\vbb$-decay events simulated at the center of the detector are shown in Fig.~\ref{fig:Display_Te130}. Early PEs from Cherenkov and scintillation light are shown. Default QE is used in the simulation. Time cut of 33.5~ns on the photon arrival time is used to select early light. Uniformly distributed scintillation light make it more difficult to guess the event topology.
-Nevertheless we show that there is still sufficient difference in the position distribution of the early light to separate two track and single track events.
+More realistic examples of $\Te$ $\vbb$-decay and $\B$ events simulated at the center of the detector are shown in Fig.~\ref{fig:Display_Te130}. Early PEs from Cherenkov and scintillation light are shown. Default simulation QE is applied. Time cut of 33.5~ns on the photon arrival time is used to select early PEs. Uniformly distributed scintillation light make it more difficult to guess the event topology. Nevertheless we show that there is still sufficient difference in the position distribution of the early PEs to separate two track and single track events.
 
 \begin{figure}[htb]
 \centering
 \includegraphics[angle=0,width=0.45\textwidth]{plots/hDisplay_Te130_evt124_e1257_e1270_cos-0908}
 \includegraphics[angle=0,width=0.45\textwidth]{plots/hDisplay_Te130_evt131_e1264_e1263_cos-0029}
 \includegraphics[angle=0,width=0.45\textwidth]{plots/hDisplay_Te130_evt352_e1186_e1340_cos0888}
+\includegraphics[angle=0,width=0.45\textwidth]{plots/hDisplay_Te130_evt352_e1186_e1340_cos0888}
 \caption{Examples of PEs position on the detector sphere after time cut of 33.5ns. PEs from Cherenkov (red) and scintillation light (blue) are compared. (Top left) $\Te$ $\vbb$-decay back-to-back electrons: E$_1$=1.257~MeV, E$_2$=1.270~MeV, cos($\theta$)=-0.908. (Top right) $\Te$ $\vbb$-decay electrons at $\sim$90$^{\circ}$:  E$_1$=1.264~MeV, E$_2$=1.263~MeV, cos($\theta$)=-0.029. (Bottom left) $\Te$ $\vbb$-decay electrons at $\sim$0$^{\circ}$:  E$_1$=1.186~MeV, E$_2$=1.340~MeV, cos($\theta$)=0.888. (Bottom right) 2.529~MeV single electron. Events are simulated at the center of the detector. Default QE is applied.}
 \label{fig:Display_Te130}
 \end{figure}
 
 
-$\vbb$-decay events become indistinguishable from single track topology when the angle between two electrons is small
-For quantitative description of the difference in the event topology we analyze spherical harmonics of the photon distributions on the detector sphere. We construct rotation invariant variables and compare them between signal and background events. As it is shown in Fig.~\ref{fig:Display_Te130} $\vbb$-decay become indistinguishable from single track topology when the angle between two electrons is small (two degenerate tracks). Therefore the method of spherical harmonics is most effective for events with large angular separation between the two tracks. 
+%$\vbb$-decay events become indistinguishable from single track topology when the angle between two electrons is small
+For quantitative description of the difference in the event topology we analyze spherical harmonics of the photon distributions on the detector sphere. We construct rotation invariant variables and compare them between signal and background events. As it is shown in the bottom part of Fig.~\ref{fig:Display_Te130} $\vbb$-decay become indistinguishable from single track topology when the angle between two electrons is small (two degenerate tracks). Event topologies of $\vbb$-decay and $\B$ events are also very similar when only one electron from $\vbb$-decay is above the Cherenkov threshold. Therefore the method of spherical harmonics is most effective for events with large angular separation between the two electrons when both electrons are above Cherenkov threshold. 
 
-In this paper we focus on topological difference between two tracks and single track events and do not make any attempt to use absolute directional information to suppress single track events  which direction is consistent with the direction from solar neutrinos. Once a single track topology is established one can use a centroid method (see Ref.~\cite{Directionality}) to reconstruct directionality of the track or two degenerate tracks and get rid of events aligned with the direction of $\B$ solar neutrinos.
+In this paper we focus on topological difference between two tracks and single track events and do not make any attempt to use absolute directional information to suppress single track events  which direction is consistent with the direction of solar neutrinos. Once a single track topology is established one can use a centroid method (see Ref.~\cite{Directionality}) to reconstruct directionality of the track or two degenerate tracks and suppress events that are aligned with the direction of $\B$ solar neutrinos.
 
-\subsection{Mathematical description of spherical harmonics analysis}
+\subsection{Description of Spherical Harmonics Analysis}
 A function $f(\theta,\phi)$ can be decomposed to a sum of spherical harmonics:
 
 \begin{eqnarray}
@@ -243,7 +242,7 @@ In order to compare spherical harmonics for events with vertices located off-cen
 \subsection{Software and implementation of the spherical harmonics analysis}
 {\bf A few words on the implementation. Calculation of $S_l$'s requires numerical integration that needs to be explained.}
 
-To illustrate spherical harmonics analysis technique we compare distributions of $S_0$, $S_1$, $S_2$, and $S_3$ for the three representative event topologies described in Sec.~\ref{sec:topology_and_harmonics}. Almost all the information about event topology is carried by Cherenkov light. Therefore we first show spherical harmonics of back-to-back,  90$^{\circ}$ and single track topologies calculated using Cherenkov light only (see Fig.~\ref{fig:SL_topologies_CHE}). No is QE applied here.
+To illustrate spherical harmonics analysis technique we compare distributions of $S_0$, $S_1$, $S_2$, and $S_3$ for the three representative event topologies described in Sec.~\ref{subsec:topology}. Almost all the information about event topology is carried by Cherenkov light. Therefore we first show spherical harmonics of back-to-back,  90$^{\circ}$ and single track topologies calculated using Cherenkov light only (see Fig.~\ref{fig:SL_topologies_CHE}). No is QE applied here.
 
 Two top panels of Fig.~\ref{fig:SL_topologies_CHE} show 2-dimensional distributions, S0 vs S1 and S2 vs S3, to demonstrate that all four $S_l$'s provide separation between event topologies.  We also introduce a 1-dimensional variable, S01 (bottom panel of Fig.~\ref{fig:SL_topologies_CHE}), that has the best separation power for majority of event topologies considered in this paper. $S_{01}$ is defined as a projection of S$_1$ vs S$_2$ distribution onto a linear fit of this 2-D distribution.
 
