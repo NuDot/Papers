@@ -1,0 +1,78 @@
+\input{preamble_els}
+\begin{document}
+\input{common_commands}
+
+\graphicspath{{plots/}}
+
+\title{Separating double-beta decay events from solar neutrino
+  interactions in kiloton-scale liquid scintillator detectors}
+\input{authors}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+
+\linenumbers\relax % Commence numbering lines
+
+\input{10-Introduction}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\columnwidth]{SNOp_backgrounds.JPG}
+  \caption{SNO+ Phase I signal and background energy spectrum (visible
+    kinetic energy reconstructed under a 0{\nbb} hypothesis). Plot
+    taken from~\cite{SNOp_paper}}
+  \label{fig:SNOp_bkgs}
+\end{figure}
+
+\begin{figure*}[ht]
+  \centering
+  \includegraphics[width=0.49\textwidth]{hCos_Te130.pdf}
+  \includegraphics[width=0.49\textwidth]{hE1toQ_Te130.pdf}
+  \caption{Comparison between kinematics of 0{\nbb} (\emph{dashed red
+      lines}) and 2{\nbb} decays (\emph{solid black lines}) for events
+    with the total kinetic energy of the electrons above 90\% of the
+    Q-value. \emph{Left:} Cosine of the angle between two
+    electrons. \emph{Right:} Fraction of energy carried by one of the
+    two electrons. Due to limited statistic around the energy spectrum
+    end point for 2{\nbb} decay we show statistical errors for each
+    bin.}
+  \label{fig:Kinematics}
+\end{figure*}
+
+\input{20-LiquidScintillatorDetector}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{30-SphericalHarmonics}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{40-Performance}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{50-Conclusions}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\section*{Acknowledgements}
+\input{acknowledgements}
+
+\bibliography{bibliography.bib}
+
+\appendix
+% The following line is a hack for elsevier to get the appendix and
+% the table of contents to play well together.
+\renewcommand*{\thesection}{\Alph{section}}
+\input{60-Appendix}
+
+
+\end{document}
+
