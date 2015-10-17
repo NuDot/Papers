@@ -4,10 +4,9 @@
 \let\ifpdf\relax 
 
 %\title{Optimizing Liquid Scintillators for Low Energy Events via Wavelength-Shifter and Quantum-Dot Doping} 
-\title{Optimizing Solvent and Fluor for Quantum-Dot-Doped Liquid Scintillator}
+%From Lindley
+\title{Optimizing the Solvent and Fluor Concentration for Quantum-Dot-Doped Liquid Scintillator}
 
-
-%\author{R.~Schofield\setcounter{footnote}{0}\thanks{corresponding author}~$^a$,B.~Naranjo~$^a$,Y.~Ungar$^a$, C.~Coy$^a$, C.~Aberle$^a$, T.~De Guillebon$^a$, A.~Ierokomos$^a$, L.~Winslow$^a$\\
 \author{R.~Schofield\setcounter{footnote}{0}\thanks{corresponding author}~$^a$,Y.~Ungar$^a$, C.~Aberle$^a$, C.~Coy$^a$, T.~De Guillebon$^a$, A.~Ierokomos$^a$, B.~Naranjo~$^a$ L.~Winslow$^b$\\
 \llap{$^a$}University of California, Los Angeles, Los Angeles, CA 90095, USA\\
 %%\llap{$^b$}Ecole Normale Superieure de Cachan, 94235 Cachan cedex, France\\
@@ -15,30 +14,44 @@
 \llap{$^b$}Massachusetts Institute of Technology, USA\\
 E-mail: \email{rschofield@physics.ucla.edu}}
 
+%Original.
 %\abstract{Liquid scintillator-based detectors can be made more sensitive to low energy events by increasing the scintillator's light yield and enabling direction reconstruction of particles. This study presents the optimal concentration of wavelength-shifter 2,5-Diphenyloxazole (PPO) in various solvents.   The light yield of seven different scintillators (Toluene, Pseudocumene (PC), Linear Alkyl Benzene (LAB), Phenylcyclohexane (PCH), Phenyl-o-Xylyl Ethane (PXE) and two grades of Di-Isopropyl Napthalene (DIN)) are measured and modeled as a function of the concentration of PPO. In addition, the optical properties of 2~g/L PPO in toluene doped with quantum-dots (QDs) are measured. QDs' ability to fine-tune the absorption and emission spectra of liquid scintillators demonstrate their viability to conserve the directional Cherenkov signal produced by interactions in the liquid scintillator.}
-\abstract{Quantum dots are semiconducting nanocrystals. Their unique optical properties that make them attractive secondary wavelength shifters for liquid scintillator and their composition makes them attractive dopants for loading metals into liquid scintillator. The light yield of seven different liquid scintillator solvents (Toluene, Pseudocumene (PC), Linear Alkyl Benzene (LAB), Phenylcyclohexane (PCH), Phenyl-o-Xylyl Ethane (PXE) and two grades of Di-Isopropyl Napthalene (DIN)) are measured and modeled as a function of the concentration of the fluor and primary wavelength shifter 2,5-Diphenyloxazole (PPO). These results are compared to the light yield of several candidate quantum-dots samples in a standard toluene-based liquid scintillator.}
+
+%From Lindley.
+\abstract{Quantum dots are semiconducting nanocrystals. Their unique optical properties make them attractive secondary wavelength shifters for liquid scintillator and their composition makes them attractive dopants for loading metals into liquid scintillator. The light yield of seven different liquid scintillator solvents (Toluene, Pseudocumene (PC), Linear Alkyl Benzene (LAB), Phenylcyclohexane (PCH), Phenyl-o-Xylyl Ethane (PXE) and two grades of Di-Isopropyl Napthalene (DIN)) are measured and modeled as a function of the concentration of the fluor and primary wavelength shifter 2,5-Diphenyloxazole (PPO). These results are compared to the light yield of several candidate quantum-dots samples in a standard toluene-based liquid scintillator. The next steps}
 
 \begin{document}
 
 \section{Introduction}\label{intro}
+Liquid scintillator-based detectors are one of the primary technologies used in radiation detection and measurement. They are a popular choice for neutrino experiments because they scale well to large volumes. The addition of heavy elements to the scintillator increases the detectors sensitivity to neutrons with Cd or other capture reactions like solar neutrinos on In\cite{raghavan76}. With the measurement of neutrino mass and the increased interest in the search for neutrinoless double-beta decay to determine the Majorana nature of the neutrino,  interest in the addition of these candidate isotopes to scintillator has increased accordingly\cite{SNO+, KZ}. Unfortunately, the chemistry of introducing heavy elements into organic scintillators can be difficult and degrade the optical properties of the scintillator.
+
+Quantum dots are nanocrystals. The size of a QD is inversely proportional to its band gap and therefore proportional to the wavelength of light it absorbs and emits. Because the size is well controlled during synthesis, the emission happens in a narrow peak around the characteristic wavelength set by the band gap. They are made of interesting elements like Cd, and In and many of the double-beta decay candidates like Cd, Se, Zn and Te. They can be suspended in organic liquids or water by the proper choice of organic coatings or ligands. This chemistry could be more robust than traditional methods. The combination of their optical, chemical and nuclear properties motivates the development of quantum-dot-doped liquid scintillator.
+
+Liquid scintillators are composed of a organic solvent with secondary wavelength shifters. When ionizing particles traverse the scintillator, they mainly excite the solvent molecules. The molecules can de-excite through fluorescent light emitting processes or the non-radiative transfer of energy to another molecule. The solvent is not transparent to its own fluorescence light, so primary and secondary wavelength shifters are added to the solvent. When QDs are added to the scintillator cocktail, they act as a secondary wavelength shifter.
+
+In previous work, we performed preliminary studies on the light yield of a quantum-dot-doped liquid scintillator\cite{qd1}. This work was followed up by a more detailed study of the chemistry and energy transfer in quantum-dot-doped scintillator including preliminary purification studies\cite{qd2}. This is part of a greater effort to develop a directional liquid scintillator detector. By narrowing the scintillation emission spectrum, the scintillation light is more efficiently separated from the directional Cherenkov improving the detectors ability to reconstruct a particle's direction\cite{direction}.
+
+In this work, 
+
+
  The aim of this study is to theorize an ideal liquid scintillator for observing low energy events. This is achieved by maximizing the light yield by choosing the scintillator liquid and the 2,5-Diphenyloxazole (PPO) concentration while maintaining control over the emission and absorption spectrum of a scintillator with quantum-dots (QDs) to preserve the directional information inherent in Cherenkov radiation produced in scintillator interactions.
- 
- %In this study, the optical properties of liquid scintillators consisting of aromatic organic molecules containing quantum-dots (QDs) and different concentrations of a wavelength-shifter are explored.
 
-%\subsection{Double-Beta Decay}
-%Beta decay is a radioactive process in which a neutron decays into a proton, electron and an antielectron neutrino. In the rare process of double-beta decay two neutrons within the same nucleus decay into two protons simultaneously, and two electrons and two electron antineutrinos are emitted. 
+Ionizing  particles  traversing  liquid  scintillators  mainly  excite  the  solvent  molecules  of  the  liq-
+uid.   Deexcitation  can  occur  essentially  via  the  emission  of  fluorescence  light  or  non-radiative
+energy  transfer  to  another  molecule.   Since  the  aromatic  solvent  molecules  are  not  transparent
+for their own flourescence light, in particular in large scale LS detectors, primary and sometimes
+secondary wavelength shifters are added to the liquid.  Most modern experiments use PPO (2,5-
+Diphenyloxazole) as primary and bis-MSB (4-bis-(2-Methylstyryl)benzene) as secondary wave-
+length shifter.
 
-%Ettore Majorana first hypothesized the existence of fermions that are their own antiparticles \cite{majorana37}. Fermions with this property are therefore called Majorana particles.  In 1939, Furry proposed that double-beta decay is possible without the emission of neutrinos if the neutrino is a Majorana particle \cite{furry39}. The process of this decay is called neutrinoless double-beta decay and it occurs even less frequently than two-neutrino double-beta decay (2$\nu\beta\beta$), if at all. Neutrinoless double-beta decay is characterized by a nuclear process that increases the nuclear charge Z by two units while leaving the atomic mass A unchanged \cite{Zuber}: 
-%\begin{equation}
-%(Z,A) \rightarrow (Z+2,A) + 2e^-.
-%\end{equation}
-%Due to conservation of energy, the two electrons produced in 0$\nu\beta\beta$ must carry off the entire energy of the decay. A clear signature of 0$\nu\beta\beta$ is the sum of energies of the two outgoing electrons equaling the  Q-value of the decay.  Candidates for experimental observation of double-beta decay are even-even nuclei for which single beta decay is energetically forbidden \cite{tabledb95}. Several suitable isotopes with high Q-values have been identified \cite{elliott02} and are explored in proposed and running experiments \cite{barabash11, schwingenheuer13, cremonesi13}. 
-
-%Although 0$\nu\beta\beta$ is a nuclear process, it conveys information about fundamental particle properties. Observation of 0$\nu\beta\beta$ would directly show that lepton number conservation is violated. Additionally, it would imply that neutrinos are massive Majorana particles, regardless of the different physical mechanisms which can lead to 0$\nu\beta\beta$ \cite{schechter82}. Through the calculation of nuclear matrix elements, information about neutrino masses can extracted \cite{Zuber, cremonesi13}. Currently, only limits on the 0$\nu\beta\beta$ half-life have been established. A claimed signal \cite{klapdor04,klapdor06} using $^{76}$Ge data from the Heidelberg-Moscow experiment \cite{heidelbergmoscow01} has been disfavored by recent results from the GERDA experiment \cite{gerda13}. 
-
-%Currently, there are two liquid scintillator 0$\nu\beta\beta$ experiments that are running or will be running in the near future: KamLAND-Zen \cite{kamlandzen13} has already set a competitive limit for the 0$\nu\beta\beta$ half-life of $^{136}$Xe, and the SNO+ experiment with $^{130}$Te is under construction \cite{snoplus10,hartnell12}. Liquid scintillators can be scaled easily to large volumes, and increasing the volume to surface area ratio of the detector can minimize external backgrounds. Energy resolution is crucial in order to obtain sufficient separation between signal and background, including the irreducible background from 2$\nu\beta\beta$. The light yield is directly linked to the energy resolution in liquid scintillator detectors. This work contributes to the effort of optimizing the light yield of candidate scintillator mixtures, including QD doped scintillators. QDs may even help reduce the background further by allowing reconstruction of events via Cherenkov radiation in the scintillator which will allow background signals to be rejected.
-
+Charged particles excite
+the molecules of the scintillator. Most frequently, the non-localized electrons in the
+-bonds of the phenyl groups in the aromatic scintillator components are excited. Following
+excitation, the possible vibrational and rotational excitation of the molecule is
+quickly (O(10??12 s) [50]) transformed to heat by collisions with other molecules. The
 \subsection{Liquid Scintillators}
+
+%Add references for qdots 1 +2, christian's new paper.
 When charged particles propagate through a scintillator, electrons in the $\pi$-bonds of the aromatic rings are readily excited \cite{birks64}. The absorption and emission spectra of a single-molecule based scintillator overlap. In order to prevent degradation of efficiency due to the reabsorption of scintillation light by the scintillator, the liquid scintillator (a solute) was mixed with a wavelength shifter (a solvent). The wavelength shifter absorbs the energy from the excited electron and then releases light of a longer wavelength to which the scintillator is more transparent. Light yield, the number of photons produced per deposited energy, is a vital property of the scintillator because it relates directly to the energy resolution of a scintillator-based detector. Optimizing the energy transfer between solvent and solute molecules maximizes the light yield.
 
 \begin{table}
@@ -310,6 +323,9 @@ Regrettably, QDs significantly reduce the light yield of scintillators. With imp
 
 
 \begin{thebibliography}{35}
+\bibitem{raghavan76}
+R.S.~Raghavan, \emph{Inverse $\beta$ Decay of $^{115}$In$\rightarrow$ $^{115}$Sn$^{*}$: A New Possibility for Detecting Solar Neutrinos from the Proton-Proton Reaction}, \emph{Phys. Rev. Lett.} {\bf37} (1976) 259.
+
 \bibitem{majorana37}
 E.~Majorana, \emph{Teoria simmetrica dell'elettrone e del positrone}, \emph{Il Nuovo Cimento} {\bf 14} (1937) 171. 
 
@@ -360,6 +376,20 @@ J.~Hartnell for the SNO+ collaboration, \emph{Neutrinoless Double Beta Decay wit
 
 \bibitem{birks64}
 J.B.~Birks, \emph{The Theory and Practice of Scintillation Counting}, Pergamon Press, 1964.
+
+\bibitem{buck15} 
+  C.~Buck, B.~Gramlich and S.~Wagner,
+  \emph{Light propagation and fluorescence quantum yields in liquid scintillators}, \jinst{10}{2015}{P09007}
+  JINST {\bf 10}, no. 09, P09007 (2015)
+  %[arXiv:1509.02327 [physics.ins-det]].
+  %%CITATION = ARXIV:1509.02327;%%
+
+\bibitem{lindley12} 
+  L.~Winslow and R.~Simpson,
+  `\emph{Characterizing Quantum-Dot-Doped Liquid Scintillator for Applications to Neutrino Detectors}, \jinst{7}{2012}{P07010}
+  %[arXiv:1202.4733 [physics.ins-det]].
+  %%CITATION = ARXIV:1202.4733;%%
+  %5 citations counted in INSPIRE as of 02 Oct 2015
 
 \bibitem{lindley14}
 C.~Aberle, J.J.~Li, S.~Weiss and L.~Winslow, \emph{Measuring directionality in double-beta decay and neutrino interactions with kiloton-scale scintillation detectors }, \jinst{9}{2014}{P06012}.
