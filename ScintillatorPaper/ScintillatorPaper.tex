@@ -7,7 +7,7 @@
 %From Lindley
 \title{Optimizing the Solvent and Fluor Concentration for Quantum-Dot-Doped Liquid Scintillator}
 
-\author{R.~Schofield\setcounter{footnote}{0}\thanks{corresponding author}~$^a$,Y.~Ungar$^a$, C.~Aberle$^a$, C.~Coy$^a$, T.~De Guillebon$^a$, A.~Ierokomos$^a$, B.~Naranjo~$^a$ L.~Winslow$^b$\\
+\author{R.~Schofield\setcounter{footnote}{0}\thanks{corresponding author}~$^a$,Y.~Ungar$^a$, C.~Aberle$^a$, C.~Coy$^a$, T.~De Guillebon$^a$, A.~Elagin, A.~Ierokomos$^a$, B.~Naranjo~$^a$ L.~Winslow$^b$\\
 \llap{$^a$}University of California, Los Angeles, Los Angeles, CA 90095, USA\\
 %%\llap{$^b$}Ecole Normale Superieure de Cachan, 94235 Cachan cedex, France\\
 %%\llap{$^c$}University of California, Berkeley, Berkeley, CA 94704, USA\\
@@ -31,22 +31,7 @@ Liquid scintillators are composed of a organic solvent with secondary wavelength
 
 In previous work, we performed preliminary studies on the light yield of a quantum-dot-doped liquid scintillator\cite{qd1}. This work was followed up by a more detailed study of the chemistry and energy transfer in quantum-dot-doped scintillator including preliminary purification studies\cite{qd2}. This is part of a greater effort to develop a directional liquid scintillator detector. By narrowing the scintillation emission spectrum, the scintillation light is more efficiently separated from the directional Cherenkov improving the detectors ability to reconstruct a particle's direction\cite{direction}.
 
-In this work, we measure the light yields of simple scintillator cocktails made from the six most common solvents to determine the best solvent for a quantum-dot-doped liquid scintillator. We use 2,5-Diphenyloxazole (PPO) as the primary wavelength shifter.  The details of these solvents and the PPO used are listed in Table~ \ref{solvents_table}. We study the light yield as a function of PPO concentration. These results are then compared to the light yields of a selection of currently available QDs, see Table~\ref{quantum_dots_table}, disolved in a scintillator cocktail of toluene with 2~g/L of PPO.
-
-%PUT THIS LATER.
- %The concentration of the wavelength shifter PPO in each scintillator candidate listed in Table \ref{solvents_table} was adjusted and the relative light yields of these binary scintillator mixtures were compared. PPO concentration affects the light yield through two competing mechanisms. The efficiency of energy transfer from solvent to solute increases with increasing PPO concentration. At the studied PPO concentrations, the energy transfers are predominantly non-radiative F\"orster energy transfers \cite{foerster48,foerster59}, but the emission and re-absorption of real photons or collision energy transfer and others \cite{dexter53} also contribute to the overall effective energy transfer rate. There also is the effect of self-quenching \cite{birks64} which becomes more important at higher PPO concentrations. In this process, two PPO molecules interact with each other and no light is emitted. 
-%The light yield $I(c_{PPO})$ as a function of PPO concentration $c_{PPO}$ can be described by the equation 
-%\begin{equation}
-%\label{fit_eq}
-%I(c_{PPO})=p_1 \cdot \frac{1}{1+p_2/c_{PPO}} \cdot \frac{1}{1+p_3\cdot c_{PPO}}
-%\end{equation} 
-%where $p_1$, $p_2$ and $p_3$ are three solvent specific parameters: $p_1$ characterizes the maximum light yield without self-quenching, $p_2$ the effectiveness of energy transfer from solvent molecules to solute molecules, and $p3$ the effect of self-quenching. For details on the derivation of these types of equations see \cite{buck07,aberle11} and references therein. 
-
-%Add references for qdots 1 +2, christian's new paper.
-%When charged particles propagate through a scintillator, electrons in the $\pi$-bonds of the aromatic rings are readily excited \cite{birks64}. The absorption and emission spectra of a single-molecule based scintillator overlap. In order to prevent degradation of efficiency due to the reabsorption of scintillation light by the scintillator, the liquid scintillator (a solute) was mixed with a wavelength shifter (a solvent). The wavelength shifter absorbs the energy from the excited electron and then releases light of a longer wavelength to which the scintillator is more transparent. Light yield, the number of photons produced per deposited energy, is a vital property of the scintillator because it relates directly to the energy resolution of a scintillator-based detector. Optimizing the energy transfer between solvent and solute molecules maximizes the light yield.
-
-%Unfortunately, doping liquid scintillators with QDs comes at the cost of lower light yields as shown in Section \ref{ly_results} and discussed Section \ref{abs_emi_results}. Fortunately, this can be partially countered by choosing the emission peak to match the optimal wavelength for the quantum efficiency of the photomultiplier tube (PMT)\cite{hamamatsupmt}. The QDs of various emission and absorption spectra that undergo study for suitability are listed in Table \ref{quantum_dots_table}.
- 
+In this work, we measure the light yields of simple scintillator cocktails made from the six most common solvents to determine the best solvent for a quantum-dot-doped liquid scintillator. We use 2,5-Diphenyloxazole (PPO) as the primary wavelength shifter.  The details of these solvents and the PPO used are listed in Table~ \ref{solvents_table}. We study the light yield as a function of PPO concentration. These results are then compared to the light yields of a selection of currently available QDs, see Table~\ref{quantum_dots_table}, disolved in a scintillator cocktail of toluene with 2~g/L of PPO. Additional measurements of the absorption and emission spectra of the QD samples are made to understand the observed reduced light yields.
 
 \begin{table}
 \caption{The solvents used in this paper, their names, abbreviations, corresponding IUPAC names, CAS numbers and information on the source of the chemicals. The primary wavelength shifter PPO is included for completeness. \label{solvents_table}}
@@ -128,7 +113,6 @@ In order to ensure reproducible and accurate measurements, a sample handling pro
 
 The quartz cell is also cleaned thoroughly when samples are changed. The optical grease on the outside is removed with ethanol and on the inside it is washed with isopropanol then dried with N$_{2}$ twice, washed with cyclohexane, and again dried with N$_{2}$. The amount of liquid scintillator sample in the cell is kept constant to avoid effects due to differences in light collection. Before each measurement, a pipet is inserted into the liquid to slowly purge the samples with nitrogen for about 10 minutes to actively remove remaining oxygen. 
 
-%For the PPO scans, samples not older than 4 days after mixing were used to minimize long-term irreversible effects of contact with spurious oxygen. 
 The coupling of the cell to the PMT is done consistently, and the PMT is aligned in the same way in order to avoid effects due to the earth's magnetic field. Section \ref{ly_analysis_sec} presents the studies that determine measurement reproducibility.  The quartz cell containing the liquid scintillator sample is placed in the dark box setup as described in the previous section, and a measurement is performed for a duration of 30 minutes.
  
 \begin{figure}[tbh]
@@ -139,18 +123,17 @@ The coupling of the cell to the PMT is done consistently, and the PMT is aligned
 \end{figure}
 
 \subsection{Absorption and Emission Spectrum Measurements}
-\subsubsection{Setup}
+
 A Perkin Elmer Lambda 25 UV/Vis is used for measuring the emission spectrum and a Shimadzu UV3101 for measuring absorption spectrum of the QD doped liquid scintillators. Both instruments utilize a double-beam setup. White light from deuterium UV lamp and a halogen lamp produce the beams. \cite{|}
 
-To measure the absorption spectrum of each quantum-dot sample, the following procedure is executed. A (1~cm$\times$1~cm$\times$3.5~cm) UV-transparent quartz cell (Starna 21-Q-10 \cite{starnacells}) is rinsed with toluene to dissolve any residue on the wall. Next, the cell is soaked in hydrochloric acid for 5 minutes to clean the cell and destroy any remaining QD. To wash away the hydrochloric acid and the residue QD constituents, the quartz cell is rinsed with distilled water and is then subjected to three iterations of liquid isopropyl alcohol evaporated by nitrogen gas. Since all of the QD samples are dissolved in toluene, a background absorption spectrum analysis is required to isolate the quantum-dot spectrum.  A background scan is performed with a vial filled with pure toluene. The toluene is then replaced with the QD sample, and the absorption scan is performed.  % This is repeated for each QD candidate listed in \ref{quantum_dots_table}.
+To measure the absorption spectrum of each quantum-dot sample, the following procedure is executed. A (1~cm$\times$1~cm$\times$3.5~cm) UV-transparent quartz cell (Starna 21-Q-10 \cite{starnacells}) is rinsed with toluene to dissolve any residue on the wall. Next, the cell is soaked in hydrochloric acid for 5 minutes to clean the cell and destroy any remaining QD. To wash away the hydrochloric acid and the residue QD constituents, the quartz cell is rinsed with distilled water and is then subjected to three iterations of liquid isopropyl alcohol evaporated by nitrogen gas. Since all of the QD samples are dissolved in toluene, a background absorption spectrum analysis is required to isolate the quantum-dot spectrum.  For absorption measurements, a background scan is performed with a vial filled with pure toluene. The toluene is then replaced with the QD sample, and the absorption scan is performed.  The emission spectrum does not require a background toluene scan.
 
-The cleaning procedure for the emission spectrum measurements is the same as the procedure for the absorption trials. The emission spectrum is measured by a Perkin Elmer Lambda 25 UV/Vis and does not require a background toluene scan. 
 
 \section{Results}
 \label{analysis_results_sec}
-This section presents the analysis methodology as well as the main results, namely the light yield measurements as a function of PPO concentrations for each of the solvents listed in Table \ref{solvents_table} and for the different QDs listed in Table \ref{quantum_dots_table} dissolved in toluene with 2~g/L of PPO added. The emission and absorption spectrum of the QD scintillators are also measured.
+This section presents the analysis methodology as well as the main results, namely the light yield measurements as a function of PPO concentrations for each of the solvents listed in Table \ref{solvents_table} and for the different QDs listed in Table \ref{quantum_dots_table} dissolved in toluene with 2~g/L of PPO. The emission and absorption spectrum of the QD scintillators are also measured.
  
-\subsection{Light Yield}\label{ly_analysis_sec}
+\subsection{Light Yield Analysis}\label{ly_analysis_sec}
 \begin{figure}[tbh]
         \begin{center}
         \includegraphics[scale=0.6] {graphs/14August2013_toluene_5gL_PPO_processed_waveform_paper.pdf}
@@ -158,28 +141,23 @@ This section presents the analysis methodology as well as the main results, name
 \end{center}
 \end{figure}
 
-\subsubsection{Signal Analysis}
-%An example single waveform is shown in Figure \ref{waveform_fig}. Each waveform consists of 512 voltage samples. At a rate of 1~Gs/s one waveform thus spans 512~ns. The voltage range is [2~V,-2~V] with a resolution of 8-bit, 256 channels. The sampling is therefore done with voltage channels of size $\approx$ 0.0156~V. The amount of light collected is proportional to the the charge of a given pulse. Thus, the integral over the voltage pulse has to be calculated. To do this, the following steps are carried out for each waveform: 
-\begin{itemize}
-\item Baseline: At the beginning of each waveform, 100 samples are averaged to get the baseline value. 
-\item Pulse finder: Pulses are defined as a consecutive series of samples below the rounded baseline value.
-\item Pulse times: For each pulse the start time is defined as the time where the waveform falls below the rounded baseline value. The stop time is set once the pulse reaches this value again.  
-\item Charge: The integral of the baseline-subtracted waveform between the start and stop times.  
-\end{itemize}
+The PMT pulse from the collected scintillation light is digitized and written out as a waveform. An example single waveform is shown in Figure \ref{waveform_fig}. Each waveform consists of 512 voltage samples. At a rate of 1~Gs/s one waveform thus spans 512~ns. The voltage range is [2~V,-2~V] with a resolution of 8-bit, 256 channels. The sampling is therefore done with voltage channels of size $\approx$ 0.0156~V. The amount of light collected is proportional to the the charge of a given pulse. Thus, the integral over the voltage pulse has to be calculated. To do this, the following steps are carried out for each waveform: 
+\begin{enumerate}
+\item Baseline Calculation: At the beginning of each waveform, 100 samples are averaged to get the baseline value. 
+\item Pulse Finder: Pulses are defined as a consecutive series of samples below the calculated baseline value.
+\item Pulse Times: For each pulse the start time is defined as the time where the waveform falls below the baseline value. The stop time is set once the pulse reaches this value again.  
+\item Pulse Charge: The integral of the baseline-subtracted waveform between the start and stop times.  
+\end{enumerate}
 
-The duration of each run is around thirty minutes and during this time on the order of $3\cdot10^5$ waveforms are recorded. Each pulse corresponds to one gamma ray interaction within the liquid scintillator. The amount of light collected by the PMT is dependent on the scattering angle of the electron that is produced by Compton scattering of the 0.662 MeV gamma ray. The result of the charge calculation is placed in a histogram, Figure \ref{ChargeSpec_fig}. Since the Compton effect is the dominant mechanism, this histogram is a Compton spectrum. The events where the Compton scattered electron obtained close to the maximal energy, 478~keV for the 662~keV gammas from $^{137}$Cs, is associated with events at the right end of this spectrum. %Since we are interested in the largest pulses close to the Compton edge we can simply use the charges of all the pulses.
-Multiple pulses are found for each waveform, including baseline fluctuations. The small fake pulses from baseline fluctuations did not affect analysis. In order to compare different scintillator mixtures, the charge where the number of events dropped to half of the Compton edge maximum is compared, Figure \ref{ChargeSpec_fig}. This quantity is proportional to the scintillator light yield. For practical reasons and because this study only looks at relative light yield, results are presented in arbitrary charge units instead of real charge units.
+The duration of each run is around thirty minutes and during this time on the order of $3\cdot10^5$ waveforms are recorded. Each pulse corresponds to one gamma ray interaction within the liquid scintillator. The amount of light collected by the PMT is dependent on the scattering angle of the electron that is produced by Compton scattering of the 0.662 MeV gamma ray. The result of the charge calculation is placed in a histogram, Figure \ref{ChargeSpec_fig}. Since the Compton effect is the dominant mechanism, this histogram is a Compton spectrum. The events where the Compton scattered electron obtained close to the maximal energy, 478~keV for the 662~keV gammas from $^{137}$Cs, is associated with events at the right end of this spectrum. 
 
+Multiple pulses are found for each waveform, including baseline fluctuations. The small fake pulses from baseline fluctuations did not affect analysis. In order to compare different scintillator mixtures, the charge where the number of events dropped to half of the Compton edge maximum is compared, Figure \ref{ChargeSpec_fig}. This quantity is proportional to the scintillator light yield. For practical reasons and because this study only looks at relative light yield, results are presented in arbitrary charge units instead of real charge units. The uncertainty in the extraction of this quantity is negligible compared to the systematic uncertainties due to the handling of the samples especially the oxygen concentration.
 
-\subsubsection{Investigation of Uncertainties}
-This section focuses on the reproducibility of a measurement and estimates the error of a single measurement based on the sample handle procedure defined in Section \ref{ly_setup_sec}. 
+The error due to differences in the procedure of coupling the scintillator cell to the PMT glass is studied with a LAB sample with 5~g/L PPO in a sealed cell.  The coupling is renewed and data taken 10 times. The RMS divided by the sample mean for the trials is 0.30~\%. This number is used as a rough estimate for the relative error of a single measurement due to differences in the coupling. 
 
-The error due to differences in the procedure of coupling the scintillator cell to the PMT glass is measured. For this test, the same sample, LAB with 5~g/L PPO, is sealed in the cell and only the coupling is renewed. The RMS divided by the sample mean for several trials is 0.30~\%. This number is used as a rough estimate for the relative error of a single measurement due to differences in the coupling. The small uncertainty in the determination of the charge value from the histograms, Figure \ref{ChargeSpec_fig}, is already included here. The relative spread of 0.30~\% is negligible compared to other uncertainties discussed below.   
+Increased oxygen concentration is known to decrease scintillator light yield. A 24-day old sample of DIN HP with 5~g/L PPO is purged with nitrogen bubbles for 10 minutes as in the standard measurement procedure and is measured. Then the sample is opened and left in contact with oxygen for 15 minutes. It is then re-measured without nitrogen purging. The charge value dropped by 2.04~\%. It is left open for an additional 3 hours and the measurement repeated without purging. The relative difference between the first and the last measurement is about 6.92~\%. This gives us the range in the uncertainty due to oxygen concentration.
 
-The effect of oxygen is also studied quantitatively. A comparatively 24-day old sample of DIN HP with 5~g/L PPO is purged with nitrogen bubbles for 10 minutes as in the standard measurement procedure and is measured. Then the sample is opened and left in contact with oxygen for 15 minutes. It is then re-measured without nitrogen purging. The charge value dropped by 2.04~\%. After an additional ~3 hours of contact with oxygen the same is measured. The relative difference between the first and the last measurement is about 6.92~\%, indicating the importance of nitrogen purging and reproducible procedures in preventing oxygen from entering the scintillator. 
-
-In order to estimate the total error of a single light yield measurement, the same sample with the full sample change protocol, as described in Section \ref{ly_setup_sec}, is measured repeatedly. For these measurements an older sample, 7 weeks after mixing, of DIN HP is used as well as a standard DIN sample, 3-4 weeks old. For the older samples, 10 minutes of nitrogen purging is not sufficient to remove oxygen. The effect of differences in the oxygen removal is included in these reproducibility measurements. However, it is difficult to assess exactly how oxygen contamination affects the measurements when the full measurement protocol is applied. The RMS for these data sets 
-is is about 3.70~\% and is regarded as a rough estimate of the relative uncertainty of a single light yield measurement.
+In order to estimate the total error of a single light yield measurement, the same sample with the full sample protocol, as described in Section \ref{ly_setup_sec}, is done repeatedly. For these measurements an older sample, 7 weeks after mixing, of DIN HP is used as well as a standard DIN sample, 4 weeks old. For the older samples, 10 minutes of nitrogen purging is not sufficient to remove oxygen since the light yield improves over the trials.  The RMS for these data sets is 3.70~\% and is used the uncertainty on a single light yield measurement.
 
 \begin{figure}[tbh]
         \begin{center}
@@ -188,17 +166,22 @@ is is about 3.70~\% and is regarded as a rough estimate of the relative uncertai
  \end{center}
 \end{figure}
 
-\subsubsection{Light Yield Results}\label{ly_results}
-Table \ref{fitresult_table} contains the light yield results for the different liquid scintillator candidates described in Table \ref{solvents_table}.
+Data is taken for each candidate solvent listed in Table \ref{solvents_table} at several concentrations of PPO. Figure~\ref{ChargeResults_fig} and Figure~\ref{Toluene_ChargeResults_fig} shows the solvent's characteristic charge at the Compton edge for the PPO concentrations of 0.5 g/L, 1 g/L, 2 g/L, 5 g/L, 10 g/L and 50 g/L.  The uncertainty on the data points is 3.70\%.
 
-In Figure \ref{fitresult_table}, each plot shows the solvent's characteristic charge at the Compton edge as a function of PPO concentration in g/L. Concentrations of 0.5 g/L, 1 g/L, 2 g/L, 5 g/L, 10 g/L and 50 g/L have been used. Tables \ref{ChargeResults_fig} and \ref{Toluene_ChargeResults_fig} include the fit results; the parameters p1, p2 and p3 describe the light yield normalization,
-the energy transfer from solvent to solute and the self-quenching effect, respectively.
+In general, the efficiency of energy transfer from solvent to the wavelength shifter increases with increasing PPO concentration. At the studied PPO concentrations, the energy transfers are predominantly non-radiative F\"orster energy transfers \cite{foerster48,foerster59}, but the emission and re-absorption of real photons or collision energy transfer and others \cite{dexter53} also contribute to the overall effective energy transfer rate. There also is the effect of self-quenching \cite{birks64} which becomes more important at higher PPO concentrations. In this process, two PPO molecules interact with each other and no light is emitted. We model the light yield $I(c_{PPO})$ as a function of PPO concentration $c_{PPO}$,
+\begin{equation}
+\label{fit_eq}
+I(c_{PPO})=p_1 \cdot \frac{1}{1+p_2/c_{PPO}} \cdot \frac{1}{1+p_3\cdot c_{PPO}}
+\end{equation} 
+where $p_1$, $p_2$ and $p_3$ are three solvent specific parameters. $p_1$ characterizes the maximum light yield without self-quenching. $p_2$ is the effectiveness of energy transfer from solvent molecules to the wavelength shifter molecules. $p3$ models the effect of self-quenching. For details on the derivation of these types of equations see \cite{buck07,aberle11} and references therein. Table \ref{fitresult_table} contains the fit results for the different liquid scintillator solvent candidates.
+
 
 As clearly stated in Table \ref{Toluene_ChargeResults_fig}, toluene produces the highest light yield around 2.2~g/L.  QD scintillators are doped with 2~g/L PPO for comparison with 2~g/L PPO in toluene. The light yield as a function of QD emission wavelength is plotted in Figure \ref{ly_QD}.
 
 \begin{table}
 \caption{Listed below are the fit results for each solvent's data set. The fit parameters and their errors are given and their respective $\chi^{2}$ values, and the probabilities to get a worse $\chi^{2}$ than the observed one. Since we have 6 data points and 3 parameters in the fit the number of degrees of freedom is 3. \label{fitresult_table}}
 
+%Uncertainty on LY.
   \begin{center}
     \begin{tabular}{lllllll}
        Solvent & $p_1$ [a.u.] & $p_2$ [g/L] & $p_3$ [g/L] & $\chi^{2}$ & prob. \% & max. LY\\
@@ -217,12 +200,12 @@ As clearly stated in Table \ref{Toluene_ChargeResults_fig}, toluene produces the
 
 \begin{figure}[tbh]
         \begin{center}
-        \subfigure[PC]{\includegraphics[scale=0.30]{graphs/Light_Yield/PC_Light_Yield.png}}
-        \subfigure[LAB]{\includegraphics[scale=0.30]{graphs/Light_Yield/LAB_Light_Yield.png}}
-        \subfigure[PXE]{\includegraphics[scale=0.30]{graphs/Light_Yield/PXE_Light_Yield.png}}
-        \subfigure[DIN]{\includegraphics[scale=0.30]{graphs/Light_Yield/DIN_Light_Yield.png}}
-        \subfigure[DIN HP]{\includegraphics[scale=0.30]{graphs/Light_Yield/DIN_HP_Light_Yield.png}}
-        \subfigure[PCH]{\includegraphics[scale=0.30]{graphs/Light_Yield/PCH_Light_Yield.png}}
+        \subfigure[PC]{\includegraphics[scale=0.39]{graphs/Light_Yield/PC_Light_Yield.png}}
+        \subfigure[LAB]{\includegraphics[scale=0.39]{graphs/Light_Yield/LAB_Light_Yield.png}}
+        \subfigure[PXE]{\includegraphics[scale=0.39]{graphs/Light_Yield/PXE_Light_Yield.png}}
+        \subfigure[DIN]{\includegraphics[scale=0.39]{graphs/Light_Yield/DIN_Light_Yield.png}}
+        \subfigure[DIN HP]{\includegraphics[scale=0.39]{graphs/Light_Yield/DIN_HP_Light_Yield.png}}
+        \subfigure[PCH]{\includegraphics[scale=0.39]{graphs/Light_Yield/PCH_Light_Yield.png}}
 \caption[]{Show the charge value at the Compton edge (proportional to the light yield) for each of the 6 concentrations of PPO for six of the liquid scintillator candidates. A relative error of $3.7~\%$ was used for each measurement. The red lines show the fit of equation \ref{fit_eq}. Note that the x-axis is logarithmic; the PPO concentrations span two orders of magnitude. %The rise of the LY at low concentrations is faster than the drop due to self-quenching at high concentrations.
   \label{ChargeResults_fig}}
         \end{center}
@@ -230,7 +213,7 @@ As clearly stated in Table \ref{Toluene_ChargeResults_fig}, toluene produces the
 
 \begin{figure}[tbh]
         \begin{center}
-        \subfigure[Toluene]{\includegraphics[scale=0.30]{graphs/Light_Yield/Toluene2014_Light_Yield.png}}
+        \subfigure[Toluene]{\includegraphics[scale=0.60]{graphs/Light_Yield/Toluene2014_Light_Yield.png}}
 \caption[]{Show the charge value at the Compton edge (proportional to the light yield) for each of the 6 concentrations of PPO for toluene. A relative error of $3.7~\%$ was used for each measurement. The red lines show the fit of equation \ref{fit_eq}. Note that the x-axis is logarithmic; the PPO concentrations span two orders of magnitude. %The rise of the LY at low concentrations is faster than the drop due to self-quenching at high concentrations.
   \label{Toluene_ChargeResults_fig}}
         \end{center}
@@ -291,6 +274,14 @@ The absorption and emission spectrum of the QDs were extensively probed, and the
 Detection of low energy events in liquid scintillators require high light yield and preservation of Cherenkov radiation. This study  successfully measures and models the light yield of seven scintillator liquids as a function of wavelength-shifter concentration in order to find the maximum light yield of each candidate. Furthermore, an extensive study on the effects of quantum-dot doping of toluene with 2 g/L of PPO in solution are analyzed. QDs reduce the width and control the location of the absorption spectrum peak. This allows the quantum efficiency of the photocathode to be matched and minimized the amount of Cherenkov radiation absorbed by the liquid scintillator.
 
 Regrettably, QDs significantly reduce the light yield of scintillators. With improved technology in quantum dot production, QDs with better characteristics such as shorter emission wavelengths are expected to become available in the near future. These QDs should be able to improve the light yield of quantum dot-doped scintillator. 
+
+
+%Add references for qdots 1 +2, christian's new paper.
+%When charged particles propagate through a scintillator, electrons in the $\pi$-bonds of the aromatic rings are readily excited \cite{birks64}. The absorption and emission spectra of a single-molecule based scintillator overlap. In order to prevent degradation of efficiency due to the reabsorption of scintillation light by the scintillator, the liquid scintillator (a solute) was mixed with a wavelength shifter (a solvent). The wavelength shifter absorbs the energy from the excited electron and then releases light of a longer wavelength to which the scintillator is more transparent. Light yield, the number of photons produced per deposited energy, is a vital property of the scintillator because it relates directly to the energy resolution of a scintillator-based detector. Optimizing the energy transfer between solvent and solute molecules maximizes the light yield.
+
+%Unfortunately, doping liquid scintillators with QDs comes at the cost of lower light yields as shown in Section \ref{ly_results} and discussed Section \ref{abs_emi_results}. Fortunately, this can be partially countered by choosing the emission peak to match the optimal wavelength for the quantum efficiency of the photomultiplier tube (PMT)\cite{hamamatsupmt}. The QDs of various emission and absorption spectra that undergo study for suitability are listed in Table \ref{quantum_dots_table}.
+ 
+
 
 
 \begin{thebibliography}{35}
