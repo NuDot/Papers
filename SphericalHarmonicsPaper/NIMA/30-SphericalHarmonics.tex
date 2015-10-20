@@ -90,14 +90,21 @@ where $Y_{lm}$ are Laplace's spherical harmonics defined in real-value basis usi
 
 \begin{eqnarray}
 \label{eq2}
-Y_{lm} = LONGformulaHERE,
+Y_{lm} = \left\{
+  \begin{array}{@{}ll@{}}
+    \sqrt{2}N_{lm}P_l^m(cos\theta)cos~m\phi, & \text{if}\ m>0 \\
+    N_{lm} = \sqrt{\frac{(2l+1)}{4\pi} \frac{(l-m)!}{(l+m)!}}, & \text{if}\ m=0 \\
+    \sqrt{2}N_{l|m|}P_l^|m|(cos\theta)sin~|m|\phi, & \text{if}\ m<0
+  \end{array}\right.
 \end{eqnarray}
 
- where  coefficients $f_{lm}$ are defined as
+
+
+Coefficients $f_{lm}$ are defined as
  
 \begin{eqnarray}
 \label{eq3}
-f_{lm} = LONGformulaHERE.
+f_{lm} = \int_{0}^{2\pi} d\phi \int_0^{\pi} d\theta sin\theta f(\theta,\phi) Y_{lm}(\theta,\phi)
 \end{eqnarray}
 
 Equation~\ref{eq4} defines power spectrum of $f(\theta,\phi)$ in spherical harmonics representation, $s_l$, where $l$ is a multiple moment. The power spectrum $s_l$ is invariant under rotation. It is unique to each of the functions $f_i(\theta,\phi)$, $i=$1,2,3..., that can not be transformed into each other by rotation.
@@ -122,7 +129,7 @@ Sum of $s_l$'s over all multiple moments equals to L2 norm of the function $f(\t
 Therefore normalized power spectrum 
 
 \begin{eqnarray}
-\label{eq5}
+\label{eq6}
 S_l = \frac{s_l}{\sum_{l=0}^{\infty} s_l} =  \frac{s_l}{\int_{\Omega} |f(\theta,\phi)|^2 d\Omega}
 \end{eqnarray}
 
@@ -167,7 +174,9 @@ In order to compare spherical harmonics for events with vertices located off-cen
 
 
 \subsection{Implementation of the spherical harmonics analysis}
-{\bf A few words on the implementation. Calculation of $S_l$'s requires numerical integration that needs to be explained.}
+For each event we create a 2-D histogram, $\theta$ vs $\phi$, with the distribution of PEs on the detector surface. We then treat this histogram as a function $f(\theta,\phi)$ where the value of the function for any pair of $\theta$ and $\phi$ is equal to the number of PE in the histogram bin corresponding to that pair.
+
+Coefficients $f_{lm}$ from Eq.~\ref{eq3} are calculated using a Monte Carlo integration technique. Variables $S_0$, $S_1$, $S_2$, and $S_3$ are calculated using Eqs.\ref{eq4} - \ref{eq6}.
 
 To illustrate spherical harmonics analysis technique we compare distributions of $S_0$, $S_1$, $S_2$, and $S_3$ for the three representative event topologies described in Sec.~\ref{subsec:topology}. Almost all the information about event topology is carried by Cherenkov light. Therefore we first show spherical harmonics for back-to-back,  90$^{\circ}$ and single track topologies based on Cherenkov PEs only (see Fig.~\ref{fig:SL_topologies_CHE}).
 
