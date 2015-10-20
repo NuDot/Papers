@@ -1,8 +1,88 @@
 \section{Detector Model}
 \label{sec:detector_description}
-{\bf Copy info from~\cite{Aberle2014}.
+{\bf Copy info from~\cite{Aberle2014}:}
 
-Figures~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist} show simulation
+In order to study the effects relevant to directional reconstruction
+in liquid scintillators, a Geant4\cite{geant4one,geant4two} simulation
+has been constructed. The simulation uses Geant4~version 4.9.6 with the default liquid scintillator
+optical model, in which optical photons are
+assigned the group velocity in the wavelength region of normal
+dispersion.
+
+The detector geometry is a sphere of 6.5~m radius filled with
+scintillator. Figure \ref{detector_view} shows the geometry and the
+Cherenkov light from an example $^{116}$Cd $0\nu\beta\beta$ event. The
+default scintillator properties have been chosen to match a KamLAND-like
+scintillator\cite{kamland2003}: 80\% n-dodecane, 20\% pseudocumene and 1.52~g/l PPO. The
+scintillator properties implemented in the simulation include the
+atomic composition and density ($\rho$ = 0.78~g/ml), the
+wavelength-dependent attenuation length\cite{tajimaMaster} and
+refractive index\cite{OlegThesis}, the scintillation emission
+spectrum\cite{tajimaMaster}, emission rise time ($\tau_r$ = 1.0~ns)
+and emission decay time constants ($\tau_{d1}$ = 6.9~ns and
+$\tau_{d2}$ = 8.8~ns with relative weights of 0.87 and 
+0.13)\cite{tajimaThesis}, scintillator light yield (9030 photons/MeV),
+and the Birks constant ($kB$ $\approx$ 0.1~mm/MeV)\cite{ChrisThesis}.  This is a standard scintillator. The attenuation length at 400~nm, the position of the peak standard bialkali photocathode efficiency, is 25~m. The attenuation length drops precipitously between 370~nm and 360~nm from 6.5~m to 0.65~m. We use this drop to define the cutoff wavelength at 370~nm. Variations from the baseline KamLAND case are discussed below. 
+
+Re-emission of absorbed photons in the scintillator
+bulk volume and optical scattering, specifically Rayleigh scattering, have not yet been included by default. A test simulation shows that the effect of optical scattering is negligible~\cite{Aberle2014}.
+
+The inner sphere surface is used as the photodetector. It is treated
+as fully absorbing (no reflections), with a photodetector coverage of
+100\%. As in the case of optical scattering, reflections at the sphere are a small effect that would create a small tail at longer times. Two important photodetector properties have been varied: 1)
+the transit-time spread (TTS, default $\sigma$ = 0.1~ns) and 2) the
+wavelength-dependent quantum efficiency (QE) for photoelectron
+production. The default is the QE of a bialkali photocathode (Hamamatsu
+R7081 PMT)\cite{Hamamatsu_R7081}. The QE values as a function of wavelength come from the Double Chooz\cite{dctwo}
+Monte Carlo simulation. We note that the KamLAND 17-inch PMTs use the
+same photocathode type with similar quantum efficiency. We are neglecting any threshold effects in the photodetector readout electronics.
+
+
+Four effects primarily contribute to the timing of the scintillator detector
+system: the travel time of the particle, the time constants of the scintillation process, chromatic dispersion, and the timing of the photodetector.
+
+In the energy range important for $0\nu\beta\beta$, a 1.4~MeV electron travels a total path length of 0.8~cm, has a distance from the origin of 0.6~cm in 0.030$\pm$0.004~ns  and takes 0.028$\pm$0.004~ns to drop below Cherenkov threshold. We note that due to scattering the final direction of the electron before it stops does not correspond to the initial direction; however the scattering angle is small while the majority of Cherenkov light is produced. The Cherenkov light thus encodes the direction of the primary electron. The scattering physics is handled by Geant4's ``Multiple Scattering" process which is valid down to 1~keV, where atomic shell structure becomes important\cite{geant4scatt}.
+
+
+The scintillator-specific rise and decay times are the second effect that determines the timing in a scintillator detector. The first step in the scintillation process is the transfer of energy from the solvent to the solute. The time constant of this
+energy transfer accounts for a rise time in scintillation light
+emission. Past neutrino experiments were not highly sensitive to the
+effect of the scintillation rise time, which is the reason why there
+is a lack of accurate numbers. We assume a rise time of 1.0~ns; more
+detailed studies are needed in the future. The two time constants used
+to describe the falling edge of the scintillator emission time
+distribution (quoted above) are values specific to the KamLAND
+scintillator.
+
+Chromatic dispersion is the third effect that determines the timing in a scintillator detector. Due to the wavelength-dependence of the refractive index the speed of
+light in the scintillator (see Equation (\ref{eqGroup})) increases
+with increasing photon wavelengths for normal dispersion, with red
+light traveling faster than blue light.
+
+Photoelectrons coming from Cherenkov light are on average
+created about 0.5~ns earlier than PEs from scintillation light. The
+RMS values from PE time distributions for Cherenkov and scintillation
+light are both about 0.5~ns. Note that these numbers include the
+effect of the finite electron travel time.
+
+The fourth effect determining the timing in a scintillator detector is the timing of the photodetectors. The measurement of the arrival times of single photoelectrons is
+affected by the transit-time spread (TTS) of the photodetectors, a
+number which can be different by orders of magnitude depending on the
+detector type. The default TTS of 0.1~ns ($\sigma$) can be achieved with large area picosecond photodetectors
+(LAPPDs)\cite{Adams:2013nva,RSI_paper,PSEC4_paper,anode_paper} and possibly hybrid photodetectors
+(HPDs)\cite{hpdThesis}; even significantly lower TTS numbers are
+realistic with the LAPPD\cite{RSI_paper,PSEC4_paper,anode_paper}.
+
+The primary
+quantities provided by the Geant4~simulation are the photoelectron hit
+positions and the detection times after the TTS resolution has been
+applied. In section~\ref{reconstruction_sec} these quantities are then
+used for event reconstruction.
+
+
+
+
+{\bf Figures~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist} show simulation
 output relevant for further discussion.}
 
 \begin{figure*}[ht]
