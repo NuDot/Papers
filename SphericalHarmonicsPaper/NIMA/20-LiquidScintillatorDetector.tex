@@ -1,18 +1,12 @@
 \section{Detector Model}
 \label{sec:detector_description}
-{\bf Copy info from~\cite{Aberle2014}:}
 
-In order to study the effects relevant to directional reconstruction
-in liquid scintillators, a Geant4\cite{geant4one,geant4two} simulation
-has been constructed. The simulation uses Geant4~version 4.9.6 with the default liquid scintillator
-optical model, in which optical photons are
-assigned the group velocity in the wavelength region of normal
-dispersion.
+In order to study topology of $\vbb$ decay and background events in a liquid scintillator detector, a Geant4\cite{geant4one,geant4two} simulation has been constructed. The same simulation is used as in our preceding paper~\cite{Aberle2014}. Here we repeat most relevant simulation parameters.
+
+The simulation uses Geant4~version 4.9.6 with the default liquid scintillator optical model, in which optical photons are assigned the group velocity in the wavelength region of normal dispersion.
 
 The detector geometry is a sphere of 6.5~m radius filled with
-scintillator. Figure \ref{detector_view} shows the geometry and the
-Cherenkov light from an example $^{116}$Cd $0\nu\beta\beta$ event. The
-default scintillator properties have been chosen to match a KamLAND-like
+scintillator. The default scintillator properties have been chosen to match a KamLAND-like
 scintillator\cite{kamland2003}: 80\% n-dodecane, 20\% pseudocumene and 1.52~g/l PPO. The
 scintillator properties implemented in the simulation include the
 atomic composition and density ($\rho$ = 0.78~g/ml), the
@@ -29,10 +23,7 @@ bulk volume and optical scattering, specifically Rayleigh scattering, have not y
 
 The inner sphere surface is used as the photodetector. It is treated
 as fully absorbing (no reflections), with a photodetector coverage of
-100\%. As in the case of optical scattering, reflections at the sphere are a small effect that would create a small tail at longer times. Two important photodetector properties have been varied: 1)
-the transit-time spread (TTS, default $\sigma$ = 0.1~ns) and 2) the
-wavelength-dependent quantum efficiency (QE) for photoelectron
-production. The default is the QE of a bialkali photocathode (Hamamatsu
+100\%. As in the case of optical scattering, reflections at the sphere are a small effect that would create a small tail at longer times. The default is the QE of a bialkali photocathode (Hamamatsu
 R7081 PMT)\cite{Hamamatsu_R7081}. The QE values as a function of wavelength come from the Double Chooz\cite{dctwo}
 Monte Carlo simulation. We note that the KamLAND 17-inch PMTs use the
 same photocathode type with similar quantum efficiency. We are neglecting any threshold effects in the photodetector readout electronics.
@@ -55,7 +46,7 @@ distribution (quoted above) are values specific to the KamLAND
 scintillator.
 
 Chromatic dispersion is the third effect that determines the timing in a scintillator detector. Due to the wavelength-dependence of the refractive index the speed of
-light in the scintillator (see Equation (\ref{eqGroup})) increases
+light in the scintillator increases
 with increasing photon wavelengths for normal dispersion, with red
 light traveling faster than blue light.
 
@@ -76,14 +67,9 @@ realistic with the LAPPD\cite{RSI_paper,PSEC4_paper,anode_paper}.
 The primary
 quantities provided by the Geant4~simulation are the photoelectron hit
 positions and the detection times after the TTS resolution has been
-applied. In section~\ref{reconstruction_sec} these quantities are then
-used for event reconstruction.
+applied. These quantities are then used for event topology reconstruction.
 
-
-
-
-{\bf Figures~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist} show simulation
-output relevant for further discussion.}
+Figures~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist} show the output of the detector simulation discussed in this section. Left panel in Fig.~\ref{fig:ArrivalTimeDist} compares PE arrival time between Cherenkov and scintillation light for simulation of 1000 $\Te$ $\vbb$-decay events. Right panel in Fig.~\ref{fig:ArrivalTimeDist} compares Cherenkov PE arrival time between $\Te$ $\vbb$-decay and $\B$ events. $\B$ events produce slightly higher number of the Cherenkov photons because they have only one electron carrying the same kinetic energy as two electrons in the case of $\vbb$-decay events. Distributions of the scintillation PEs arrival time are indistinguishable between $^{130}$Te 0{\nbb} decay and $^8$B due to identical total energy in the event, $Q(^{130}{\rm Te})=2.526$~MeV.
 
 \begin{figure*}[ht]
   \centering
@@ -104,6 +90,7 @@ output relevant for further discussion.}
 \label{fig:ArrivalTimeDist}
 \end{figure*}
 
+As shown in Fig.~\ref{fig:ArrivalTimeDist} time cut of 33.5~ns on the PE arrival time selects a sample of early PEs that includes majority of the Cherenkov light. Comparable number of scintillation PEs gets selected with this time cut. Figure~\ref{fig:NPhotDist} shows total number of scintillation and Cherenkov PE per event for $\vbb$ signal and $\B$ background. Due to higher number of Cherenkov PE produces in single electron event topology early PE sample has on average slightly higher number of PE. The difference is not significant to be used as a reliable discriminant between $\vbb$-decay and $\B$ events. However it may provide an extra handle on signal-background separation in combination (e.g. by using multivariative techniques) with other event parameters.
 
 \begin{figure*}[ht]
   \centering
