@@ -6,10 +6,10 @@
 Comparison of $S_0$ and $S_1$ distributions between 0{\nbb} decay and
 $^{8}$B events is shown in Fig.~\ref{fig:S_vs_energy}. There is a
 noticeable separation between the signal and background. We also note
-that in the energy range of interest $S_l$'s do not have strong
-dependence on the energy deposited in the detector, which makes them
+that in the energy range of interest, the $S_l$'s do not strongly
+depend on the energy deposited in the detector, which makes them
 reliable discriminators at the end point of the 0{\nbb} decay energy
-spectrum. The information about the event topology is complimentary to
+spectrum. This makes the information about the event topology complimentary to
 the energy measurements.
 
 \begin{figure*}[h]
@@ -29,33 +29,32 @@ the energy measurements.
 
 Figure~\ref{fig:SL_Te_33p5ns_center} shows separation between
 $^{130}$Te signal and $^{8}$B background events simulated at the
-center of the detector. True values of vertex position and time is
-used. Time cut of 33.5~ns on the photon arrival time is applied to
+center of the detector. True values of the vertex position and time are
+used. Also, a time cut of 33.5~ns on the photon arrival time is applied to
 separate Cherenkov and scintillation light. Most of the discrimination
 between signal and background comes from $S_0$ and $S_1$. In the
-following $S_2$ and $S_3$ are not used to separate $^{130}$Te and
-$^{8}$B events\footnote{$S_2$ and $S_3$ are helpful for separation of
-  $^{130}$Te signal from $^{10}$C background. See Appendix.}. The
+following, $S_2$ and $S_3$ are not used to separate $^{130}$Te and
+$^{8}$B events (though $S_2$ and $S_3$ are helpful for separation of
+  $^{130}$Te signal from $^{10}$C background. See Appendix.). The
 scatter plot of $S_2$ vs $S_3$ is shown here for completeness.
 
-In order to optimize separation between $^{130}$Te signal and $^{8}$B
-background a linear combination of $S_0$ and $S_1$, $S_{01}$, is
-used. A linear fit, $S_0$ = $A \times S_1 + B$, of 2-dimensional $S_0$
+In order to optimize the separation between $^{130}$Te signal and $^{8}$B
+background, a linear combination of $S_0$ and $S_1$, $S_{01}$, is
+used. A linear fit, $S_0$ = $A \times S_1 + B$, of the 2-dimensional $S_0$
 vs $S_1$ scatter plot is performed as shown in
-Fig.~\ref{fig:SL_Te_33p5ns_center}. Then this 2-dimensional
-distribution is projected onto the fitted line. {\bf A little bit of
+Fig.~\ref{fig:SL_Te_33p5ns_center}.  This 2-dimensional
+distribution then is projected onto the fitted line. {\bf A little bit of
   math here to quantitatively describe $S_{01}$ via $S_0$ and $S_1$:}
-A new coordinate frame is obtained by rotation of the original
-$S_0$-$S_1$ frame at angle $\theta$ obtained from the fit:
+A new coordinate frame is obtained by rotating the original
+$S_0$-$S_1$ frame with the angle $\theta$ obtained from the fit:
 $tan(\theta)$=$A$. A transformation, $S_{01} = S_1 \cdot cos(\theta) +
-S_0 \cdot sin(\theta)$, defines the $S_{01}$ variable.
+S_0 \cdot sin(\theta)$, defines the $S_{01}$ variable. The bottom plot in Fig.~\ref{fig:SL_Te_33p5ns_center} 
+shows the performance of $S_{01}$ to separate $^{130}$Te signal and $^{8}$B
+background events. A fit to this distribution can be done to optimize the
+discrimination power for a particular experimental setting.
 
-Bottom plot in Fig.~\ref{fig:SL_Te_33p5ns_center} shows performance of
-the $S_{01}$ variable to separate $^{130}$Te signal and $^{8}$B
-background. A fit to this distribution can be done to optimize the
-discrimination power in a particular experimental settings. Here we
-refrain from quantitative estimates on the improvements in sensitivity
-to 0{\nbb} decay search using this method of spherical harmonics as a
+We refrain from quantitative estimates on the improvements in sensitivity
+to 0{\nbb} decay searches using this method of spherical harmonics as a
 reliable estimate would require a dedicated analysis taking into
 account all the details of a particular experiment.
 
@@ -89,27 +88,24 @@ harmonics analysis for events distributed within the fiducial volume
 of the detector taking into account finite resolution on vertex
 position reconstruction.
 
-The absolute cut (e.g., 33.5~ns) on the photon arrival time for central events relies on the fact that within the uncertainty on electron track length all photons travel equal distance before they reach the surface of the detector. PEs with early measured time correspond mostly to Cherenkov photons because of the delay in the scintillation process and longer wavelength of the Cherenkov light. Early 
+The absolute cut (e.g., 33.5~ns) on the photon arrival time for central events relies on the fact that, within the uncertainty on electron track length, all photons travel for the same distance before  reaching the surface of the detector. 
+PEs with early measured time correspond mostly to Cherenkov photons because of the delay in the scintillation process and longer wavelength of the Cherenkov light. 
 
 When the vertex is not at the center, a uniform absolute time cut on the photon
 arrival time is no longer effective in the selection of Cherenkov
-photons. In the case of off-center vertex, there could be a situation when even significantly delayed scintillation photons reach the side of the detector that is
+photons. In the case of an off-center vertex, there could be a situation when even significantly delayed scintillation photons reach the side of the detector that is
 closer to the vertex much earlier than Cherenkov photons traveling to
-the opposite side of the detector. Therefore, the time cut has to be
-position dependent and take into account the total distance traveled
-by each individual photon.
+the opposite side of the detector. Therefore, the time cut has to take into account the total distance traveled to each PMT by each individual photon.
 
 We found that a relative time cut defined as $\Delta t=t^{phot}_{measured} -
-t^{phot}_{predicted}<$1~ns selects photons with sufficient fraction of
-Cherenkov photons. However two factors reduce Cherenkov/scintillation light separation when this relative time cut is applied to select early PEs compared to the absolute time cut.
+t^{phot}_{predicted}<$1~ns selects photons with a sufficient fraction being
+Cherenkov photons. However two factors reduce the Cherenkov/scintillation light separation when this relative time cut is applied.
 
-Predicted time, $ t^{phot}_{predicted}=l/v^{phot}$, depends on total distance, $l$, traveled by the photon and velocity of the photon, $v^{phot}$. One reduction in the light separation comes from chromatic dispersion. Since the wavelength information is not available for any PE, we use an average index of refraction of n=1.53 and define photon velocity as $v^{phot} = c/n$. This uncertainty on the photon velocity due to chromatic dispersion reduces the separation between scintillation and Cherenkov light. Additional reduction in the light separation is caused by uncertainty on the total distance traveled by the photon caused by finite vertex resolution.
+One reduction in the light separation comes from chromatic dispersion. The predicted time, $ t^{phot}_{predicted}=l/v^{phot}$, depends on the total distance, $l$, traveled by the photon and the velocity of the photon, $v^{phot}$.  Since the wavelength information is not available for a given PE, we must use an average index of refraction of n=1.53 and define the photon velocity as $v^{phot} = c/n$. This uncertainty on the photon velocity due to chromatic dispersion reduces the separation between scintillation and Cherenkov light. The other reduction in the light separation comes from the uncertainty in the reconstructed vertex position. This uncertainty leads to an uncertainty in the photon's total distance traveled and ultimately to a reduction in the Cherenkov/scintillation separation power.
 
-When the whole fiducial volume of the detector is considered only relative time cut can be used. Therefore effectiveness of the spherical harmonics analysis in separating of 0{\nbb} decay and $^{8}$B events is reduced. To demonstrate performance of the spherical harmonics analysis in a  more realistic experimental settings we define fiducial volume within our detector as $R<3$~m and  simulate $\Te$ $\vbb$ signal and $\B$ background events with verticies uniformly distributed  within that fiducial volume.
+When the whole fiducial volume of the detector is considered only the relative time cut can be used. Therefore, the effectiveness of the spherical harmonics analysis in separating of 0{\nbb} decay and $^{8}$B events is reduced. To demonstrate performance of the spherical harmonics analysis in a  more realistic experimental settings we define the fiducial volume within our detector as $R<3$~m and  simulate $\Te$ $\vbb$ signal and $\B$ background events with vertices uniformly distributed within that fiducial volume.
 
-Figure~\ref{fig:SL_Te_SmearX0cm_momDT1ns_rndVtx_3p0m} compare spherical harmonics for the signal and background events within the fiducial volume. Perfect vertex reconstruction is used so that only effect due to chromatic dispersion is shown in Fig.~\ref{fig:SL_Te_SmearX0cm_momDT1ns_rndVtx_3p0m} (to be compared with central events shown in Fig.~\ref{fig:SL_Te_33p5ns_center}). Next generation LS detectors may be able to recover theses losses due to chromatic dispersion by choosing liquid scintillators with a more narrow
-emission spectrum (e.g. see Ref~\cite{LS_narrow_emission}).
-
+Figure~\ref{fig:SL_Te_SmearX0cm_momDT1ns_rndVtx_3p0m} compares the spherical harmonics for the signal and background events within the fiducial volume. Perfect vertex reconstruction is used in order to isolate the effect due to chromatic dispersion.   {\bf Don't understand this fragment: (to be compared with central events shown in Fig.~\ref{fig:SL_Te_33p5ns_center}).} Next generation LS detectors may be able to recover theses losses due to chromatic dispersion by choosing liquid scintillators with a more narrow emission spectrum (e.g. see Ref~\cite{LS_narrow_emission}).
 
 \begin{figure*}[h]
   \centering
@@ -132,23 +128,20 @@ emission spectrum (e.g. see Ref~\cite{LS_narrow_emission}).
 
 Imprecise knowledge of the vertex position due to finite resolution is
 the second factor affecting performance of the spherical harmonics
-analysis. The vertex resolution not only reduces Cherenkov/scintillation light separation but it also affects uniformity of the scintillation light distribution in the early PE sample.
+analysis. The vertex resolution not only reduces Cherenkov/scintillation light separation but it also affects the uniformity of the scintillation light distribution in the early PE sample.
 
-Small deviations in vertex reconstruction cause large effect
-on $S_0$ and $S_1$ for single electron event topology.
-For the verticies shifted along the direction of the electron track the relative time cut $\Delta t$
-makes uniform scintillation light distribution less uniform. The
+Small deviations in vertex reconstruction cause a large effect
+on the $S_0$ and $S_1$ distributions for the single electron event topology.
+For the vertices shifted along the direction of the electron track the relative time cut $\Delta t$
+reduces the uniformity of the scintillation light distribution. The
 $\Delta t$ cut selects more forward emitted photons in the case when
 the reconstructed vertex is shifted to the direction opposite to the
-electron momentum (enhancing forward region populated by Cherenkov
-photons - more asymmetric photon distribution causing higher values of
-$S_1$). It selects more backward emitted photons in the case when the
-reconstructed vertex is shifted in the direction along the electron
-momentum (counter balancing forward region populated by Cherenkov
-photons - more symmetric photon distribution causing smaller values of
-$S_1$).
+electron momentum. This enhances the forward region populated by Cherenkov
+photons and causes a more asymmetric photon distribution that moves $S_1$ to higher values.  The opposite occurs for the case where the reconstructed vertex is shifted in the direction along the electron
+momentum. Here, the time cut selects more backward emitted photons and counter balances the forward region populated by Cherenkov
+photons leading to a more symmetric photon distribution and smaller values of $S_1$.
 
-Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows performance of the spherical harmonics analysis for events with verticies smeared with 3~cm resolution and uniformly distributed within the fiducial volume. Since the goal of this paper is to introduce spherical harmonic analysis we do not perform full vertex reconstruction and only apply smearing to the simulated vertex position using Gaussian distribution with sigma of 3~cm on $x$, $y$, and $z$ coordinates. 
+Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows the performance of the spherical harmonics analysis for events after taking into account a 3~cm vertex reconstruction resolution, applied uniformly within the fiducial volume. Since the goal of this paper is to introduce spherical harmonic analysis we do not perform a full vertex reconstruction and only apply smearing to the simulated vertex position using a Gaussian distribution with sigma of 3~cm on $x$, $y$, and $z$ coordinates. 
 
 \begin{figure*}[h]
   \centering
@@ -175,15 +168,15 @@ Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows performance of the s
   manner. Working on it, but may not be simple so I don't want to
   include it in this paper.}
 
-Good vertex resolution is essential for spherical harmonics analysis. However, as one can see in Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}, even 3~cm vertex resolution reduces the discrimination power of the spherical harmonics analysis.
+Good vertex resolution is essential for spherical harmonics analysis. As one can see in Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}, even a 3~cm vertex resolution reduces the discrimination power of the spherical harmonics analysis.
 
 Such strong dependence on the vertex resolution can be
 addressed by choosing a different liquid scintillator mixture with a
-more delayed emission of the scintillation light with respect to the Cherenkov light. With larger delay in the scintillation light, larger uncertainty on the photon predicted time is allowed to maintain high fraction of Cherenkov light in the early PE sample selected with relative time cut $\Delta t$. In addition, if the fraction of scintillation light is small compared to Cherenkov light, the distortions in the uniformity of the scintillation light distribution due to mis-reconstructed vertex do not significantly affect $S_0$ and $S_1$ variables.
+more delayed emission of the scintillation light with respect to the Cherenkov light. With a larger delay in the scintillation light, a high fraction of Cherenkov light in the early PE sample selected with relative time cut $\Delta t$ can be maintained for a given vertex resolution. In addition, if the fraction of scintillation light is small compared to Cherenkov light, the distortions in the uniformity of the scintillation light distribution due to mis-reconstructed vertex do not significantly affect the $S_0$ and $S_1$ variables.
 
 Figure~\ref{fig:SL_Te_momDT1ns_sci0p5ns_rndVtx_3p0m} shows
 spherical harmonics analysis for the simulation where the
-scintillation component is delayed by additional 0.5ns compared to our default simulation. Events are simulated uniformly within the fiducial volume of the detector. Vertex resolution of 3~cm is assumed. Noticeable separation between $\vbb$ and $\B$ events is achieved.
+scintillation component is delayed by an additional 0.5ns compared to our default simulation. Events are simulated uniformly within the fiducial volume of the detector. Vertex resolution of 3~cm is assumed. Noticeable separation between $\vbb$ and $\B$ events is achieved.
 
 The discrimination power of the spherical harmonics analysis improves with vertex resolution and more delay in the emission of the scintillation light. Moreover the dependence on vertex reconstruction reduces with delay in the scintillation light. 
 
