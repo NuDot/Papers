@@ -1,3 +1,125 @@
+\section{Timing of photons coming from $^{10}$C background}
+
+Typical energy deposition by $^{10}$C events is shown in
+Fig.~\ref{fig:Edep_C10}. Assuming $\sim$15\% energy resolution, events in 
+the energy range of 2.1-2.9~MeV would contribute to the backgroung count in 
+the ROI.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.95\textwidth]{hEdep_C10.pdf}
+  \caption{Energy deposition in $^{10}$C events.}
+  \label{fig:Edep_C10}
+\end{figure}
+
+Since 98\% of $^{10}$C decays through an excited state of $^{10}$B(718), 
+which has a half-life time of $\sim$1~ns, the majority of $^{10}$C events have 
+a prompt positron accompanied by a delayed 0.718~MeV gamma. The positron energy
+has to be 0.79~MeV for an event to have energy deposition equal to Q-value of
+$\Te$ $\vbb$-decay.
+
+The positron from $\Cten$ on average travels 4~mm before it stops and anihilates
+producing two 0.511~MeV gammas. Those gammas then interact in the scintillator via 
+Compton scattering and photo-electric effect along while they loose their energy
+over $\sim X_0$ distance. Therefore light emmited in $\Cten$ events originates from
+several clusters that are spread over $\sim X_0$. Significant fraction of the 
+early PE would be due to primary positron cluster. Because the positron has smaller 
+kinetic energy than kinetic energy of electrons from $\vbb$-decay the amount of early 
+PE is smaller for $\Cten$ events. Delayed 0.718~MeV gamma in some of $\Cten$ events 
+also result in a delay in the photon arrival time with respect to $\vbb$-decay events.
+
+Figure~\ref{fig:Arrival_time_C10_overlaid} compares PE arrival times between 
+$\vbb$-decay and $\Cten$ events. Prompt $\Cten$ is a simplified simulation where 
+a positron is simultaneously produced with 0.718~MeV gamma. The difference between
+prompt $\Cten$ and $\vbb$-decay is caused by presence of a positron and this 
+difference is typical event by even basis. An additional difference due to delayed
+gamma shown in Fig.~\ref{fig:Arrival_time_C10_overlaid} is an average over 1000 events.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.95\textwidth]{hT_Te130vsC10_overlaid_v2.pdf}
+  \caption{Photo-electron (PE) arrival times after application of the
+    photo-detector transit time spread (TTS) of 100~ps for the
+    simulation of 1000 0{\nbb} decay events of $^{130}$Te (\emph{solid
+      lines}) and $^{10}$C (\emph{dotted lines}) events at the center
+    of the detector. Cherenkov and scintillation components are are normalized for 
+    for shape comparison.}
+\label{fig:Arrival_time_C10_overlaid}
+\end{figure}
+
+To distinguish between $\vbb$-decay and $\Cten$ we count total number of PEs in the 
+early light sample. For central events where we assume perfect knowledge of the 
+primary vertex location the early light sample is defined as t$<$33.5~ns. For a more 
+realistic scenario where the vertex is uniformly distributed within the fiducial volume
+the early light sample is defined as $\Delta t=t^{phot}_{measured} - 
+t^{phot}_{predicted}<$1~ns.
+
+
+Number of Cherenkov and scintillation PEs in early light samples for $\vbb$-decay and 
+$\Cten$ central events is shown in Fig.~\ref{fig:NPhotDist_C10}. Here a perfect 
+reconstrution of the primary vertex is assumed. Figure~\ref{fig:NPhot_compare_central} shows
+separation between $\vbb$-decay and $\Cten$ events by counting total number of PEs. 
+
+\begin{figure*}[ht]
+  \centering
+  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130.pdf}
+  \includegraphics[width=0.45\textwidth]{hMomNPhot_C10.pdf}
+  \caption{Early photons. Number of Cherenkov (\emph{dashed red line}), 
+    scintillation
+    (\emph{dotted blue line}), and total (\emph{solid black line}) PEs
+    for the simulation of 1000 $^{130}$Te 0{\nbb} decay (left panel)
+    and of 648 $^{10}$C (\emph{right panel}) events (1000 $^{10}$C events was 
+    generated, but selected only those that has total energy deposition in the 
+    detector in the range between 2.1 and 2.9~MeV).}
+\label{fig:NPhotDist_C10}
+\end{figure*}
+
+
+
+\begin{figure*}[ht]
+  \centering
+  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
+  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay 
+    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV. 
+    Events originated at the center of the sphere.
+    Perfect vertex reconstruction - true vertex position is used. Time cut of 
+    33.5~ns on the photon arrival time is applied.}
+\label{fig:NPhot_compare_central}
+\end{figure*}
+
+
+Figure~\ref{fig:NPhot_compare_rndVtx_noSmear} compares total number of PEs for events uniformly 
+distributed within the fiducial volume. Perfect knowledge of the vertex is assumed.
+
+\begin{figure*}[ht]
+  \centering
+  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear0cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
+  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay
+    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV.
+    Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
+    Perfect vertex reconstruction - true vertex position is used.}
+\label{fig:NPhot_compare_rndVtx_noSmear}
+\end{figure*}
+
+
+Figure~\ref{fig:NPhot_compare_rndVtx_noSmear} compares total number of PEs for events uniformly
+distributed within the fiducial volume and reconstructed vertex smeared with 3~cm resolution.
+
+\begin{figure*}[ht]
+  \centering
+  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
+  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay
+    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV.
+    Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
+    Vetrex is smeared with 3~cm resolution.}
+\label{fig:NPhot_compare_rndVtx_Smear3cm}
+\end{figure*}
+
+
+
+
+
 \section{0{\nbb} decay vs $^{10}$C background}
 
 Other common backgrounds to 0{\nbb} decay search include radioactive
@@ -52,53 +174,6 @@ distribution. Figure~\ref{fig:Arrival_time_C10} compares the shape of the
 PE arrival time distribution between $^{130}$Te 0{\nbb} decays and
 $^{10}$C events. The time profile of the scintillation photons can be used
 to separate signal from $^{10}$C events.
-
-Samples of early photons are compared on Fig.~\ref{fig:NPhotDist_C10}
-
-\begin{figure*}[ht]
-  \centering
-  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130.pdf}
-  \includegraphics[width=0.45\textwidth]{hMomNPhot_C10.pdf}
-  \caption{Early photons. Number of Cherenkov (\emph{dashed red line}), 
-    scintillation
-    (\emph{dotted blue line}), and total (\emph{solid black line}) PEs
-    for the simulation of 1000 $^{130}$Te 0{\nbb} decay (left panel)
-    and of 648 $^{10}$C (\emph{right panel}) events (1000 $^{10}$C events was 
-    generated, but selected only those that has total energy deposition in the 
-    detector in the range between 2.1 and 2.9~MeV).}
-\label{fig:NPhotDist_C10}
-\end{figure*}
-
-\begin{figure*}[ht]
-  \centering
-  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
-  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay 
-    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV. 
-    Events originated at the center of the sphere.
-    Perfect vertex reconstruction - true vertex position is used. Time cut of 
-    33.5~ns on the photon arrival time is applied.}
-\label{fig:NPhot_compare_central}
-\end{figure*}
-
-\begin{figure*}[ht]
-  \centering
-  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear0cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay
-    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV.
-    Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
-    Perfect vertex reconstruction - true vertex position is used.}
-\label{fig:NPhot_compare_rndVtx_noSmear}
-\end{figure*}
-
-\begin{figure*}[ht]
-  \centering
-  \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay
-    and $^{10}$C events with energy deposition in the range between 2.1 and 2.9~MeV.
-    Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
-    Vetrex is smeared with 3~cm resolution.}
-\label{fig:NPhot_compare_rndVtx_Smear3cm}
-\end{figure*}
 
 
 
