@@ -4,12 +4,17 @@ Typical energy deposition by $^{10}$C events is shown in
 Fig.~\ref{fig:Edep_C10}. Vertical lines indicate Q-value of $\Te$ and 
 $\pm$10\% region around Q-value. In order to include detector energy resolution 
 effects we consider $\Cten$ events in this region, which is 2.276~MeV - 2.782~MeV.
+\footnote{Everywhere below we refer to this energy range for $\Cten$ events unless 
+stated otherwise}
 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.95\textwidth]{hEdep_C10.pdf}
-  \caption{Energy deposition in $^{10}$C events.}
+  \caption{$^{10}$C energy deposition in the detector. Simulation of 10000 events
+  produced at the center of the detector. Solid red line at 2.529~MeV indicates $\Te$ 
+  Q-value. Dashed red lines at 2.276~MeV and 2.782~MeV show $\pm$10\% region around 
+  Q-value.}
   \label{fig:Edep_C10}
 \end{figure}
 
@@ -48,30 +53,39 @@ gamma shown in Fig.~\ref{fig:Arrival_time_C10_overlaid} is an average over 1000 
 \label{fig:Arrival_time_C10_overlaid}
 \end{figure}
 
-To distinguish between $\vbb$-decay and $\Cten$ we count total number of PEs in the 
-early light sample. For central events where we assume perfect knowledge of the 
-primary vertex location the early light sample is defined as t$<$33.5~ns. For a more 
-realistic scenario where the vertex is uniformly distributed within the fiducial volume
-the early light sample is defined as $\Delta t=t^{phot}_{measured} - 
-t^{phot}_{predicted}<$1~ns.
+As can be seen from Fig.~\ref{fig:Arrival_time_C10_overlaid} there is a noticable difference
+in the shape of PEs arrival time distribution between $\vbb$-decay and $\Cten$ events. A fit
+to a template shapes can be used to discriminate between signal and background. In this study,
+to distinguish between $\vbb$-decay and $\Cten$ events we count total number of PEs in the
+early light sample. 
+
+Two definitions of the early light sample are used. First, for central events, where we assume 
+perfect knowledge of the primary vertex location, the early light sample is defined as PEs 
+with arrival time t$<$33.5~ns. Second, for a more realistic scenario, where the vertex is uniformly 
+distributed within the fiducial volume and the uncertainty on the vertex position reconstruction
+is taken into account, the early light sample is defined as PEs with $\Delta T=T^{PE}_{measured} - 
+T^{PE}_{predicted}<$1~ns, where $T^{PE}_{measured}$ is measured arrival time and $T^{PE}_{predicted}$
+is predicted arrival time based on the primary vertex location.
 
 
-Number of Cherenkov and scintillation PEs in early light samples for $\vbb$-decay and 
-$\Cten$ central events is shown in Fig.~\ref{fig:NPhotDist_C10}. Here a perfect 
-reconstrution of the primary vertex is assumed. Figure~\ref{fig:NPhot_compare_central} shows
-separation between $\vbb$-decay and $\Cten$ events by counting total number of PEs. 
+Numbers of Cherenkov and scintillation PEs in early light samples for $\vbb$-decay and 
+$\Cten$ central events are shown in Fig.~\ref{fig:NPhotDist_C10}. Perfect reconstrution of the 
+primary vertex is assumed and a time cut of 33.5~ns is used to define early light sample. 
+Distributions of total number of PEs in the early light sample for $\vbb$-decay and $\Cten$ events
+normalized to the same number of simulated events are overlaid in Fig.~\ref{fig:NPhot_compare_central}.
+We conclude that counting PEs that arrive early provides effective separation between signal and
+background.
+
 
 \begin{figure*}[ht]
   \centering
   \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130.pdf}
   \includegraphics[width=0.45\textwidth]{hMomNPhot_C10.pdf}
-  \caption{Early photons. Number of Cherenkov (\emph{dashed red line}), 
-    scintillation
-    (\emph{dotted blue line}), and total (\emph{solid black line}) PEs
-    for the simulation of 1000 $^{130}$Te 0{\nbb} decay (left panel)
-    and of 648 $^{10}$C (\emph{right panel}) events (1000 $^{10}$C events was 
-    generated, but selected only those that has total energy deposition in the 
-    detector in the 10\% energy range around Q-value.}
+  \caption{Number of PEs after 33.5~ns time cut applied to events simulated at the center
+    of the detector. Cherenkov (\emph{dashed red line}), 
+    scintillation (\emph{dotted blue line}), and total (\emph{solid black line}) PEs are
+    compared separately for the simulation of 1000 $^{130}$Te 0{\nbb} decay (left panel)
+    and of 4152 $^{10}$C (\emph{right panel}) events.} 
 \label{fig:NPhotDist_C10}
 \end{figure*}
 
@@ -80,17 +94,22 @@ separation between $\vbb$-decay and $\Cten$ events by counting total number of P
 \begin{figure*}[ht]
   \centering
   \includegraphics[width=0.95\textwidth]{hMomNPhot_Te130vsC10_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
-  \caption{Comparison of total number of early photons between $^{130}$Te 0{\nbb} decay 
-    and $^{10}$C events with energy deposition in the 10\% energy range around Q-value. 
-    Events originated at the center of the sphere.
-    Perfect vertex reconstruction - true vertex position is used. Time cut of 
-    33.5~ns on the photon arrival time is applied.}
+  \caption{Total number of PEs in the early light sample. Comparison between $^{130}$Te 0{\nbb} decay 
+    (solid red line) and $^{10}$C events (dashed greem line). Events are simulated at the center of the 
+    detector. Perfect vertex reconstruction - true vertex position is used. Time cut of 
+    33.5~ns on the photon arrival time is applied. Histograms are normalized to 1000 events.}
 \label{fig:NPhot_compare_central}
 \end{figure*}
 
+Now we consider events with the primary vertex uniformly distributed within the fiducial volume of
+R$<$3~m. In this case, the early light sample is defined as PEs with $\Delta T=T^{PE}_{measured} -
+T^{PE}_{predicted}<$1~ns. Distributions of $\Delta T=T^{PE}_{measured} - T^{PE}_{predicted}$ for 
+different assumptions on vertex resolution and corresponding total number of PEs in the early light
+sample are shown in Figs.~\ref{fig:NPhot_compare_rndVtx_noSmear} - \ref{fig:NPhot_compare_rndVtx_Smear50cm}.
 
-Figure~\ref{fig:NPhot_compare_rndVtx_noSmear} compares total number of PEs for events uniformly 
-distributed within the fiducial volume. Perfect knowledge of the vertex is assumed.
+Figure~\ref{fig:NPhot_compare_rndVtx_noSmear} compares total number of PEs in the early light sample for 
+events uniformly distributed within the fiducial volume and assuming perfect reconstruction of the primary 
+vertex.
 
 \begin{figure*}[ht]
   \centering
@@ -101,15 +120,17 @@ distributed within the fiducial volume. Perfect knowledge of the vertex is assum
         $\vbb$-decay (black solid line) and $\Cten$ events (magenta dashed line) are compared. 
 	Vertical line at 1~ns indicates cut for early light selection. 
         (Right) Total number of PEs in the early light sample. 
-        $^{10}$C events with energy deposition in the 10\% energy range around Q-value are
+        $^{10}$C events with energy deposition in the $\pm$10\% energy range around Q-value are
 	selected. Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
         {\bf Perfect vertex reconstruction - true vertex position is used.}}
 \label{fig:NPhot_compare_rndVtx_noSmear}
 \end{figure*}
 
 
-Figure~\ref{fig:NPhot_compare_rndVtx_Smear3cm} compares total number of PEs for events uniformly
-distributed within the fiducial volume and reconstructed vertex smeared with 3~cm resolution.
+Figure~\ref{fig:NPhot_compare_rndVtx_Smear3cm} compares total number of PEs in the early light sample for 
+events uniformly distributed within the fiducial volume and assuming $\sigma$=3~cm resolution on the primary 
+vertex reconstruction. The effect of primary vertex reconstruction resolution is implemented as smearing of 
+the actual simulated vertex position, $R_{vtx}$, with the gaussian distribution
 
 \begin{figure*}[ht]
   \centering
@@ -120,7 +141,7 @@ distributed within the fiducial volume and reconstructed vertex smeared with 3~c
         $\vbb$-decay (black solid line) and $\Cten$ events (magenta dashed line) are compared.
         Vertical line at 1~ns indicates cut for early light selection.
         (Right) Total number of PEs in the early light sample.
-        $^{10}$C events with energy deposition in the 10\% energy range around Q-value are
+        $^{10}$C events with energy deposition in the $\pm$10\% energy range around Q-value are
         selected. Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
         {\bf Vetrex is smeared with 3~cm resolution.}}
 \label{fig:NPhot_compare_rndVtx_Smear3cm}
@@ -139,7 +160,7 @@ distributed within the fiducial volume and reconstructed vertex smeared with 10~
         $\vbb$-decay (black solid line) and $\Cten$ events (magenta dashed line) are compared.
         Vertical line at 1~ns indicates cut for early light selection.
         (Right) Total number of PEs in the early light sample.
-        $^{10}$C events with energy deposition in the 10\% energy range around Q-value are
+        $^{10}$C events with energy deposition in the $\pm$10\% energy range around Q-value are
         selected. Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
         {\bf Vetrex is smeared with 10~cm resolution.}}
 \label{fig:NPhot_compare_rndVtx_Smear10cm}
@@ -159,7 +180,7 @@ distributed within the fiducial volume and reconstructed vertex smeared with 30~
         $\vbb$-decay (black solid line) and $\Cten$ events (magenta dashed line) are compared.
         Vertical line at 1~ns indicates cut for early light selection.
         (Right) Total number of PEs in the early light sample.
-        $^{10}$C events with energy deposition in the 10\% energy range around Q-value. are
+        $^{10}$C events with energy deposition in the $\pm$10\% energy range around Q-value. are
         selected. Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
         {\bf Vetrex is smeared with 30~cm resolution.}}
 \label{fig:NPhot_compare_rndVtx_Smear30cm}
@@ -178,7 +199,7 @@ distributed within the fiducial volume and reconstructed vertex smeared with 50~
         $\vbb$-decay (black solid line) and $\Cten$ events (magenta dashed line) are compared.
         Vertical line at 1~ns indicates cut for early light selection.
         (Right) Total number of PEs in the early light sample.
-        $^{10}$C events with energy deposition in the 10\% energy range around Q-value are
+        $^{10}$C events with energy deposition in the $\pm$10\% energy range around Q-value are
         selected. Verticies are uniformly distributed within the fiducial volume, $R<3$~m.
         {\bf Vetrex is smeared with 50~cm resolution.}}
 \label{fig:NPhot_compare_rndVtx_Smear50cm}
