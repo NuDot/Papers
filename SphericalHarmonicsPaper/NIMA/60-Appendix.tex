@@ -63,9 +63,12 @@ Two definitions of the early light sample are used. First, for central events, w
 perfect knowledge of the primary vertex location, the early light sample is defined as PEs 
 with arrival time t$<$33.5~ns. Second, for a more realistic scenario, where the vertex is uniformly 
 distributed within the fiducial volume and the uncertainty on the vertex position reconstruction
-is taken into account, the early light sample is defined as PEs with $\Delta T=T^{PE}_{measured} - 
-T^{PE}_{predicted}<$1~ns, where $T^{PE}_{measured}$ is measured arrival time and $T^{PE}_{predicted}$
-is predicted arrival time based on the primary vertex location.
+is taken into account, the early light sample is defined as PEs with $\Delta T=T_{measured} - 
+T_{predicted}<$1~ns, where $T_{measured}$ is measured arrival time and $T_{predicted}$
+is predicted arrival time based on the primary vertex location: 
+$T^{predicted} = |r_{hit} - r_{vtx}|/v_{phot}$, where $v_phot = c/1.53$ is avearge photon velocity
+in the scintillator, $r_{hit}$ is the position of the PE on the photo-detector, and $r_{vtx}$ is the
+reconstructed position of the primary vertex.
 
 
 Numbers of Cherenkov and scintillation PEs in early light samples for $\vbb$-decay and 
@@ -102,8 +105,8 @@ background.
 \end{figure*}
 
 Now we consider events with the primary vertex uniformly distributed within the fiducial volume of
-R$<$3~m. In this case, the early light sample is defined as PEs with $\Delta T=T^{PE}_{measured} -
-T^{PE}_{predicted}<$1~ns. Distributions of $\Delta T=T^{PE}_{measured} - T^{PE}_{predicted}$ for 
+R$<$3~m. In this case, the early light sample is defined as PEs with $\Delta T=T_{measured} -
+T_{predicted}<$1~ns. Distributions of $\Delta T=T_{measured} - T_{predicted}$ for 
 different assumptions on vertex resolution and corresponding total number of PEs in the early light
 sample are shown in Figs.~\ref{fig:NPhot_compare_rndVtx_noSmear} - \ref{fig:NPhot_compare_rndVtx_Smear50cm}.
 
@@ -129,8 +132,10 @@ vertex.
 
 Figure~\ref{fig:NPhot_compare_rndVtx_Smear3cm} compares total number of PEs in the early light sample for 
 events uniformly distributed within the fiducial volume and assuming $\sigma$=3~cm resolution on the primary 
-vertex reconstruction. The effect of primary vertex reconstruction resolution is implemented as smearing of 
-the actual simulated vertex position, $R_{vtx}$, with the gaussian distribution
+vertex reconstruction. The effect of primary vertex reconstruction resolution is implemented as a smearing of 
+the actual simulated vertex position, $R_{vtx}$, with the gaussian distribution, $G(R_{vtx},\sigma)$ 
+which has sigma of $\sigma$ and mean of $R_{vtx}$. The resulting vertex position used in the calculation of the
+predicted time $T_{predicted}$ is defined as $r_{vtx}$=$R_{vtx} + G(R_{vtx},\sigma)$.
 
 \begin{figure*}[ht]
   \centering
