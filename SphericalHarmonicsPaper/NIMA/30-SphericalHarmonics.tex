@@ -28,13 +28,37 @@ In order to illustrate differences between different event topologies, we introd
   \label{fig:Display_top_5MeV}
 \end{figure*}
 
+
+\begin{figure*}[h]
+  \centering
+  \begin{tabular}{c c c}
+  \includegraphics[width=0.3\textwidth]{hDisplay_topology180_5MeV.pdf} &
+  \includegraphics[width=0.3\textwidth]{hDisplay_topology90_5MeV.pdf} &
+  \includegraphics[width=0.3\textwidth]{hDisplay_1el_10MeV.pdf} \\
+  \end{tabular}
+  \includegraphics[width=0.9\textwidth]{hMultipleMoment_CHELight_VtxSmear0cm_VtxShiftX0cm_999p9ns_5p0MeV_center_NoMultScat.pdf}
+  \caption{CCherenkov photons distributions on the detector sphere for
+    the three representative event topologies: two back-to-back
+    electrons (\emph{left}), two electrons at 90$^{\circ}$ angle
+    (\emph{middle}), and a single electron (\emph{center}).  All
+    electrons are 5~MeV and originate at the center of the
+    detector. 100 events overlayed for better visibility of the
+    Cherenkov rings. 100\% QE is assumed. \JOcom{These can not be
+      included as PDFs, but my conversion shrunk the size.}}
+  \label{fig:Event_Topology}
+\end{figure*}
+
 In practice, Cherenkov rings from low energy electrons are not clearly visible. Examples of such Cherenkov clusters, produced by events with a total kinetic energy of 2.539~MeV (the Q-value of \Te), are shown in Fig.~\ref{fig:Display_top_2p5MeV}. One can try to guess the event topology by comparing different segments of the detector sphere.
 
 \begin{figure*}[h]
   \centering
+  \begin{tabular}{c c c}
   \includegraphics[width=0.3\textwidth]{hDisplay_topology180_2p529MeVTot}
   \includegraphics[width=0.3\textwidth]{hDisplay_topology90_2p529MeVTot}
   \includegraphics[width=0.3\textwidth]{hDisplay_1el_2p529MeV}
+  \end{tabular}
+  \includegraphics[width=0.9\textwidth]{hMultipleMoment_cheLight_VtxSmear0cm_VtxShiftX0cm_999p9ns_center.pdf}
+
   \caption{Cherenkov photons distributions on the detector sphere for
     the three representative event topologies: two back-to-back 1.26~MeV
     electrons (\emph{left}), two 1.26~MeV electrons at 90$^{\circ}$
@@ -52,6 +76,8 @@ More realistic examples of \Te~ 0\nbb~and \B events simulated at the center of t
   \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt124_e1257_e1270_cos-0908}
   \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt131_e1264_e1263_cos-0029}
   \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt352_e1186_e1340_cos0888}
+  \includegraphics[width=0.45\textwidth]{hDisplay_1el_2p529MeV_33p5ns}
+  \includegraphics[width=0.9\textwidth]{hMultipleMomentSignal_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf} 
   \caption{Examples of PEs position on the detector sphere after time
     cut of 33.5ns. PEs from Cherenkov (\emph{red}) and scintillation
     light (\emph{blue}) are compared. \emph{Top left:} $^{130}$Te
