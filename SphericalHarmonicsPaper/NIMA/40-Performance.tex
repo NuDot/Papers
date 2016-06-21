@@ -1,69 +1,74 @@
-\section{Performance and Experimental Challenges}
-\label{sec:performance_and_challenges}
+\section{Performance of the Spherical Harmonics Analysis in Separating 0\nbb-decay from \B~Background.}
+\label{sec:performance}
 
-\subsection{Performance of the spherical harmonics analysis on 0{\nbb} decay and $^{8}$B events.}
+In this section we discuss factors that affect performance of the spherical harmonics technique in separating
+0\nbb~signal from \B~background events. We found that most separation comes from the first two multiple moments,
+$l=0$ and $l=1$. However, according to Eq.~\ref{eq6}, higher multiple moments are needed for a better normalization of the 
+power spectrum $S_l$. In the following we choose to calculate power spectrum $s_l$ up to multiple moment of l=3 and
+use only normalized variable $S_0$ and $S_1$, where the normalization is given by
 
-Comparison of $S_0$ and $S_1$ distributions between 0{\nbb} decay and
-$^{8}$B events is shown in Fig.~\ref{fig:S_vs_energy}. There is a
-noticeable separation between the signal and background. We also note
-that in the energy range of interest, the $S_l$'s do not strongly
-depend on the energy deposited in the detector, which makes them
-reliable discriminators at the end point of the 0{\nbb} decay energy
-spectrum. This makes the information about the event topology complimentary to
-the energy measurements.
+\begin{eqnarray}
+\label{eq7}
+S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_l}
+\end{eqnarray}
+
+As discussed below, a linear combination of $S_0$ and $S_1$ can be used to construct a single variable, $S_{01}$, that provides 
+separation between signal and background in 1D space. We show distributions of this variable $S_{01}$ to demonstrate qualitatively 
+the separation between 0\nbb~and \B~events depending on a few key assumptions about the detector characteristics.
+
+Since the goal of this paper is to describe the technique of spherical harmonics analysis for separating
+different event topologies relevant for 0\nbb-decay searches in a generic liquid scintillator detector, we intentionally refrain from any 
+quantitative estimates on the improvements in sensitivity to 0\nbb~decay. The actual improvements in sensitivity due to spherical 
+harmonics analysis would depend on various details of a given experimental setup. Therefore, we believe that detailed qunatitative 
+sensitivity studies are more apporpiate in the context of a particular 0\nbb~decay experiment which is beyond the scope of this paper.
+
+\subsection{Central events with perfect vertex reconstruction}
+
+We start evaluating the performance of the sphercical harmonics analysis from looking into events that originate at the center
+of the detector and assuming perfect reconstruction of the event vertex position. For such events, a time cut of 33.5~ns on PEs 
+arrival time can be applied to obtain early PEs sample which contain high fraction of Cherenkov PE. The default QE and 100\% 
+photo-coverage is used in the simulation.
+
+Comparison of $S_0$ and $S_1$ distributions for 0\nbb-decay signal and \B~background events is shown in Fig.~\ref{fig:S_vs_energy}.
+Both variables provide a noticeable separation between signal and background. We also note that in the energy range of interest, 
+the $S_l$'s do not strongly depend on the energy deposited in the detector, which makes information contained in the normalized power 
+spectrum complimentary to the energy measurements. Therefore, spherical harmonics analysis can be used as an additional handle for
+background suppresion at the end point of the 0\nbb-decay energy spectrum.
 
 \begin{figure*}[h]
 \centering
 \includegraphics[width=0.49\textwidth]{hS0.pdf}
 \includegraphics[width=0.49\textwidth]{hS1.pdf}
-\caption{$S_0$ (\emph{left}) and $S_1$ (\emph{right}) distributions
-  for events with two different event topologies and total kinetic
-  energy. $^{130}$Te, $^{82}$Se 0{\nbb} decay, 2.529 MeV and 2.995 MeV
-  events are compared. The simulation is done for events with the
-  vertex in the center of the detector. $^{8}$B events are implemented
-  as 2.529~MeV or 2.995~MeV electrons with initial direction along
-  $x$-axis. Perfect vertex reconstruction - true vertex position is
-  used. Time cut of 33.5~ns on the photon arrival time is applied.}
+\caption{$S_0$ (\emph{left}) and $S_1$ (\emph{right}) distributions for 1000 simulated 0\nbb-decay signal and \B~background events.
+  Two different isotopes are compared, $^{130}$Te and $^{82}$Se. Corresponding kinetic energies of single electrons from \B~events are
+  2.53 MeV and 3.00 MeV. Central events assuming perfect reconstruction of vertex position. Time cut of 33.5~ns on the PE arrival time is
+  applied. The default QE and 100\% photo-coverage is used in the simulation. $^{8}$B events are implemented as monochromatic electrons
+  with the initial direction along $x$-axis.}
 \label{fig:S_vs_energy}
 \end{figure*}
 
-Figure~\ref{fig:SL_Te_33p5ns_center} shows separation between
-$^{130}$Te signal and $^{8}$B background events simulated at the
-center of the detector. True values of the vertex position and time are
-used. Also, a time cut of 33.5~ns on the photon arrival time is applied to
-separate Cherenkov and scintillation light. Most of the discrimination
-between signal and background comes from $S_0$ and $S_1$. In the
-following, $S_2$ and $S_3$ are not used to separate $^{130}$Te and
-$^{8}$B events (though $S_2$ and $S_3$ are helpful for separation of
-  $^{130}$Te signal from $^{10}$C background. See Appendix.). The
-scatter plot of $S_2$ vs $S_3$ is shown here for completeness.
+Left panel in Fig.~\ref{fig:SL_Te_33p5ns_center} compares scatter plots of the first two components of the power spectrum, 
+$S_0$ and $S_1$, for signal and background. In order to optimize separation between $^{130}$Te and $^{8}$B
+events, a linear combination of $S_0$ and $S_1$, $S_{01}$, is constructed as follows. 
 
-In order to optimize the separation between $^{130}$Te signal and $^{8}$B
-background, a linear combination of $S_0$ and $S_1$, $S_{01}$, is
-used. A linear fit, $S_0$ = $A \times S_1 + B$, of the 2-dimensional $S_0$
-vs $S_1$ scatter plot is performed as shown in
-Fig.~\ref{fig:SL_Te_33p5ns_center}.  This 2-dimensional
-distribution then is projected onto the fitted line. {\bf A little bit of
-  math here to quantitatively describe $S_{01}$ via $S_0$ and $S_1$:}
-A new coordinate frame is obtained by rotating the original
-$S_0$-$S_1$ frame with the angle $\theta$ obtained from the fit:
-$tan(\theta)$=$A$. A transformation, $S_{01} = S_1 \cdot cos(\theta) +
-S_0 \cdot sin(\theta)$, defines the $S_{01}$ variable. The bottom plot in Fig.~\ref{fig:SL_Te_33p5ns_center} 
-shows the performance of $S_{01}$ to separate $^{130}$Te signal and $^{8}$B
-background events. A fit to this distribution can be done to optimize the
-discrimination power for a particular experimental setting.
+First, a linear fit, $S_0$ = $A \cdot S_1 + B$, of all points on the scatter plot is performed as shown by the dashed 
+line in the left panel of Fig.~\ref{fig:SL_Te_33p5ns_center}. Then a 1-D variable $S_{01}$ is defined as
+$S_{01} = S_1 \cdot cos(\theta) + S_0 \cdot sin(\theta)$, where $tan(\theta)$=$A$. Right panel in Fig.~\ref{fig:SL_Te_33p5ns_center}
+compares distributions of $S_{01}$ for 0\nbb-decay signal and \B~background. These 1-D histogrmas for $S_{01}$ represent
+projection of points on the scater plot onto the fitted line. We use distribution of the variable $S_{01}$ as a figure of merit
+for signal/background separation.
 
-We refrain from quantitative estimates on the improvements in sensitivity
-to 0{\nbb} decay searches using this method of spherical harmonics as a
-reliable estimate would require a dedicated analysis taking into
-account all the details of a particular experiment.
+\textbf{Text below hasn't been revised yet.}
 
 \begin{figure*}[h]
   \centering
   \includegraphics[width=0.49\textwidth]{hS0vsS1_Te130_1el_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
 %  \includegraphics[width=0.49\textwidth]{hS2vsS3_Te130_1el_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
   \includegraphics[width=0.49\textwidth]{hS01_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf}
-  \caption{Spherical harmonics comparison between $^{130}$Te 0{\nbb}
+  \caption{\emph{Left:} Scatter plot of $S_0$ versus $S_1$ for a simulation of 1000 signal and background events.
+    Central events assuming perfect reconstruction of vertex position. Time cut of 33.5~ns on the PE arrival time is
+    applied.
+Spherical harmonics comparison between $^{130}$Te 0{\nbb}
     decay signal ($Q=2.529$~MeV) (\emph{red}) and $^{8}$B solar
     neutrinos background (\emph{blue}) for 1000 simulated events
     originated at the center of the sphere. $^{8}$B events are
