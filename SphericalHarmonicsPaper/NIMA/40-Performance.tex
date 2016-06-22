@@ -92,9 +92,12 @@ reach the side of the detector that is closer to the vertex much earlier than Ch
 detector. Therefore, the time cut has to take into account the total distance traveled by each individual photon.
 
 We found that a differential time cut defined as $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns selects photons with a 
-sufficient fraction being Cherenkov photons. However two factors reduce the Cherenkov/scintillation light separation when this relative 
-time cut is applied.
+sufficient fraction being Cherenkov photons. However two factors significantly reduce the Cherenkov/scintillation light 
+separation, and therefore, reduce discrimination power of the spherical harmonics analysis, when this relative time cut is applied. 
+These factors are chromatic dispersion and vertex resolution. In the following we describe both effects and propose a solution to 
+mitigate their influence on the spherical harmonics analysis.
 
+\subsubsection{Chromatic dispersion}
 One reduction in the light separation comes from chromatic dispersion. The predicted time, $ t^{phot}_{predicted}=l/v^{phot}$, depends 
 on the total distance, $l$, traveled by the photon and the velocity of the photon, $v^{phot}$.  Since the wavelength information is 
 not available for a given PE, we must use an average index of refraction of n=1.53 and define the photon velocity as $v^{phot} = c/n$. 
@@ -129,56 +132,67 @@ Cherenkov PEs in the early PE sample as in the case of central events when an ab
 \end{figure*}
 
 
-\textbf{Text below hasn't been revised yet.}
-Imprecise knowledge of the vertex position due to finite resolution is the second factor affecting performance of the spherical 
-harmonics analysis. Uncertainty on the vertex position...
-
-The vertex resolution not only reduces Cherenkov/scintillation light separation but it also affects the uniformity 
-of the scintillation light distribution in the early PE sample.
-
-Small deviations in vertex reconstruction cause a large effect
-on the $S_0$ and $S_1$ distributions for the single electron event topology.
-For the vertices shifted along the direction of the electron track the relative time cut $\Delta t$
+\subsubsection{Vertex resolution} 
+Imprecise knowledge of the vertex position affects the spherical harmonics analysis in two ways. First, similarly to the effect of chromatic 
+dispersion the vertex uncertainty makes differential time cut less efficient in providing sufficient Cherenkov/scintillation light ratio
+in the early PE sample. Second, small deviations in vertex reconstruction cause a large effect on the $S_0$ and $S_1$ distributions for the 
+single electron event topology.
+For the vertices shifted along the direction of the electron track the differential time cut $\Delta t$
 reduces the uniformity of the scintillation light distribution. The
 $\Delta t$ cut selects more forward emitted photons in the case when
 the reconstructed vertex is shifted to the direction opposite to the
 electron momentum. This enhances the forward region populated by Cherenkov
-photons and causes a more asymmetric photon distribution that moves $S_1$ to higher values.  The opposite occurs for the case where the reconstructed vertex is shifted in the direction along the electron
+photons and causes a more asymmetric photon distribution that moves $S_1$ to higher values\footnote{In general, $S_1$ component of the 
+spherical harmonics power spectrum is higher for asymmetric distributions and lower for symmetric distributions (e.g., compare back-to-back
+and single electron topologies in Fig.~\ref{fig:ThreeTopologies_Display_5MeV}). Moreover, $S_1=$~0 for a distribution with perfect symmetry 
+with respect to the center of the sphere.}.  
+The opposite occurs for the case where the reconstructed vertex is shifted in the direction along the electron
 momentum. Here, the time cut selects more backward emitted photons and counter balances the forward region populated by Cherenkov
 photons leading to a more symmetric photon distribution and smaller values of $S_1$.
 
-Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows the performance of the spherical harmonics analysis for events after taking into account a 3~cm vertex reconstruction resolution, applied uniformly within the fiducial volume. Since the goal of this paper is to introduce spherical harmonic analysis we do not perform a full vertex reconstruction and only apply smearing to the simulated vertex position using a Gaussian distribution with sigma of 3~cm on $x$, $y$, and $z$ coordinates. 
+Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows the performance of the spherical harmonics analysis for events 
+in the fiducial volume, $R<$3~m, after taking into account a 3~cm vertex reconstruction resolution. Finite vertex resolution of 3~cm is
+introduced as smearing of the actual simulated vertex position using a Gaussian distribution with sigma of 3~cm along $x$, $y$, and $z$ coordinates.
 
 \begin{figure*}[h]
   \centering
   \includegraphics[width=0.49\textwidth]{hS0vsS1_Te130_1el_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
   \includegraphics[width=0.49\textwidth]{hS01_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-  \caption{Spherical harmonics comparison between $^{130}$Te 0{\nbb}
-    decay signal ($Q=2.529$~MeV) (\emph{red}) and $^{8}$B solar
-    neutrinos background (\emph{blue}) for 1000 simulated
-    events.Verticies are uniformly distributed within the fiducial
-    volume, R$<$3~m. $^8$Be events are implemented as 2.529~MeV
-    electrons with the initial momentum direction uniformly
-    distributed within 4$\pi$ solid angle. Vetrex is smeared with 3~cm
-    resolution. \emph{Left:} $S_0$ versus $S_1$ scatter plot. Black
-    dotted line is a linear fit of these 2D histograms. Variable
-    $S_{01}$ is defined as a projection of 2D distribution onto this
-    linear fit. \emph{Right:} $S_{01}$}
+  \caption{\emph{Left:} Scatter plot of $S_0$ versus $S_1$ for a simulation of 1000 signal (\emph{red crosses}) and background
+    (\emph{blue triangles}) events. Event verticies are uniformly distributed within the fiducial volume, $R<3$~m.
+    Vetrex is smeared with 3~cm resolution. Differential cut of
+    $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns is applied to select early PE sample.
+    The default QE and 100\% photo-coverage is used in the simulation.
+    Black dashed line corresponds to a linear fit to define 1-D variable $S_{01}$ (see text for details).
+    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).}
 \label{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}
 \end{figure*}
 
+As can be seen in Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}, the vertex resolution significantly reduces the discrimination power 
+of the spherical harmonics analysis for our default detector model.
 
-{\bf Solution to this problem would be a better selection criteria of
-  early light. It has to preserve high admixture of the Cherenkov
-  photons, but needs to select scintillation photons in a more uniform
-  manner. Working on it, but may not be simple so I don't want to
-  include it in this paper.}
+%{\bf Solution to this problem would be a better selection criteria of
+%  early light. It has to preserve high admixture of the Cherenkov
+%  photons, but needs to select scintillation photons in a more uniform
+%  manner. Working on it, but may not be simple so I don't want to
+%  include it in this paper.}
 
-Good vertex resolution is essential for spherical harmonics analysis. As one can see in Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}, even a 3~cm vertex resolution reduces the discrimination power of the spherical harmonics analysis.
 
-Such strong dependence on the vertex resolution can be
-addressed by choosing a different liquid scintillator mixture with a
-more delayed emission of the scintillation light with respect to the Cherenkov light. With a larger delay in the scintillation light, a high fraction of Cherenkov light in the early PE sample selected with relative time cut $\Delta t$ can be maintained for a given vertex resolution. In addition, if the fraction of scintillation light is small compared to Cherenkov light, the distortions in the uniformity of the scintillation light distribution due to mis-reconstructed vertex do not significantly affect the $S_0$ and $S_1$ variables.
+\subsubsection{Requirements for the next generation liquid scintillator detectors}
+To take full advantage of topology reconstruction capabilities in the next generation liquid scintillator detectors optical properties of the 
+scintillator has to be tuned to allow for better Cherenkov/scintillation light separation.
+
+The effects due to chromatic dispersion can be addressed by using liquid scintillators with a more narrow emission spectrum. For example,
+such as described in Ref.~\cite{LS_narrow_emission}.
+
+Strong dependence on the vertex resolution can be addressed by choosing a liquid scintillator mixture with a more delayed emission 
+of scintillation light with respect to Cherenkov light. With a larger delay in scintillation light, a high fraction of Cherenkov light 
+in the early PE sample can be maintained even if photon track length is mis-reconstructed due to imprecise reconstruction of the vertex 
+position. In addition, if the fraction of scintillation light is small compared to Cherenkov light, the distortions in the uniformity of 
+the scintillation PE due to shifted reconstructed vertex position would not significantly affect spherical harmonics power spectrum.
+
+
+\textbf{Text below hasn't been revised yet. 5ns rise time will be implemented instead of unphysical 0.5~ns delay.}
 
 Figure~\ref{fig:SL_Te_momDT1ns_sci0p5ns_rndVtx_3p0m} shows
 spherical harmonics analysis for the simulation where the
@@ -205,5 +219,4 @@ The discrimination power of the spherical harmonics analysis improves with verte
 \label{fig:SL_Te_SmearX3cm_momDT1ns_sci0p5ns_rndVtx_3p0m}
 \end{figure*}
 
-Next generation LS detectors may be able to recover theses losses due to chromatic dispersion by choosing liquid scintillators with a more narrow emission spectrum (e.g. see Ref~\cite{LS_narrow_emission}). Etc...
 
