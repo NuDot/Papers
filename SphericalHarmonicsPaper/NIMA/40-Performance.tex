@@ -93,23 +93,23 @@ detector. Therefore, the time cut has to take into account the total distance tr
 
 We found that a differential time cut defined as $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns selects photons with a 
 sufficient fraction being Cherenkov photons. However, when this differential time cut is applied, two factors significantly reduce 
-the Cherenkov/scintillation light separation in the early light sample, and therefore, reduce discrimination power of the spherical 
+the Cherenkov/scintillation light separation in the early PE sample, and therefore, reduce discrimination power of the spherical 
 harmonics analysis. These factors are chromatic dispersion and vertex resolution. In the following we describe both effects and 
 propose solutions to mitigate their influence on the spherical harmonics analysis.
 
 \subsubsection{Chromatic dispersion}
 One reduction in the Cherenkov/scintillation light separation comes from chromatic dispersion. The predicted time, 
-$t^{phot}_{predicted}=l/v^{phot}$, depends on the total distance, $l$, traveled by the photon and the velocity of the photon, 
+$t^{phot}_{predicted}=l/v^{phot}$, depends on the distance, $l$, traveled by the photon and the velocity of the photon, 
 $v^{phot}$.  Since the wavelength information is not available for a given PE, we must use an average index of refraction, $n$, 
 and define the photon velocity as $v^{phot} = c/n$. This uncertainty on the photon velocity makes the differential time cut less 
 effective in separating Cherenkov light from scintillation light. 
 
 Poor Cherenkov/scintillation light separation reduces the effectiveness of the spherical harmonics analysis. For each event topology 
 spherical harmonics power spectrum is mostly determined by distinct distributions of Cherenkov photons. At the same time scintillation 
-photons represent background noise for event topology reconstruction.
+photons represent uniform background noise for event topology reconstruction.
 
 In general, selection of an early PE sample for any event within a fiducial volume of a reasonable size has to be done with a time
-cut that would affected by chromatic dispersion. We define fiducial volume as $R<3$~m, where $R$ is the distance between event vertex 
+cut that would be affected by chromatic dispersion. We define fiducial volume as $R<3$~m, where $R$ is the distance between event vertex 
 and the center of the detector. Figure~\ref{fig:SL_Te_SmearX0cm_momDT1ns_rndVtx_3p0m} demonstrates performance of the spherical 
 harmonics analysis for events within this fiducial volume. Perfect vertex reconstruction is still assumed for events shown in 
 Fig.~\ref{fig:SL_Te_SmearX0cm_momDT1ns_rndVtx_3p0m}. A differential time cut of 1~ns is used.
@@ -144,7 +144,7 @@ normalized power spectrum of spherical harmonics.
 
 Early PE sample of the single electron topology typically has a strong asymmetry due
 to preferential directionality of Cherenkov PEs that are selected together with uniformly distributed scintillation PEs. 
-Mis-reconstructed vertex introduce asymmetry in the selection of scintillation PE. Vertex shifts parallel to the direction of 
+A mis-reconstructed vertex introduces an artificial asymmetry in the selection of scintillation PE. Vertex shifts parallel to the direction of 
 the electron track have the largest effect compared to the shifts in the transverse direction. 
 
 If a vertex is shifted in the direction opposite to the track of the electron, the differential time cut selects more scintillation 
@@ -188,7 +188,7 @@ of the spherical harmonics analysis in our default detector model.
 %  include it in this paper.}
 
 
-\subsubsection{Requirements for the next generation liquid scintillator detectors}
+\subsection{Requirements for the next generation liquid scintillator detectors}
 To take full advantage of topology reconstruction capabilities in the next generation liquid scintillator detectors optical properties of the 
 scintillator has to be tuned to allow for better Cherenkov/scintillation light separation.
 
@@ -203,7 +203,7 @@ the scintillation PE due to shifted reconstructed vertex position would not sign
 
 While our default detector model assumes scintillation rise time of $\tau_r=$1~ns, scintillation rise time up to $\tau_r=$7~ns can 
 be achieved (see Ref.~\ref{Mingfang_slow_rise_time}). As a test we repeated spherical harmonics analysis on 0\nbb-decay and \B~events after
-increasing scintillation rise time parameter to $\tau_r=$5~ns in the detector model. All other parameters are kept the same.
+increasing scintillation rise time parameter to $\tau_r=$5~ns in our detector model. All other parameters are kept the same.
 Figure ~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m_SciRT5p0ns} shows result of that test. The events are uniformly distributed within 
 the fiducial volume and each vertex is smeared with 3~cm resolution. 
 
