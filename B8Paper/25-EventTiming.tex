@@ -49,11 +49,11 @@ topographical reconstruction.
 
 \begin{figure*}[ht]
   \centering
-  \includegraphics[width=0.45\textwidth]{hT_scintillation.pdf}
-  \includegraphics[width=0.45\textwidth]{hT_cherenkov.pdf}
+  \includegraphics[width=0.45\textwidth]{hT_Te130.pdf}
+  \includegraphics[width=0.45\textwidth]{hTche_Te130_B8.pdf}
   \caption{\emph{Left:} Photo-electron (PE) arrival times after
     application of the photo-detector transit time spread (TTS) of 100~ps for the default simulation 
-    of \Te~0\nbb-decay and \C~events produced at the center of the detector. 
+    of \Te~0\nbb-decay produced at the center of the detector. 
     Scintillation PE arrival time distribution is compared for \nbb-decay (dashed blue line) and
     \Cten~events (dotted green line). The corresponding distribution for \B~events is not shown
     because it is indistinguishable from the distribution for \nbb-decay. Cherenkov PE arrival
@@ -61,7 +61,7 @@ topographical reconstruction.
     The vertical line at 33.5~ns indicates the time cut for the selection of the early PE sample.
     The shape of scintillation PE arrival times for \B~events
     \emph{Right:} Comparison between Cherenkov PEs arrival time for \Te~0\nbb-decay (\emph{solid line}), 
-    \B~(\emph{dashed line}), and \C~events (\emph{dotted line}).}
+    \B~(\emph{dashed line}).}
 \label{fig:ArrivalTimeDist}
 \end{figure*}
 
@@ -79,13 +79,13 @@ PE sample for signal and background events.
 
 \begin{figure*}[ht]
   \centering
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_Te130.pdf}
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_1el_2p529MeV.pdf}
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_C10.pdf}
+  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130.pdf}
+  \includegraphics[width=0.45\textwidth]{hMomNPhot_1el_2p529MeV.pdf}
+%  \includegraphics[width=0.33\textwidth]{hMomNPhot_C10.pdf}
   \caption{Early PE sample composition: number of Cherenkov (\emph{dashed red line}), scintillation
     (\emph{dotted blue line}), and total (\emph{solid black line}) PEs per event
     for the simulation of 1000 $^{130}$Te 0\nbb-decay events (\emph{left panel}),
-    1000 $^8$B events (\emph{middle panel}), and 4152 \C~events (\emph{right panel}).}
+    1000 $^8$B events (\emph{middle panel}).}%, and 4152 \C~events (\emph{right panel}).}
 \label{fig:NPhotDist}
 \end{figure*}
 
@@ -105,59 +105,4 @@ are too short to affect the effective vertex of the scintillation light. The num
 (see Fig.~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist}) due to the increased electron kinetic energy but this alone is not 
 sufficient to distinguish \B~events from 0\nbb-decay. However, it may provide an extra handle on signal-background separation in 
 combination (e.g. by using multivariative techniques) with other event parameters.
-
-
-
-\subsection{\C~background}
-
-Background from \C~could be significant at a shallow detector depth.
-Decay scheme of \C~is shown in Fig.~\ref{fig:C10_scheme_and_edep}. We note that 98\% of $^{10}$C decays through an excited state of $^{10}$B(718),
-which has an unusually long half-life time of $\sim$1~ns. Therefore the majority of $^{10}$C events have a prompt positron accompanied by 
-a delayed 0.718~MeV gamma. Because of the exponential nature of the delay, there will be still many \C~events where the delay in 
-0.718~MeV gamma production won't be detectable due to finite time resolution of the detector. However photo-detectors with TTS below 100~ps, 
-may allow for exploiting this delayed gamma for extra signal-background separation in some fraction of \C~events.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.49\columnwidth]{C10DecayScheme.pdf}
-  \includegraphics[width=0.49\textwidth]{hEdep_C10.pdf}
-  \caption{\emph{Left:} Decay scheme of \C~events. \emph{Right:} Energy deposition in \C~events. Vertical solid line indicates 2.53~MeV
-    which corresponds to Q-value of \Te~isotope. Vertical dashed lines indicate 2.28~MeV and 2.78~MeV corresponding to $\pm$10\% region 
-    around the Q-value of \Te~0\nbb-decay.}
-\label{fig:C10_scheme_and_edep}
-\end{figure}
-
-The energy of the positron in \C~events has to be 0.79~MeV for energy deposition to be equal to Q-value of \Te. Such positron on average 
-travels 4~mm before it stops and annihilates producing two 0.511~MeV gammas or before it forms a (ortho-)positronium which in turn annihilates 
-in two or three gammas. In a typical liquid scintillator there is about 50\% chance for a positron to form an ortho-positronium. 
-An ortho-positronium in a liquid scintillator has a life-time of $\sim$3~ns~\cite{Ortho-positronium}. This delay in ortho-positronium annihilation
-may significantly affect overall PE time distribution for \C~events. In some cases this alone allows for \C~background suppression, 
-with photo-detectors time resolution being the major limiting factor in the signal-background separation efficiency~\cite{KLZ-use-of-PSD}.
-
-Geant-4 simulation package, a standard tool for detector simulation, does not include simulation of ortho-positronium production and
-annihilation~\cite{Geant4-release-and-private-communication}. Therefore our default detector model simulate $\sim$50\% of \C~events which
-have ortho-positronium as an intermediate state. In the following we decided to leave such events with ortho-positronium out of discussion 
-and focus on properties of the rest of \C~events that are more challenging to suppress.
-
-The kinetic energy of the positron from \C~is smaller than total kinetic energy of the electrons from 0\nbb-decay. Therefore less 
-Cherenkov and scintillation PEs are produced at the primary vertex. One 0.718~MeV from $10$B excited state and two 0.511~MeV gammas
-from positron annihilation travel for about one radiation length while loosing their energy via Compton scattering and photo-electric effect.
-Most of scintillation PEs in \C~events is produced at spatially separated secondary verticies which leads to significant smearing in scintillation 
-PEs arrival time compared to 0\nbb-decay events where the scintillation is localized at the primary vertex (see Fig.\ref{fig:ArrivalTimeDist}). 
-We note that this smearing is characteristic of any background that includes a positron as it would always be accompanied by at least 
-two gammas.
-
-Small number of Cherenkov PE can also be produced by low energy electrons at gamma interaction points, but it is hard to separate them
-from scintillation PE due to uncertainties on the vertex position and time of each gamma interaction.
-
-
-
-%\subsection{0\nbb/\C~separation using PE timing}
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[width=0.45\textwidth]{hMomDT_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-%  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-%  \caption{}
-%\label{fig:0nbb-C10_timing_separation}
-%\end{figure}
 
