@@ -1,0 +1,9 @@
+*.toc
+*.out
+*.aux
+*.bbl
+*.log
+*.spl
+*.blg
+NuDot_SphericalHarmonics.pdf
+*~
