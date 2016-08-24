@@ -1,0 +1,64 @@
+\input{preamble_els}
+\begin{document}
+\input{common_commands}
+
+\graphicspath{{plots/}}
+
+%\usepackage{lineno}
+\linenumbers
+%\usepackage{setspace}
+%\doublespacing
+\setstretch{2.5}
+%\bibliography
+
+\title{Towards Separating Double-Beta Decay Events from Backgrounds in a Kiloton-Scale Directional Liquid Scintillator Detector}
+\input{authors}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\date{\today}
+
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\linenumbers\relax % Commence numbering lines
+
+\input{10-Introduction}
+
+\input{20-LiquidScintillatorDetector}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+\input{25-EventTiming}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{30-SphericalHarmonics}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{40-Performance}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{50-Conclusions}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\section*{Acknowledgements}
+\input{acknowledgements}
+
+\bibliography{bibliography}
+%\appendix
+% The following line is a hack for elsevier to get the appendix and
+% the table of contents to play well together.
+%\renewcommand*{\thesection}{\Alph{section}}
+%\input{60-Appendix}
+
+
+\end{document}
+
