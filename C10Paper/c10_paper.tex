@@ -11,7 +11,7 @@
 \setstretch{2.5}
 %\bibliography
 
-\title{Towards Separating Double-Beta Decay Events from Backgrounds in a Kiloton-Scale Directional Liquid Scintillator Detector}
+\title{Separating Double-Beta Decay Events from \C~background in a Kiloton-Scale Liquid Scintillator Detector}
 \input{authors}
 
 \begin{abstract}
@@ -33,11 +33,7 @@
 \input{20-LiquidScintillatorDetector}
 \clearpage %These are only needed to force correct placement of the
            %figures while there is no text
-\input{25-EventTiming}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
-
-\input{30-SphericalHarmonics}
+\input{30-EventTiming}
 \clearpage %These are only needed to force correct placement of the
            %figures while there is no text
 
@@ -53,11 +49,11 @@
 \input{acknowledgements}
 
 \bibliography{bibliography}
-%\appendix
+\appendix
 % The following line is a hack for elsevier to get the appendix and
 % the table of contents to play well together.
-%\renewcommand*{\thesection}{\Alph{section}}
-%\input{60-Appendix}
+\renewcommand*{\thesection}{\Alph{section}}
+\input{60-Appendix}
 
 
 \end{document}

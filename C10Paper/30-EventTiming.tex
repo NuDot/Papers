@@ -38,8 +38,8 @@ about 0\nbb-decay events also hold for 2\nbb-decay when total energy of the elec
 %Should we recalculate for 130Te.
 Examining the kinematics for one of the 0\nbb~electrons with equal energy split, a 1.26~MeV electron travels a total path length of 0.X~cm, 
 has a distance from the origin of 0.X~cm in 0.0X$\pm$0.00X~ns  and takes 0.0X$\pm$0.00X~ns to drop below Cherenkov threshold. 
-We note that due to scattering of the electron, the final direction of the electron before it stops does not correspond to the initial 
-direction; however the scattering angle is small while the majority of Cherenkov light is produced.
+%We note that due to scattering of the electron, the final direction of the electron before it stops does not correspond to the initial 
+%direction; however the scattering angle is small while the majority of Cherenkov light is produced.
 
 Figure~\ref{fig:ArrivalTimeDist} shows the output of the detector simulation for 1000 simulated \Te~ 0\nbb-decay 
 events. The left panel in Fig.~\ref{fig:ArrivalTimeDist} compares PE arrival time between Cherenkov and scintillation light  
@@ -66,49 +66,17 @@ topographical reconstruction.
 \end{figure*}
 
 
-Selection of PEs with relatively small arrival time allows to select a sample of PEs with high fraction of directional Cherenkov light.
-This allows for event topology reconstruction. In particular, signal-like events with exactly two electrons can be separated from events 
-with only one electron such as from \B~solar neutrino interactions.
+%Selection of PEs with relatively small arrival time allows to select a sample of PEs with high fraction of directional Cherenkov light.
+%This allows for event topology reconstruction. In particular, signal-like events with exactly two electrons can be separated from events 
+%with only one electron such as from \B~solar neutrino interactions.
 
-As shown in Fig.~\ref{fig:ArrivalTimeDist}, for events produced at the center of the detector, a time cut of 33.5~ns on the PE arrival 
-time selects a sample of early PEs that includes the majority of directional Cherenkov photons. Scintillation PEs also are 
-selected with this time cut. Figure~\ref{fig:NPhotDist} shows the total number of scintillation and Cherenkov PE per event in the early 
-PE sample for signal and background events.
-
-
-
-\begin{figure*}[ht]
-  \centering
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_Te130.pdf}
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_1el_2p529MeV.pdf}
-  \includegraphics[width=0.33\textwidth]{hMomNPhot_C10.pdf}
-  \caption{Early PE sample composition: number of Cherenkov (\emph{dashed red line}), scintillation
-    (\emph{dotted blue line}), and total (\emph{solid black line}) PEs per event
-    for the simulation of 1000 $^{130}$Te 0\nbb-decay events (\emph{left panel}),
-    1000 $^8$B events (\emph{middle panel}), and 4152 \C~events (\emph{right panel}).}
-\label{fig:NPhotDist}
-\end{figure*}
+%As shown in Fig.~\ref{fig:ArrivalTimeDist}, for events produced at the center of the detector, a time cut of 33.5~ns on the PE arrival 
+%time selects a sample of early PEs that includes the majority of directional Cherenkov photons. Scintillation PEs also are 
+%selected with this time cut. Figure~\ref{fig:NPhotDist} shows the total number of scintillation and Cherenkov PE per event in the early 
+%PE sample for signal and background events.
 
 
 
-\subsection{\B~background}
-
-For a detector similar to our model \B~background is significant due to large mass.
-
-Electrons from elastic scattering of \B~solar neutrinos have nearly flat energy spectrum around the 
-Q-value~\cite{SNOp-B8-bkg}. We simulate \B~background as a single monochromatic electron with energy of 2.53~MeV 
-(Q-value of \Te). A 2.53~MeV electron travels a total path length of 0.X~cm, has a distance from the origin of 0.X~cm in 
-0.0X$\pm$0.00X~ns  and takes 0.0X$\pm$0.00X~ns to drop below Cherenkov threshold.
-
-The scintillation PE timing distribution is unchanged compared to 0\nbb-decay since the electron's path lengths at these energies 
-are too short to affect the effective vertex of the scintillation light. The number of Cherenkov photons is increased 
-(see Fig.~\ref{fig:ArrivalTimeDist} and~\ref{fig:NPhotDist}) due to the increased electron kinetic energy but this alone is not 
-sufficient to distinguish \B~events from 0\nbb-decay. However, it may provide an extra handle on signal-background separation in 
-combination (e.g. by using multivariative techniques) with other event parameters.
-
-
-
-\subsection{\C~background}
 
 Background from \C~could be significant at a shallow detector depth.
 Decay scheme of \C~is shown in Fig.~\ref{fig:C10_scheme_and_edep}. We note that 98\% of $^{10}$C decays through an excited state of $^{10}$B(718),
@@ -152,12 +120,12 @@ from scintillation PE due to uncertainties on the vertex position and time of ea
 
 
 
-%\subsection{0\nbb/\C~separation using PE timing}
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[width=0.45\textwidth]{hMomDT_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-%  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
-%  \caption{}
-%\label{fig:0nbb-C10_timing_separation}
-%\end{figure}
+\subsection{0\nbb/\C~separation using PE timing}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.45\textwidth]{hMomDT_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
+  \includegraphics[width=0.45\textwidth]{hMomNPhot_Te130vsC10_allLight_VtxSmear3cm_VtxShiftX0cm_momDT1p0ns_rndVtx_3p0mSphere.pdf}
+  \caption{}
+\label{fig:0nbb-C10_timing_separation}
+\end{figure}
 
