@@ -4,7 +4,7 @@
 In this section we discuss factors that affect performance of the spherical harmonics analysis in separating
 0\nbb~signal from \B~background events. We found that most separation comes from the first two multiple moments,
 $l=0$ and $l=1$. However, according to Eq.~\ref{eq6}, higher multiple moments are needed for a better normalization of the 
-power spectrum $S_l$. In the following we choose to calculate power spectrum $s_l$ up to multiple moment of l=3 and
+power spectrum $S_l$. In the following we choose to calculate the power spectrum $s_l$ up to l=3 and
 use only normalized variable $S_0$ and $S_1$, where the normalization is given by
 
 \begin{eqnarray}
@@ -25,14 +25,14 @@ sensitivity studies are more appropriate in the context of a particular 0\nbb~de
 \subsection{Central events with perfect vertex reconstruction}
 
 We start evaluating the performance of the spherical harmonics analysis by looking at events that originate at the center
-of the detector and by assuming perfect reconstruction of the event vertex position. For such events, a time cut of 33.5~ns on PEs 
-arrival time can be applied to obtain early PEs sample which contain high fraction of Cherenkov PE. The default QE and 100\% 
-photo-coverage is used in the simulation.
+of the detector and by assuming perfect reconstruction of the event vertex position. For such events, a time cut of 33.5~ns on 
+the PE arrival time can be applied to obtain early an PEs sample which contains a high fraction of Cherenkov PEs. The default QE and 100\% 
+photo-coverage are used in the simulation.
 
-Comparison of $S_0$ and $S_1$ distributions for 0\nbb-decay signal and \B~background events is shown in Fig.~\ref{fig:S_vs_energy}.
+A comparison of $S_0$ and $S_1$ distributions for 0\nbb-decay signal and \B~background events is shown in Fig.~\ref{fig:S_vs_energy}.
 Both variables provide a noticeable separation between signal and background. We also note that in the energy range of interest, 
 the $S_l$'s do not strongly depend on the energy deposited in the detector, which makes information contained in the normalized power 
-spectrum complimentary to the energy measurements. Therefore, spherical harmonics analysis can be used as an additional handle for
+spectrum complimentary to the energy measurements. Spherical harmonics analysis can thus be used as an additional handle for
 background suppression at the end point of the 0\nbb-decay energy spectrum.
 
 \begin{figure*}[h]
@@ -52,9 +52,9 @@ events, a linear combination of variables $S_0$ and $S_1$ is constructed as foll
 
 First, a linear fit, $S_0$ = $A \cdot S_1 + B$, of all points on the scatter plot is performed as shown by the dashed 
 line in the left panel in Fig.~\ref{fig:SL_Te_33p5ns_center}. Then a 1-D variable $S_{01}$ is defined as
-$S_{01} = S_1 \cdot cos(\theta) + S_0 \cdot sin(\theta)$, where $tan(\theta)$=$A$. Right panel in Fig.~\ref{fig:SL_Te_33p5ns_center}
-compares distributions of $S_{01}$ for 0\nbb-decay signal and \B~background. These 1-D histograms for $S_{01}$ represent
-projection of the points on the scatter plot onto the fitted line. We use distribution of the variable $S_{01}$ as a figure of merit
+$S_{01} = S_1 \cdot cos(\theta) + S_0 \cdot sin(\theta)$, where $tan(\theta)$=$A$. The right-hand panel in Fig.~\ref{fig:SL_Te_33p5ns_center}
+compares distributions of $S_{01}$ for 0\nbb-decay signal and \B~background. These 1-D histograms for $S_{01}$ represent the
+projection of the points on the scatter plot onto the fitted line. We use the distribution of the variable $S_{01}$ as a figure of merit
 for signal/background separation. Figure~\ref{fig:SL_Te_33p5ns_center} demonstrates that spherical harmonics analysis potentially 
 brings extra separation power which\ is in addition to the energy measurements.
 
@@ -81,15 +81,15 @@ So far only events at the center of the detector have been considered. Precise v
 Here we discuss performance of the spherical harmonics analysis for events that originate throughout the whole fiducial volume
 of the detector and that also have limited vertex reconstruction precision.
 
-Selection of early PE sample using absolute time cut of 33.5~ns that has been applied to central events relies on the fact that, 
+Selection of the early PE sample using the absolute time cut of 33.5~ns that has been applied to central events relies on the fact that, 
 within the uncertainty on electron track length, all photons travel the same distance before reaching the surface of the detector. 
 PEs with early measured time correspond mostly to Cherenkov photons because of the delay in the scintillation process and longer 
 wavelength of the Cherenkov light. 
 
-When the vertex is not at the center, a uniform absolute time cut on the photon arrival time is no longer effective in selecting 
-Cherenkov photons. In the case of an off-center vertex, there could be a situation when even significantly delayed scintillation photons 
+Since in general the vertex is not at the center of the detector, a uniform absolute time cut on the photon arrival time is no longer 
+effective in selecting Cherenkov photons. In the case of an off-center vertex, even significantly delayed scintillation photons can
 reach the side of the detector that is closer to the vertex much earlier than Cherenkov photons traveling to the opposite side of the 
-detector. Therefore, the time cut has to take into account the total distance traveled by each individual photon.
+detector. The time cut thus has to take into account the total distance traveled by each individual photon.
 
 We found that a differential time cut defined as $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns selects photons with a 
 sufficient fraction being Cherenkov photons. However, when this differential time cut is applied, two factors significantly reduce 
