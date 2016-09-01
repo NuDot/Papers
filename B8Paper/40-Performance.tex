@@ -13,8 +13,9 @@ S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_l}
 \end{eqnarray}
 
 As discussed below, a linear combination of $S_0$ and $S_1$ can be used to construct a single variable, $S_{01}$, that provides 
-separation between signal and background in 1-D space. We show distributions of this variable $S_{01}$ to demonstrate qualitatively 
+separation between signal and background in 1-D space. We show distributions of this variable $S_{01}$ to demonstrate
 the separation between 0\nbb~and \B~events depending on a few key assumptions about the detector characteristics.
+
 
 {\it {\bf The following paragraph needs to be moved to intro and maybe re-phrased. }
 Since the goal of this paper is to describe the technique of spherical harmonics analysis for separating
@@ -56,9 +57,20 @@ First, a linear fit, $S_0$ = $A \cdot S_1 + B$, of all points on the scatter plo
 line in the left panel in Fig.~\ref{fig:SL_Te_33p5ns_center}. Then a 1-D variable $S_{01}$ is defined as
 $S_{01} = S_1 \cdot cos(\theta) + S_0 \cdot sin(\theta)$, where $tan(\theta)$=$A$. The right-hand panel in Fig.~\ref{fig:SL_Te_33p5ns_center}
 compares distributions of $S_{01}$ for 0\nbb-decay signal and \B~background. These 1-D histograms for $S_{01}$ represent the
-projection of the points on the scatter plot onto the fitted line. We use the distribution of the variable $S_{01}$ as a figure of merit
-for signal/background separation. Figure~\ref{fig:SL_Te_33p5ns_center} demonstrates that spherical harmonics analysis potentially 
-brings extra separation power which\ is in addition to the energy measurements.
+projection of the points on the scatter plot onto the fitted line. 
+%We use the distribution of the variable $S_{01}$ as a figure of merit
+%for signal/background separation. 
+To quantify the separation between the signal and background we calculate the area of the overlap in the $S_{01}$ distributions, 
+$I_{overlap}$. There is no separation if $I_{overlap}$=1 and there is a 100\% separation if $I_{overlap}$=0. 
+%We also calculate the distance between the mean values of each $S_{01}$ distribution relative to their root mean 
+%squares (RMS), $\epsilon = \frac{ \overline{S_{01}^{bkg}} - \overline{S_{01}^{sig}} } {\sqrt{ RMS_{bkg}^2 + RMS_{sig}^2 }}$, where
+%$\overline{S_{01}^{bkg}}$ and $\overline{S_{01}^{sig}}$ are the mean values, $RMS_{bkg}$ and $RMS_{sig}$
+%are the RMS values of background and signal $S_{01}$ distribution respectively. In the following we use the ratio 
+%$\frac{\epsilon}{I}$ as a measure for the separation between the signal and backgrdound.
+
+Figure~\ref{fig:SL_Te_33p5ns_center} demonstrates that spherical harmonics analysis potentially brings extra separation power, which 
+is in addition to the energy measurements. The overlap between signal and background is $I_{overlap}$=0.52.
+%The separation $\frac{\epsilon}{I} = \frac{0.915}{0.521} = 1.76$.
 
 
 \begin{figure*}[h]
@@ -71,7 +83,8 @@ brings extra separation power which\ is in addition to the energy measurements.
     Central events assuming perfect reconstruction of vertex position. Time cut of 33.5~ns on the PE arrival time is
     applied. The default QE and 100\% photo-coverage is used in the simulation.
     Black dashed line corresponds to a linear fit to define 1-D variable $S_{01}$ (see text for details).
-    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).}
+    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).
+    $I_{overlap}$=0.52.}
 \label{fig:SL_Te_33p5ns_center}
 \end{figure*}
 
@@ -150,11 +163,14 @@ reconstruction we apply a 3~cm smearing around the actual vertex position for ea
 and $z$ directions with three independent Gaussian distributions of the same width, $\sigma_x = \sigma_y = \sigma_z =$3~cm.
 
 Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows the performance of the spherical harmonics analysis under these more realistic 
-assumptions. The overlap of the S01 distributions between signal and background is Y\%. The spherical harmonics analysis
-does not bring any significant separation between signal and background in our default detector model after the chromatic dispersion and
+assumptions. The overlap between signal and background is $I_{overlap}$=0.79, which means that the separation is 52\% worse than in 
+an idealized scenario shown in Fig.~\ref{fig:SL_Te_33p5ns_center}.
+The spherical harmonics analysis brings little
+separation between signal and background in our default detector model after the chromatic dispersion and
 vertex resolution are taken into account. However, properties of the liquid scintillator can be adjusted to improve 
 the performance of the spherical harmonics analysis. In the folowing we show that a single change in the scintillation rise time
-restores most of the separation power that was shown previously in Fig.~\ref{fig:SL_Te_33p5ns_center}.
+improves the separation.
+%restores most of the separation power that was shown previously in Fig.~\ref{fig:SL_Te_33p5ns_center}.
 
 
 
@@ -168,7 +184,8 @@ restores most of the separation power that was shown previously in Fig.~\ref{fig
     $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns is applied to select early PE sample.
     The default QE and 100\% photo-coverage is used in the simulation.
     Black dashed line corresponds to a linear fit to define 1-D variable $S_{01}$ (see text for details).
-    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).}
+    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).
+    $I_{overlap}$=0.79.}
 \label{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}
 \end{figure*}
 
@@ -184,10 +201,13 @@ position. In addition, if the fraction of scintillation light is small compared 
 the scintillation PE due to shifted reconstructed vertex position does not significantly affect spherical harmonics power spectrum.
 
 While our default detector model assumes scintillation rise time of $\tau_r=$1~ns, scintillation rise time up to $\tau_r=$7~ns can 
-be achieved (see Ref.~\ref{Mingfang_slow_rise_time}). As a test we repeated spherical harmonics analysis on 0\nbb-decay and \B~events after
-increasing scintillation rise time parameter to $\tau_r=$5~ns in our detector model. All other parameters are kept the same.
-Figure ~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m_SciRT5p0ns} shows result of that test. The events are uniformly distributed within 
-the fiducial volume and each vertex is smeared with 3~cm resolution. 
+be achieved (see Ref.~\ref{Mingfang_slow_rise_time}). As a test we increased the scintillation rise time parameter to $\tau_r=$5~ns in 
+our detector model and repeated spherical harmonics analysis on 0\nbb-decay and \B~events that are uniformly distributed within the fiducial 
+volume and that have each vertex smeared with 3~cm resolution. All other parameters are kept the same.
+Figure ~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m_SciRT5p0ns} shows the 
+result of that test. The overlap between signal and background is $I_{overlap}$=0.64, which means that the separation is 23\% worse than in
+an idealized scenario shown in Fig.~\ref{fig:SL_Te_33p5ns_center} and 23\% better than in the default detector model shown in 
+Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}.
 
 We conclude that a rise time of $\tau_r=$5~ns provides sufficient delay between
 Cherenkov and scintillation light to make spherical harmonics analysis a potentially useful technique to separate 
@@ -204,7 +224,8 @@ Cherenkov and scintillation light to make spherical harmonics analysis a potenti
     $\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns is applied to select early PE sample.
     The default QE and 100\% photo-coverage is used in the simulation.
     Black dashed line corresponds to a linear fit to define 1-D variable $S_{01}$ (see text for details).
-    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).}
+    \emph{Right:} Comparison of the $S_{01}$ distribution between signal (\emph{red solid line}) and background (\emph{blue dashed line}).
+    $I_{overlap}$=0.64.}
 \label{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m_SciRT5p0ns}
 \end{figure*}
 
@@ -218,12 +239,14 @@ such as described in Ref.~\cite{LS_narrow_emission}.
 %Start:
 %separation = 0.915454
 %overlap = 0.521
+%power = 1.76
 
 %Middle:
 %separation = 0.357271
 %overlap = 0.793
+%power = 0.45
 
 %Final:
 %separation = 0.665755
 %overlap = 0.642643
-
+%power = 1.04
