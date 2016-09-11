@@ -1,26 +1,70 @@
 \section{Detector Model}
 \label{sec:detector_description}
 
-The same simulation using Geant4~version 4.9.6 as in Ref.~\cite{Aberle2014} is used to model a sphere of 6.5~m radius filled with
-liquid scintillator. We consequently limit our discussion of the simulation to a summary of the most relevant parameters.  
+We use the Geant4-based simulation of Ref.~\cite{Aberle2014}
+to model a sphere of 6.5~m radius filled with liquid scintillator. We
+consequently limit the discussion of the simulation to a summary of
+the most relevant parameters.
 
-The scintillator composition has been chosen to match a KamLAND-like scintillator\cite{kamland2003}. The composition is 80\% n-dodecane, 20\% pseudocumene and 1.52~g/l PPO with a density of $\rho$ = 0.78~g/ml).
-We use the Geant4~default liquid scintillator optical model, in which optical photons are assigned the group velocity in the wavelength region of normal dispersion. Wavelength dependent attenuation length\cite{tajimaMaster}, scintillation emission spectrum\cite{tajimaMaster}, and refractive index\cite{OlegThesis} are used. The scintillator light yield is assumed to be 9030 photons/MeV) with Birks quenching  ($kB$ $\approx$ 0.1~mm/MeV)\cite{ChrisThesis}. However, we do deviate from the baseline KamLAND case in that the re-emission of absorbed photons in the scintillator bulk volume and optical scattering, specifically Rayleigh scattering, have not yet been included. A test simulation shows that the effect of optical scattering is negligible~\cite{Aberle2014}.
+The scintillator composition has been chosen to match a KamLAND-like
+scintillator\cite{kamland2003}. The composition is 80\% n-dodecane,
+20\% pseudocumene and 1.52~g/l PPO with a density of $\rho$ =
+0.78~g/ml).  We use the Geant4~default liquid scintillator optical
+model, in which optical photons are assigned the group velocity in the
+wavelength region of normal dispersion. The attenuation
+length\cite{tajimaMaster}, scintillation emission
+spectrum\cite{tajimaMaster}, and refractive index\cite{OlegThesis}
+include wavelength-dependence. The scintillator light yield is assumed
+to be 9030 photons/MeV) with Birks quenching ($kB$ $\approx$
+0.1~mm/MeV)\cite{ChrisThesis}. However, we deviate from the
+baseline KamLAND case in that the re-emission of absorbed photons in
+the scintillator bulk volume and optical scattering, specifically
+Rayleigh scattering, have not yet been included. A test simulation
+shows that the effect of optical scattering is
+negligible~\cite{Aberle2014}.
 
 %This is important but I think I put it back below.
 %The attenuation length at 400~nm, which is the position of the peak standard bialkali photocathode efficiency, is 25~m. The attenuation length drops precipitously from 6.5~m to 0.65~m between 370~nm and 360~nm. We use this drop to define the cutoff wavelength at 370~nm. This is a standard scintillator. However, we do deviate from the baseline KamLAND case in that the re-emission of absorbed photons in the scintillator bulk volume and optical scattering, specifically Rayleigh scattering, has not yet been included. A test simulation shows that the effect of optical scattering is negligible~\cite{Aberle2014}.
 
-In this study, we use the fact that scintillators have inherent time constants that slow this light relative to the Cherenkov light with 
-wavelengths too long to be absorbed by the scintillator, between 360-370~nm for this scintillator. The key inputs to the simulation are 
-thus the time constants inherent to the scintillator cocktail that will determine the timing of the scintillation light relative to the 
-unperterbed Cherenkov light. The first step in the scintillation process is the transfer of the energy deposited by the primary particles 
-from the scintillator's solvent to the solute. The time constant of this energy transfer accounts for a rise time in scintillation light 
-emission. Because past neutrino experiments were not highly sensitive to the effect of the scintillation rise time, there is a lack of 
-accurate measurements of this property. We assume a rise time of 1.0~ns from a re-analysis of the data in Ref.~\cite{ChristophThesis} 
-but more detailed studies are needed. The decay time constants are determined by the vibrational energy levels of the solute and are 
-measured to be $\tau_{d1}$ = 6.9~ns and $\tau_{d2}$ = 8.8~ns with relative weights of 0.87 and 0.13 for the KamLAND 
-scintillator~\cite{tajimaThesis}. In a detector of this size, chromatic dispersion, red light travelling faster than blue due to the 
-wave-length dependent index of refraction, enhances the separation but is not the dominant effect.
+The technique of using Cherenkov light for topological \B~ background rejection
+depends on the inherent time constants that (on average) slow
+scintillation light relative to the Cherenkov light for wavelengths
+longer than the scintillator absorption cutoff (between
+360-370~nm~\cite{scint_cutoff}). The first step in the scintillation
+process is the transfer of energy deposited by the primary
+particles from the scintillator's solvent to the solute. The time
+constant of this energy transfer accounts for a rise time in
+scintillation light emission. Because past neutrino experiments were
+not highly sensitive to the effect of the scintillation rise time,
+there is a lack of accurate measurements of this property. We assume a
+rise time of 1.0~ns from a re-analysis of the data in
+Ref.~\cite{ChristophThesis} but more detailed studies are needed. 
 
-The inner sphere surface is used as the photodetector. It is treated as fully absorbing, no reflections, with 100\% photocathode coverage. As in the case of optical scattering, reflections at the sphere are a small effect that would create a small tail at longer times. The quantum efficiency (QE) of a bialkali photocathode (Hamamatsu R7081 PMT)\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}. We note that the KamLAND 17-inch PMTs use the same photocathode type with similar quantum efficiency. In order to neglect the effect of the transit-time-spread (TTS) of the photodetectors, we use a TTS of 0.1~ns ($\sigma$), which can be achieved with large area picosecond photodetectors
-(LAPPDs)\cite{anode_paper,PSEC4_paper,RSI_paper,Vienna2013,Ceramic_paper1,HV_paper,Timing_paper,Incom_paper}. We neglect any threshold effects in the photodetector readout electronics and the photoelectron hit positions and the detection times after the TTS resolution has been applied are used for event reconstruction.
+The decay time constants are determined by the vibrational energy
+levels of the solute and are measured to be $\tau_{d1}$ = 6.9~ns and
+$\tau_{d2}$ = 8.8~ns with relative weights of 0.87 and 0.13 for the
+KamLAND scintillator~\cite{tajimaThesis}. In a detector of this size,
+chromatic dispersion, red light traveling faster than blue due to the
+wave-length dependent index of refraction, enhances the separation but
+is not the dominant effect.
+
+The inner sphere surface is used as the photodetector. It is treated
+as fully absorbing with no reflections, and with 100\% photocathode
+coverage~\cite{Juno_coverage}. As in the case of optical scattering,
+reflections at the sphere are a small effect that would create a small
+tail at longer times, and hence not affect the identification of the
+early Cherenkov light. The assumed quantum efficiency (QE) of is that
+of a typical bialkali photocathode (Hamamatsu R7081
+PMT~\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}). We note that
+the KamLAND 17-inch PMTs use the same photocathode type with similar
+quantum efficiency; photocathodes with higher efficiencies are now
+starting to become better understood theoretically and may become
+commercially available~\cite{Photonis, Smedley, Luca}.  In order to
+neglect the effect of the transit-time-spread (TTS) of the
+photodetectors, we use a TTS of 0.1~ns ($\sigma$), which can be
+achieved with large area picosecond photodetectors
+(LAPPDs)~\cite{anode_paper,PSEC4_paper,RSI_paper,Vienna2013,Ceramic_paper1,HV_paper,Timing_paper,Incom_paper}.
+We neglect the (small) threshold effects in the photodetector readout
+electronics, spatial resolution of the photoelectron hit positions,
+and contributions to time resolution other than the photodetector TTS.
+

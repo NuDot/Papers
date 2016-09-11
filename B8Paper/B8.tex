@@ -1,0 +1,89 @@
+\input{preamble_els}
+\begin{document}
+\input{common_commands}
+
+%\graphicspath{{plots/}}
+\graphicspath{{figs/}}
+
+%\usepackage{lineno}
+\linenumbers
+%\usepackage{setspace}
+%\doublespacing
+\setstretch{2.0}
+%\bibliography
+
+%%%%%%%%%%55555
+%YOUAREHERE
+\large
+%%%%%%%%55555555555555
+
+\title{Separating Double-Beta Decay Events from Solar Neutrino
+Interactions in a Kiloton-Scale Liquid Scintillator Detector By Fast Timing}
+\input{authors}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\date{\today}
+
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\linenumbers\relax % Commence numbering lines
+
+\input{10-Introduction}
+
+%YOUAREHERE
+
+\input{20-LiquidScintillatorDetector}
+
+\begin{comment}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+\input{25-EventTiming}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{30-SphericalHarmonics}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{40-Performance}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\input{50-Conclusions}
+\clearpage %These are only needed to force correct placement of the
+           %figures while there is no text
+
+\section*{Acknowledgements}
+\input{acknowledgements}
+% bugger the bibliography for now.. HJF
+
+\end{comment}
+
+\begin{thebibliography}{99}
+\input{biblio_intro}
+\input{biblio_detector}
+%\input{biblio_}
+\end{thebibliography}
+
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{bibliography}
+%\appendix
+% The following line is a hack for elsevier to get the appendix and
+% the table of contents to play well together.
+%\renewcommand*{\thesection}{\Alph{section}}
+%\input{60-Appendix}
+
+
+\end{document}
+
