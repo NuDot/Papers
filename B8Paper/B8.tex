@@ -29,55 +29,54 @@ Interactions in a Kiloton-Scale Liquid Scintillator Detector By Fast Timing}
 
 \maketitle
 
-\newpage
+%\newpage
+\clearpage
 \tableofcontents
-\newpage
+%\newpage
 
 \linenumbers\relax % Commence numbering lines
+\clearpage
 
+%\begin{comment}
 \input{10-Introduction}
-
-%YOUAREHERE
-
 \input{20-LiquidScintillatorDetector}
-
-\begin{comment}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
 \input{25-EventTiming}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
-
 \input{30-SphericalHarmonics}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
-
 \input{40-Performance}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
-
+%\clearpage
 \input{50-Conclusions}
-\clearpage %These are only needed to force correct placement of the
-           %figures while there is no text
-
 \section*{Acknowledgements}
 \input{acknowledgements}
+
+%Begin Comment here
+%\begin{comment}
 % bugger the bibliography for now.. HJF
+%\end{comment}
 
-\end{comment}
+\clearpage
 
-\begin{thebibliography}{99}
-\input{biblio_intro}
-\input{biblio_detector}
+\input{Appendix_A}
+
+\clearpage
+
+\bibliography{bibliography}
+
+%\begin{thebibliography}{99}
+%\input{biblio_intro}
+%\input{biblio_detector}
+%\input{biblio_eventtiming}
+%\input{biblio_sphericalharmonics}
+%\input{biblio_performance}
+%\input{biblio_appendixA}
 %\input{biblio_}
-\end{thebibliography}
+%\end{thebibliography}
 
 
 \end{document}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliography{bibliography}
+%\bibliography{bibtmp}
 %\appendix
 % The following line is a hack for elsevier to get the appendix and
 % the table of contents to play well together.
@@ -85,5 +84,5 @@ Interactions in a Kiloton-Scale Liquid Scintillator Detector By Fast Timing}
 %\input{60-Appendix}
 
 
-\end{document}
+%\end{document}
 

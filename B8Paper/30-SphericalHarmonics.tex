@@ -1,209 +1,135 @@
-\section{Event Topology and Spherical Harmonics Analysis}
+\section{Event Topology and the Spherical Harmonics Analysis}
 \label{sec:topology_and_harmonics}
 
-In this section we provide details about a spherical harmonics analysis to separate 0\nbb-decay signal events from \B~ background. 
-We show that a spherical harmonics decomposition of the PE hits on the detector surface is sensitive to the differences between 
-two-electron (0\nbb-decay events) and single-electron (\B~events) topologies.
-
+We have developed a method based on a spherical harmonics
+decomposition to discriminate the topologies of 0\nbb-decay
+two-electron events and \B-neutrino single-electron events. The
+identification of the Cherenkov photon clusters is challenging due to
+the smearing of the characteristic ring pattern by multiple scattering
+of the electrons, and by the smallness of the Cherenkov signal
+relative to the large amount of uniformly-distributed scintillation
+light.  We find that performing the spherical harmonics analysis on
+the smaller early PE sub-sample, which has a relatively high fraction
+of Cherenkov PEs, can discriminate 0\nbb-decay signal events from
+backgrounds, although a high rejection factor will require a slower
+scintillator than in the model.
 
 \subsection{Topology of 0\nbb-decay and \B~Events}
 \label{subsec:topology}
 
-When a typical 0\nbb-decay candidate isotope is considered, all \B~background events will have the single electron above Cherenkov threshold
-in a liquid scintillator. Also a large fraction of 0\nbb-decay signal events will have both electrons above Cherenkov threshold. Cherenkov photons
-from each of the electrons will produce ring shaped clusters of PE hits on the detector surface. Therefore, any event reconstruction algorithm 
-that is capable of separating events with one Cherenkov cluster from events with two Cherenkov clusters should have some signal-background 
-discrimination power. 
+With \Te as the active isotope, all background from \B~solar neutrinos
+will have the single electron above Cherenkov threshold in the liquid
+scintillator. Also a large fraction of 0\nbb-decay signal events will
+have both electrons above Cherenkov threshold.
 
-In some cases only one Cherenkov cluster is produced in 0\nbb-decay signal events. This happens either when the angle between the two 
-0\nbb-decay electrons is small and Cherenkov clusters overlap, or when the energy split between electrons is not balanced, causing 
-one electron to be below Cherenkov threshold.
-Such signal events cannot be separated from background based on the topology of the Cherenkov photons distribution on the detector surface. 
-However, directionality of the electron that is above Cherenkov threshold can still be reconstructed. This directionality information 
-may allow for suppression of \B~events based on the position of the sun.
+In some cases only one Cherenkov cluster is produced in 0\nbb-decay
+signal events. This happens either when the angle between the two
+0\nbb-decay electrons is small and Cherenkov clusters overlap, or when
+the energy split between electrons is not balanced, causing one
+electron to be below Cherenkov threshold.  Such signal events cannot
+be separated from background based on the topology of the distribution
+of Cherenkov photons on the detector surface.  However, the
+directionality of the electron that is above Cherenkov threshold can
+still be reconstructed. This directionality information may allow for
+suppression of \B~events based on the position of the
+sun~\cite{sun_direction_cut}.
 
-Identification of the Cherenkov clusters is challenging due to much higher amount of uniformly distributed scintillation light that is
-produced in every event. We found that spherical harmonics analysis on an early PE sample which has a relatively high fraction of 
-Cherenkov PE makes it possible to separate some {\bf (quantify? this paragraph may belong to Sec.4 intro.)} of the 0\nbb-decay signal events from backgrounds.
-
-\subsection{Description of Spherical Harmonics Analysis}
-
-For the purpose of illustration of the spherical harmonics analysis concept we first consider three distinct topologies: 
-two electrons produced back-to-back at an 180$^{\circ}$ angle, two electrons at a 90$^{\circ}$ angle, and a single electron.
-Figure~\ref{fig:ThreeTopologies_Display_5MeV} shows an idealized simulation of these three topologies for a total electron 
-energy of 10~MeV. In order to emphasize ring patterns formed by Cherenkov photons the electron multiple scattering process is turned off
-in this idealized simulation. Here the single-electron event represents an idealized \B~event topology and the two-electron events represent
-two special cases of an idealized 0\nbb-decay topology.
+For the purpose of illustration of the spherical harmonics analysis
+concept we first consider two distinct topologies: a) two electrons
+produced back-to-back at an 180$^{\circ}$ angle;  and b) a single electron.
+Figure~\ref{fig:ThreeTopologies_Display_NoMultScat} shows an idealized
+simulation of these two topologies for a total electron energy of
+2.53~MeV. In order to emphasize ring patterns formed by Cherenkov
+photons the electron multiple scattering process is turned off in this
+idealized simulation and a photocathode QE of 30\% is used for both
+Cherenkov and scintillation photons. Here the single-electron event
+represents an idealized \B~event topology and the two-electron events
+represent two special cases of an idealized 0\nbb-decay topology.
 
 
 \begin{figure*}[h]
   \centering
 %  \begin{tabular}{c c c}
-  \includegraphics[width=0.33\textwidth]{hDisplay_topology180_5MeV.pdf}
-  \includegraphics[width=0.33\textwidth]{hDisplay_topology90_5MeV.pdf}
-  \includegraphics[width=0.33\textwidth]{hDisplay_1el_10MeV.pdf}
+  \includegraphics[width=0.45\textwidth]{hDisplay_topology180_NoMultScat.pdf}
+%  \includegraphics[width=0.33\textwidth]{hDisplay_topology90_NoMultScat.pdf}
+  \includegraphics[width=0.45\textwidth]{hDisplay_1el_2p529MeV_NoMultScat.pdf}
 %  \end{tabular}
-  \includegraphics[width=0.8\textwidth]{hMultipleMoment_CHELight_VtxSmear0cm_VtxShiftX0cm_999p9ns_5p0MeV_center_NoMultScat.pdf}
-  \caption{\emph{Top panels:} Idealized event displays for the three representative event topologies: two 5~MeV 
-    back-to-back electrons (\emph{top left}), two 5~MeV electrons at 90$^{\circ}$ angle (\emph{top middle}), and a single 10~MeV electron
-    (\emph{top right}). Multiple scattering is turned off in the simulation to emphasize the difference in the mutual orientation of
-    Cherenkov rings for the three topologies. For the illustration purposes 100\% QE is applied to Cherenkov photons (triangles)
-    and the default QE is applied to scintillation photons (dots). All electrons originate at the center of the
-    detector. One typical event is shown for each topology.
-    \emph{Bottom panel:} Normalized power spectrum $S_l$ calculated for distribution of Cherenkov photons only. The three
-    topologies are compared: two 5~MeV back-to-back electrons (\emph{solid red line}), two 5~MeV electrons at 90$^{\circ}$ angle
-    (\emph{dotted magenta line}), and a single 10~MeV electron (\emph{dashed blue line}). For each topology 100 events were simulated. 
-    The normalized power values $S_l$'s were calculated for each individual event. The horizontal lines correspond to the mean values of 
-    $S_l$ within each event topology. The vertical bars show one standard deviation from the mean value.}
-  \label{fig:ThreeTopologies_Display_5MeV}
+  \includegraphics[width=0.9\textwidth]{hMultipleMoment_CHELight_VtxSmear0cm_VtxShiftX0cm_999p9ns_center_NoMultScat.pdf}
+  \caption{\emph{Top panels:} Idealized event displays, with multiple
+scattering turned off and at the center of the detector, of:
+(\emph{top left}) a signal event with two 1.26~MeV back-to-back
+electrons; and (\emph{top right })a \B-neutrino background event with
+single 2.53~MeV electron. A 30\% QE is assumed for both Cherenkov
+photons (triangles) and scintillation photons (dots).  
+\emph{Bottom panel:} The normalized power spectrum $S_l$ for the
+Cherenkov photons only, calculated event-by-event for the two
+above topologies The height of the rectangular boxes correspond to a 
+63\% confidence level $(\pm 1 ~\sigma)$.}
+  \label{fig:ThreeTopologies_Display_NoMultScat}
 \end{figure*}
 
 
+\subsection{Description of the Spherical Harmonics Analysis}
 
-The central strategy of the spherical harmonics analysis is to construct rotationally invariant variables that can be used to separate 
-different event topologies. To this end, let the  function $f(\theta,\phi)$ represent the PE distribution on the detector surface. The function $f(\theta,\phi)$ can be decomposed into a sum of spherical harmonics:
+The central strategy of the spherical harmonics analysis is to
+construct rotationally invariant variables that can be used to
+separate different event topologies. To account for the fluctuation of
+the number of PEs from event to event, we use a normalized power,
+$S_l$, defined in Appendix A.
 
-\begin{eqnarray}
-\label{eq1}
-f(\theta,\phi) = \sum_{l=0}^{\infty} \sum_{m=-l}^{l} f_{lm} Y_{lm}(\theta,\phi),
-\end{eqnarray}
+The bottom panel in Fig.~\ref{fig:ThreeTopologies_Display_NoMultScat}
+compares the normalized power spectra for the two representative event
+topologies in the idealized case of no multiple scattering and with a 30\%
+quantum efficiency for both Cherenkov and scintillation
+photons~\cite{QE}. The method gives a good separation between the
+two event topologies.
 
-where $Y_{lm}$ are Laplace's spherical harmonics defined in a real-value basis using Legendre polynomials $P_l$:
+However, at energies relevant to 0\nbb-decay the Cherenkov rings
+become very fuzzy due to electron multiple scattering. In most cases
+$\sim$1~MeV electrons produce randomly shaped clusters of Cherenkov
+photons around the direction of the electron track.  Examples of \Te~
+0\nbb~and \B~events simulated with multiple scattering but still at
+the center of the detector are shown in Fig.~\ref{fig:Te130_Display}.
+\Te~ events are generated based on the phase factors described
+in~\cite{Jenni}.  $^{8}$B events are implemented as
+monochromatic electrons with the initial direction along the
+$x$-axis. The default QEs of 12\% for Cherenkov light and 23\% for
+scintillation light have been  applied. Figure~\ref{fig:Te130_Display} shows
+early PEs that pass the 33.5~ns time cut. 
+% fix the xxs
 
-\begin{eqnarray}
-\label{eq2}
-Y_{lm} = \left\{
-  \begin{array}{@{}ll@{}}
-    \sqrt{2}N_{lm}P_l^m(cos\theta)cos~m\phi, & \text{if}\ m>0 \\
-    N_{lm} = \sqrt{\frac{(2l+1)}{4\pi} \frac{(l-m)!}{(l+m)!}}, & \text{if}\ m=0 \\
-    \sqrt{2}N_{l|m|}P_l^{|m|}(cos\theta)sin~|m|\phi, & \text{if}\ m<0
-  \end{array}\right.
-\end{eqnarray}
+In this more realistic example, the uniformly distributed
+scintillation light makes it difficult to visually distinguish
+the event topology. The power spectra shown in the bottom panel of
+Fig.~\ref{fig:Te130_Display}~ are different only at $l$=0 and
+$l$=1. We use this difference to separate 0\nbb-decay
+signal from \B~background events.
 
-where the coefficients $f_{lm}$ are defined as
- 
-\begin{eqnarray}
-\label{eq3}
-f_{lm} = \int_{0}^{2\pi} d\phi \int_0^{\pi} d\theta sin\theta f(\theta,\phi) Y_{lm}(\theta,\phi).
-\end{eqnarray}
-
-Equation~\ref{eq4} defines the power spectrum of $f(\theta,\phi)$ in the spherical harmonics representation, $s_l$, where $l$ is a multiple moment. The power spectrum, $s_l$, is invariant under rotation. It is unique to each of the functions $f_i(\theta,\phi)$, $i=$1,2,3..., which can not be transformed into each other by rotation.
-
-\begin{eqnarray}
-\label{eq4}
-s_l = \sum_{m=-l}^{m=l} |f_{lm}|^2
-\end{eqnarray}
-
-The event topology in a spherical detector determines the distribution of the PE's on the detector sphere, and, therefore, a set of $s_l$'s. These values can serve as a quantitative figure of merit for different event topologies. The rotation invariance of $s_l$'s ensures that this figure of merit does not depend on the orientation of the event with respect to the chosen coordinate frame.
-
-Sum of $s_l$'s over all multiple moments equals to the L2 norm of the function $f(\theta,\phi)$:
-
-\begin{eqnarray}
-\label{eq5}
-\sum_{l=0}^{\infty} s_l = \int_{\Omega} |f(\theta,\phi)|^2 d\Omega.
-\end{eqnarray}
-
-Therefore, the normalized power spectrum,
-
-\begin{eqnarray}
-\label{eq6}
-S_l = \frac{s_l}{\sum_{l=0}^{\infty} s_l} =  \frac{s_l}{\int_{\Omega} |f(\theta,\phi)|^2 d\Omega},
-\end{eqnarray}
-
-can be used to compare the shapes of various functions $f(\theta,\phi)$ with different normalization. As the total number of PEs detected on the detector sphere fluctuates from event to event we use the normalized power $S_l$.
-
-Bottom panel in Fig.~\ref{fig:ThreeTopologies_Display_5MeV} compares the normalized power spectra for the three representative event topologies.
-The normalized power spectrum is different for all three event topologies. As expected, the largest difference is between single track and
-back-to-back events.
-
-In practice, at energies relevant to 0\nbb-decay Cherenkov rings become very fuzzy due to electron multiple scattering. In most cases $\sim$1~MeV 
-electrons produce randomly shaped clusters of Cherenkov photons around the direction of the electron track. 
-
-
-%However, a guess about the event topology still can be made by comparing 
-%photon distributions in different segments of the detector sphere. Spherical harmonics decomposition is a natural tool for making such 
-%comparison between the segments. As shown in Fig.~\ref{fig:ThreeTopologies_Display}~(\emph{bottom right}) spherical harmonics power spectrum 
-%of Cherenkov photons only still provides noticeable separation between all three event topologies.
-
-Examples of \Te~ 0\nbb~and \B~events simulated at the center of the detector are shown in Fig.~\ref{fig:Te130_Display}. 
-\Te~ events are generated based on the phase factors described in~\cite{Kotila_phase_factors}.
-$^{8}$B events are implemented as monochromatic electrons with the initial direction along $x$-axis. Multiple scattering is now included.
-The default QE is applied. Figure~\ref{fig:Te130_Display} shows early PEs that pass 33.5~ns time cut.
-
-In this more realistic example, the uniformly distributed scintillation light makes it more difficult to 
-visually distinguish the event topology. The power spectra shown in the bottom pannel of Fig.~\ref{fig:Te130_Display}~
-are different only at $l$=0 and $l$=1. We propose to use this difference to separate 0\nbb-decay signal from \B~background events.
-
-\begin{figure*}[h]
+\begin{figure*}[hb]
   \centering
-  \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt124_e1257_e1270_cos-0908}
-  \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt131_e1264_e1263_cos-0029}
-  \includegraphics[width=0.45\textwidth]{hDisplay_Te130_evt352_e1186_e1340_cos0888}
-  \includegraphics[width=0.45\textwidth]{hDisplay_1el_2p529MeV_33p5ns}
+  \includegraphics[width=0.42\textwidth]{hDisplay_Te130_evt124_e1257_e1270_cos-0908}
+  \includegraphics[width=0.42\textwidth]{hDisplay_1el_2p529MeV_33p5ns}
   \includegraphics[width=0.8\textwidth]{hMultipleMomentSignal_allLight_VtxSmear0cm_VtxShiftX0cm_33p5ns_center.pdf} 
-  \caption{ \emph{Top and middle rows:} Event display examples for {\Te} 0{\nbb}-decay signal and {\B} background events.
-    The default QE and the time cut of 33.5~ns are applied to both Cherenkov (\emph{triangles}) and scintillation (\emph{crosses}) 
-    photons. For the {\Te} 0{\nbb}-decay signal three representative events are shown each closely matching on of the three
-    topologies. A typical single electron event is shown for the {\B} background.
-    \emph{Top left:} $^{130}$Te 0{\nbb}-decay back-to-back electrons: $E_1$=1.257~MeV, $E_2$=1.270~MeV, 
-    cos($\theta$)=-0.908. \emph{Top right:} $^{130}$Te 0{\nbb}-decay electrons at $\sim$90$^{\circ}$: $E_1$=1.264~MeV, $E_2$=1.263~MeV,
-    cos($\theta$)=-0.029. \emph{Middle left:} $^{130}$Te 0{\nbb}-decay electrons at $\sim$0$^{\circ}$: $E_1$=1.186~MeV, $E_2$=1.340~MeV,
-    cos($\theta$)=0.888. \emph{Middle right:} 2.529~MeV single electron. In all events electrons originate at the center of the detector.
-    \emph{Bottom panel:} Normalized power spectrum $S_l$ calculated for distribution of all PE after the 33.5~ns time cut. 
-    {\Te} 0{\nbb}-decay signal (\emph{solid red line}) and {\B} background (\emph{dashed blue line}) topologies are compared.
-    Simulation of 1000 signal and background events. The normalized power values $S_l$'s were calculated for each individual event. 
-    The horizontal lines correspond to the mean values of $S_l$. The vertical bars show one standard deviation 
-    from the mean value.}
+  \caption{\emph{Top panels:} Event displays with multiple scattering
+and at the center of the detector for: (\emph{top left}) a signal
+event with two 1.26~MeV back-to-back electrons; and (\emph{top right
+})a \B-neutrino background event with a single 2.53~MeV electron. The
+model QE's are assumed for both Cherenkov photons (triangles) and
+scintillation photons (dots).  \emph{Bottom panel:} The normalized
+power spectrum $S_l$ for the Cherenkov photons, calculated
+event-by-event for 1000 events of each of the two above topologies. The
+heights of the rectangular boxes correspond to a 63\% C.L.
+$(\pm 1 ~\sigma)$.}
 \label{fig:Te130_Display}
 \end{figure*}
 
+We find that 0\nbb~events become indistinguishable from single-track events when
+the angle between the two electrons is small and two Cherenkov
+clusters overlap. Event topologies of 0\nbb~and \B~events are also
+very similar when only one electron from 0\nbb~ is above the Cherenkov
+threshold. The spherical harmonics analysis is most efficient
+for events with large angular separation between the two electrons and
+when both electrons are above Cherenkov threshold~\cite{further_cuts}.
 
-As shown in the middle row of Fig.~\ref{fig:Te130_Display}, 0\nbb~events become indistinguishable from single-track events when the 
-angle between the two electrons is small and two Cherenkov clusters overlap. Event topologies of 0\nbb~and \B~events are also 
-very similar when only one electron from 0\nbb~ is above the Cherenkov threshold. Therefore spherical harmonics analysis is most 
-efficient for events with large angular separation between the two electrons and when both electrons are above Cherenkov threshold.
-
-Being able to distinguish between two-tracks and single-track events using the spherical analysis can allow further cuts to be made.  For example, one might use absolute directional information to suppress single track events where the direction of the track is consistent with the location of a known background such as the sun. Once a single track topology is established, one can use a centroid method (see Ref.~\cite{Directionality}) to reconstruct directionality of the track (or two degenerate tracks) in order to suppress events that are aligned with the direction of \B~solar neutrinos.
-
-
-\subsection{Spherical Harmonics Analysis and Off-center Events}
-
-In general, the power spectrum $S_l$ is rotation invariant for a given topology only if events originate in the center of the
-detector. In order to compare spherical harmonics for events with verticies away from the center a coordinate transformation for each photon 
-hit is needed. The necessary transformation applied for each PE within an event is illustrated in Fig.~\ref{fig:SphH_transform}. 
-The solid circle in Fig.~\ref{fig:SphH_transform}~has a radius R and shows the actual detector boundaries. The dotted circle shows a new 
-sphere with the same radius R, which now has the event vertex in its center. The radius vector of each PE is stretched or shortened to 
-its intersection with this new sphere using the transformation, $\vec{r}^{,}_{PE} = \frac{\vec{a}}{|\vec{a}|} \cdot R$, 
-where $\vec{r}^{,}_{PE}$ is a new radius vector of a PE and $\vec{a}=\vec{r}_{PE} - \vec{r}_{vtx}$ with $\vec{r}_{PE}$ and $\vec{r}_{vtx}$ 
-being radius vectors of the PE and the vertex in the original coordinates, respectively.
-
-\begin{figure*}[h]
-  \centering
-%  \includegraphics[width=0.95\textwidth]{SphH_transform_sketch.JPG}
-  \includegraphics[width=0.4\textwidth]{SphH_transform.pdf}
-  \caption{Coordinate transformation applied to events that are
-    off-center. The solid circle schematically shows actual detector
-    boundaries. The dotted circle shows a new sphere of radius R$=$6.5~m
-    with the event vertex position in the center. The radius vector of
-    each photon hit is stretched or shortened until the intersection with
-    this new sphere using the transformation $\vec{r}^{,}_{hit} =
-    \frac{\vec{a}}{|\vec{a}|} \cdot R$. Where $\vec{r}^{,}_{hit}$ is a
-    new radius vector of the photon hit, $R$ is detector sphere radius,
-    and $\vec{a}=\vec{r}_{hit} - \vec{r}_{vtx}$ with $\vec{r}_{hit}$
-    and $\vec{r}_{vtx}$ being radius vectors of the photon hit and
-    vertex position in original coordinates and correspondingly.}
-  \label{fig:SphH_transform}
-\end{figure*}
-
-
-\subsection{Implementation of the spherical harmonics analysis}
-
-Numerical calculation of the power spectrum is implemented as follows.
-For each event, we create a 2-D histogram, $\theta$ vs $\phi$, with the distribution of PEs on the detector surface. We then treat this 
-histogram as a function $f(\theta,\phi)$ where the value of the function for any pair of $\theta$ and $\phi$ is equal to the number of 
-PE in the histogram bin corresponding to that pair.
-
-Coefficients $f_{lm}$ from Eq.~\ref{eq3} are calculated using a Monte Carlo integration technique. Variables $S_l$'s are calculated using 
-Eqs.\ref{eq4} - \ref{eq6}. {\bf Also need to provide reference to the libraries for Legendre polynomials.}
 
 

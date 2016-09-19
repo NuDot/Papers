@@ -5,10 +5,10 @@ TEX = pdflatex
 BIBTEX = bibtex
 
 # LaTeX Head File name
-NAME = spherical_paper
+NAME = B8
 
 # PDF name
-PDFNAME = NuDot_SphericalHarmonics
+PDFNAME = spherical_paper
 
 # SVN Versioning
 #SVN_REVISION = $(shell svn info | grep Revision | awk '{print $$2}')
