@@ -1,6 +1,8 @@
 \section{Detector Model}
 \label{sec:detector_description}
 
+%% Comment from Taritree (9/20): Though it is probably self-evident, you have not explicitly told the reader why she is reading about a detector model.  One could put in a line somewhere here or in the last paragraph in the previous section that this model is used to generate data to demonstrate/study this technique.
+
 We use the Geant4-based simulation of Ref.~\cite{Aberle2014}
 to model a sphere of 6.5~m radius filled with liquid scintillator. We
 consequently limit the discussion of the simulation to a summary of
@@ -44,19 +46,20 @@ The decay time constants are determined by the vibrational energy
 levels of the solute and are measured to be $\tau_{d1}$ = 6.9~ns and
 $\tau_{d2}$ = 8.8~ns with relative weights of 0.87 and 0.13 for the
 KamLAND scintillator~\cite{tajimaThesis}. In a detector of this size,
-chromatic dispersion, red light traveling faster than blue due to the
-wave-length dependent index of refraction, enhances the separation but
+chromatic dispersion, wherein red light traveling faster than blue due to the
+wavelength-dependent index of refraction, enhances the separation but
 is not the dominant effect.
 
 The inner sphere surface is used as the photodetector. It is treated
-as fully absorbing with no reflections, and with 100\% photocathode
+as fully absorbing with no reflections and with 100\% photocathode
 coverage~\cite{Juno_coverage}. As in the case of optical scattering,
 reflections at the sphere are a small effect that would create a small
-tail at longer times, and hence not affect the identification of the
-early Cherenkov light. The assumed quantum efficiency (QE) of is that
+tail at longer times and, hence, does not affect the identification of the
+early Cherenkov light. The assumed quantum efficiency (QE) is that
 of a typical bialkali photocathode (Hamamatsu R7081
-PMT~\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}). We note that
-the KamLAND 17-inch PMTs use the same photocathode type with similar
+PMT~\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}). 
+%% this is a natural place to state the assumed QE
+We note that the KamLAND 17-inch PMTs use the same photocathode type with similar
 quantum efficiency; photocathodes with higher efficiencies are now
 starting to become better understood theoretically and may become
 commercially available~\cite{Photonis, Smedley, Cultrera}.  In order to

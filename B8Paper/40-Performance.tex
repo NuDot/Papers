@@ -1,16 +1,18 @@
 \section{Performance of the Spherical Harmonics Analysis in Separating 0\nbb-decay from \B~Background.}
 \label{sec:performance}
 
+%% Taritree (9/20/16): is it multipole or multiple?
+
 The separation of signal and background comes almost entirely from the
 first two multiple moments, $l=0$ and $l=1$. However, higher multiple
 moments are needed for the event-by-event normalization of the power spectrum
-$S_l$ (Eq.~\ref{eq6}). In the following we choose to calculate the
+$S_l$ (Eq.~\ref{eq6}). In the following, we choose to calculate the
 power spectrum $s_l$ up to l=3 and use only the normalized variables $S_0$
 and $S_1$, where the normalization is given by
 
 \begin{eqnarray}
 \label{eq7}
-S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_l}
+S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_l}.
 \end{eqnarray}
 
 As discussed below, a linear combination of $S_0$ and $S_1$ can be
@@ -61,7 +63,8 @@ separation between $^{130}$Te and $^{8}$B events, a linear combination
 of variables $S_0$ and $S_1$ is constructed as follows~\footnote{A
 multi-variate event-by-event analysis will have more discriminatory
 power than this simple 1-dimensional separation, but in the absence of
-a real detector is a waste of time~\cite{goldberger_watson}}.
+a real detector is a waste of time~\cite{goldberger_watson}.}.
+%% Taritree (9/20/16): Reconsider using "a waste of time" for something less colloquial.
 
 First, a linear fit to $S_0$ = $A \cdot S_1 + B$, of all points on the
 scatter plot is performed, as shown by the dashed line in the left-hand
@@ -75,7 +78,7 @@ onto the fitted line.
 
 To quantify the separation between the signal and background we
 calculate the area of the overlap in the $S_{01}$ distributions,
-$I_{overlap}$. There is no separation if $I_{overlap}$=1 and there is
+$I_{overlap}$. There is no separation if $I_{overlap}$=1, and there is
 a 100\% separation if
 $I_{overlap}$=0. Figure~\ref{fig:SL_Te_33p5ns_center} shows the
 separation of this simple algorithm based on the shape of the early PE
@@ -111,8 +114,8 @@ vertex resolution}
 
 Samples of 1000 events each of signal and background were simulated
 with origins distributed throughout the whole fiducial volume of the
-detector with a vertex resolution, found from our earlier study of
-reconstruction, of 3 cm~\cite{Aberle2014}.  For the general case, even
+detector with a vertex resolution of 3cm found from our earlier study of
+reconstruction\cite{Aberle2014}.  For the general case, even
 significantly delayed scintillation photons can reach the side of the
 detector that is closer to the vertex much earlier than Cherenkov
 photons traveling to the opposite side of the detector. The time cut
