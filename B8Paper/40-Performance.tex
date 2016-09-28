@@ -1,24 +1,25 @@
 \section{Performance of the Spherical Harmonics Analysis in Separating 0\nbb-decay from \B~Background.}
 \label{sec:performance}
 
-%% Taritree (9/20/16): is it multipole or multiple?
-
 The separation of signal and background comes almost entirely from the
-first two multiple moments, $l=0$ and $l=1$. However, higher multiple
+first two multipole moments, $\ell$=0 and $\ell$=0. However, higher multipole
 moments are needed for the event-by-event normalization of the power spectrum
-$S_l$ (Eq.~\ref{eq6}). In the following, we choose to calculate the
-power spectrum $s_l$ up to l=3 and use only the normalized variables $S_0$
+$S_{\ell}$ (Eq.~\ref{eq6}). In the following, we choose to calculate the
+power spectrum $s_{\ell}$ up to $\ell$=3 and use only the normalized variables $S_0$
 and $S_1$, where the normalization is given by
 
 \begin{eqnarray}
 \label{eq7}
-S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_l}.
+S_{0,1} = \frac{s_{0,1}}{\sum_{l=0}^{3} s_{\ell}}.
 \end{eqnarray}
 
 As discussed below, a linear combination of $S_0$ and $S_1$ can be
-used to construct a single discriminant, $S_{01}$. 
-Distributions of $S_{01}$ for 0\nbb~and \B~events can be used to optimize
-detector design parameters, as described below.
+used to separate 0\nbb-decay and \B~events.
+
+%As discussed below, a linear combination of $S_0$ and $S_1$ can be
+%used to construct a single discriminant, $S_{01}$. 
+%Distributions of $S_{01}$ for 0\nbb~and \B~events can be used to optimize
+%detector design parameters, as described below.
 
 \subsection{Central events with no uncertainty on the vertex position}
 
@@ -26,18 +27,20 @@ To illustrate the technique, we initially evaluate
 the performance of the spherical harmonics
 analysis in the idealized case of events at the center of the
 detector with perfect reconstruction of the event vertex
-position. For such events, a time cut of 33.5~ns on the PE arrival
-time can be applied to obtain an `early PE' sample that contains a
-high fraction of Cherenkov PEs. The default QE of xx for Cherenkov
-light and xx for scintillation light and xx\% photo-coverage are used
-in the simulation.
+position. 
+%For such events, a time cut of 33.5~ns on the PE arrival
+%time can be applied to obtain an `early PE' sample that contains a
+%high fraction of Cherenkov PEs. The default QE of 12\% for Cherenkov
+%light and 23\% for scintillation light and 100\% photo-coverage are used
+%in the simulation.
 
-A comparison of $S_0$ and $S_1$ distributions for 0\nbb-decay signal
-and \B~background events is shown in Fig.~\ref{fig:S_vs_energy}.  Both
-variables provide a noticeable separation between signal and
-background. We note that in the energy range of interest, the
-$S_l$'s do not strongly depend on the energy deposited in the
-detector, i.e. information contained in the normalized power
+Comparisons of $S_0$ and $S_1$ distributions for $^{82}$Se and $^{130}$Te 
+0\nbb-decay signal and corresponding \B~background events are shown in 
+Fig.~\ref{fig:S_vs_energy}. Both variables, $S_0$ and $S_1$, provide 
+a noticeable separation between signal and background. 
+$^{82}$Se 0\nbb-decay events are shown to demonstrate that in the energy 
+range of interest, the $S_{\ell}$ do not strongly depend on the energy 
+deposited in the detector, i.e. information contained in the normalized power
 spectrum is complimentary to the energy measurements. 
 
 \begin{figure*}[h]
@@ -46,7 +49,7 @@ spectrum is complimentary to the energy measurements.
 \includegraphics[width=0.49\textwidth]{hS1.pdf}
 \caption{Results from the idealized case of central events at the
   detector origin( i.e. perfect vertex reconstruction); a time cut of 33.5~ns
-  on the PE arrival time is applied. The default QE and xx\%
+  on the PE arrival time is applied. The default QE and 100\%
   photo-coverage are used in the simulation.  (\emph{Left}) $S_0$ and
   $S_1$ (\emph{right}) distributions for 1000 simulated 0\nbb-decay
   signal and \B~background events.  Two different isotopes are
@@ -66,11 +69,11 @@ power than this simple 1-dimensional separation, but in the absence of
 a real detector is a waste of time~\cite{goldberger_watson}.}.
 %% Taritree (9/20/16): Reconsider using "a waste of time" for something less colloquial.
 
-First, a linear fit to $S_0$ = $A \cdot S_1 + B$, of all points on the
-scatter plot is performed, as shown by the dashed line in the left-hand
+First, we perform a linear fit to $S_0$ = $A \cdot S_1 + B$, of all points on the
+scatter plot, as shown by the dashed line in the left-hand
 panel in Fig.~\ref{fig:SL_Te_33p5ns_center}. A 1-dimensional (1-D) variable
-$S_{01}$ is defined as $S_{01} = S_1 \cdot cos(\theta) + S_0 \cdot
-sin(\theta)$, where $tan(\theta)$=$A$. The right-hand panel in
+$S_{01}$ is defined as $S_{01} = S_1 \cdot \cos(\theta) + S_0 \cdot
+\sin(\theta)$, where $\tan(\theta)$=$A$. The right-hand panel in
 Fig.~\ref{fig:SL_Te_33p5ns_center} compares distributions of $S_{01}$
 for 0\nbb-decay signal and \B~background. These 1-D histograms for
 $S_{01}$ represent the projection of the points on the scatter plot
@@ -98,7 +101,7 @@ $I_{overlap}$=0.52. At an efficiency for the signal of
     background (\emph{blue triangles}), for the idealized case of
     central events assuming perfect reconstruction of the vertex
     position. A time cut of 33.5~ns on the PE arrival time is
-    applied. The default QE and xx\% photo-coverage is used in the
+    applied. The default QE and 100\% photo-coverage is used in the
     simulation.  The black dashed line corresponds to a linear fit for
     $S_{01}$.  \emph{Right:} Comparison of the $S_{01}$ distribution
     between signal (\emph{red solid line}) and background (\emph{blue
@@ -109,25 +112,40 @@ $I_{overlap}$=0.52. At an efficiency for the signal of
 %separation = 0.915454
 %overlap = 0.521
 
-\subsection{Experimental challenges: chromatic dispersion and 
-vertex resolution}
+\subsection{Events in a fiducial volume with an uncertainty on the vertex position}
 
-Samples of 1000 events each of signal and background were simulated
-with origins distributed throughout the whole fiducial volume of the
-detector with a vertex resolution of 3cm found from our earlier study of
-reconstruction\cite{Aberle2014}.  For the general case, even
+We find that in the default detector model the separation power of
+the spherical harmonics analysis is significantly reduced when event
+vertex is not at the center of the detector and vertex resolution
+is taken into account.
+
+%Samples of 1000 events each of signal and background were simulated
+%with origins distributed throughout the whole fiducial volume of the
+%detector with a vertex resolution of 3cm found from our earlier study of
+%reconstruction\cite{Aberle2014}.  
+
+For the general case, even
 significantly delayed scintillation photons can reach the side of the
 detector that is closer to the vertex much earlier than Cherenkov
 photons traveling to the opposite side of the detector. The time cut
 thus has to take into account the total distance traveled by each
-individual photon.
+individual photon. In order to select early PE sample we use a 
+differential cut of 
+$\Delta t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns, where 
+$t^{phot}_{measured}$ is the measured time of the photon hit and
+$t^{phot}_{predicted}$ is the predicted time based on the reconstructed 
+vertex position.\footnote{ $t^{phot}_{predicted} = L^{phot}/v^{phot}$, 
+where the $L^{phot}$ is the distance from the vertex to the photon hit 
+on the detector sphere and $v^{phot}$ is the photon group velocity. 
+Chromatic dispersion thus reduces the efficiency of the time cut in 
+selecting early PE sample with high fraction of Cherenkov PE.}
 
 In general, the $S_1$ component of the spherical harmonics power
 spectrum is higher for asymmetric distributions and lower for
 symmetric distributions (e.g., compare the back-to-back and single
 electron topologies in
-Fig.~\ref{fig:ThreeTopologies_Display_5MeV}). If a vertex is shifted
-in the direction opposite to the track of the electron, the
+Fig.~\ref{fig:ThreeTopologies_Display_NoMultScat}). If a vertex is 
+shifted in the direction opposite to the track of the electron, the
 differential time cut selects more scintillation photons that are
 emitted in the direction of the electron track.  Scintillation photons
 would enhance the forward asymmetry of the early PE sample, which
@@ -140,19 +158,16 @@ track. The asymmetry of Cherenkov PEs would then be counter-balanced
 by scintillation PEs, which in turn, would move $S_1$ to lower values.
 
 
-\subsection{Events in a fiducial volume with an uncertainty on the vertex position}
-We find that in the default detector model the separation power of
-the spherical harmonics analysis is significantly reduced when chromatic
-dispersion and vertex resolution are taken into account.
 
 We simulated 1000 signal and background events that have their
 vertices uniformly distributed within a fiducial volume of $R<3$~m,
 where $R$ is the distance between the event vertex and the center of
-the detector. To implement an uncertainty on the vertex reconstruction
-we apply a 3~cm smearing around the actual vertex position for each
-simulated event. The smearing is done along $x$, $y$, and $z$
-directions with three independent Gaussian distributions of the same
-width, $\sigma_x = \sigma_y = \sigma_z =$3~cm.
+the detector, with a vertex resolution of 5.2~cm based on our earlier study of
+reconstruction\cite{Aberle2014}. 
+The uncertainty on the vertex reconstruction is implemented as smearing
+along $x$, $y$, and $z$ directions with three independent Gaussian distributions 
+of the same width, $\sigma_x = \sigma_y = \sigma_z =$3~cm.
+
 
 Figure~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m} shows the
 performance of the spherical harmonics analysis under these more
@@ -178,9 +193,9 @@ scintillation rise time improves the separation.
     simulation of 1000 signal (\emph{red crosses}) and background
     (\emph{blue triangles}) events. Event vertices are uniformly
     distributed within the fiducial volume, $R<3$~m.  The vertex is
-    smeared with 3~cm resolution. A differential cut of $\Delta
+    smeared with 5.2~cm resolution. A differential cut of $\Delta
     t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns is applied to
-    select the early PE sample.  The default QE and xx\% photo-coverage
+    select the early PE sample.  The default QE and 100\% photo-coverage
     are used in the simulation.  The black dashed line corresponds to a
     linear fit to define the 1-D variable $S_{01}$.
     \emph{Right:} A comparison of the $S_{01}$ distribution between
@@ -198,9 +213,11 @@ The strong dependence on the vertex resolution can be addressed by
 choosing a liquid scintillator mixture with a more delayed emission of
 scintillation light with respect to Cherenkov light. With a larger
 delay in scintillation light, a higher fraction of Cherenkov light can
-be maintained in the early PE sample even if a photon track length is
-mis-reconstructed due to imprecise reconstruction of the vertex
-position. In addition, if the fraction of scintillation light is small
+be maintained in the early PE sample even if 
+%a photon track length is
+%mis-reconstructed due to imprecise reconstruction of 
+the vertex position is mis-reconstructed. 
+In addition, if the fraction of scintillation light is small
 compared to Cherenkov light, the distortions in the uniformity of the
 scintillation PE due to a shifted reconstructed vertex position does
 not significantly affect the spherical harmonics power
@@ -215,7 +232,11 @@ While the default detector model assumes a scintillation rise time of
 $\tau_r=$1~ns, rise times up to $\tau_r=$7~ns can be achieved (see
 Ref.~\cite{Minfang_slow_rise_time}). As a test we increased the
 scintillation rise time parameter to $\tau_r=$5~ns in the detector
-model, with all other parameters kept the same.  Figure
+model, with all other parameters kept the same.\footnote{Usually,
+longer rise time implies lower light yeild. Here we keep exactly
+the same light yeild as in the default detector model, assuming future
+possible advances in liquid scintillator technology~\cite{Minfang_private}.} 
+Figure
 ~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m_SciRT5p0ns} shows the
 overlap between signal and background is significantly decreased to
 $I_{overlap}$=0.64, i.e. the separation is 23\% worse than in the
@@ -233,7 +254,7 @@ Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}.
     simulation of 1000 signal (\emph{red crosses}) and background
     (\emph{blue triangles}) events. Event vertices are uniformly
     distributed within the fiducial volume, $R<3$~m.  Vertex is
-    smeared with 3~cm resolution. Differential cut of $\Delta
+    smeared with 5.2~cm resolution. Differential cut of $\Delta
     t=t^{phot}_{measured} - t^{phot}_{predicted}<$1~ns is applied to
     select early PE sample.  The default QE and 100\% photo-coverage
     is used in the simulation.  Black dashed line corresponds to a
@@ -247,7 +268,7 @@ Fig.~\ref{fig:SL_Te_SmearX3cm_momDT1ns_rndVtx_3p0m}.
 \clearpage
 
 Figure~\ref{fig:Efficiency_Rejection} shows the
-efficiency for 0\nbb~ signal and the rejection factor for \B~ neutrino
+efficiency for 0\nbb-decay signal and the rejection factor for \B~ neutrino
 background for the default model (left-hand panel) 
 and for the slower scintillator with
 a 5-ns risetime (right-hand panel) as a function of the $S_{01}$
@@ -259,10 +280,10 @@ discriminant. We find a rejection factor of 2 for the default case at
   \centering
   \includegraphics[width=0.49\textwidth]{hEff_real_case.pdf}
   \includegraphics[width=0.49\textwidth]{hEff_5ns_case.pdf}
-  \caption{ The efficiency for 0\nbb~ signal (left-hand scale )and the
-rejection factor for \B neutrino background (right-hand scale) versus
-$S_{01}$ for: \emph{Left:} the default model; and \emph{Right:} a
-liquid scintillator with a 5-nsec risetime.}
+  \caption{ The efficiency for 0\nbb-decay signal (\emph{red left-hand-scale}) and the
+rejection factor for \B~neutrino background (\emph{blue right-hand-scale}) versus
+$S_{01}$ for the default model (\emph{left panel}) and a
+liquid scintillator with a 5-nsec risetime (\emph{right panel}).}
 \label{fig:Efficiency_Rejection}
 \end{figure*}
 

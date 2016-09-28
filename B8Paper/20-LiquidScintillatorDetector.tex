@@ -32,7 +32,7 @@ The technique of using Cherenkov light for topological \B~ background rejection
 depends on the inherent time constants that (on average) slow
 scintillation light relative to the Cherenkov light for wavelengths
 longer than the scintillator absorption cutoff (between
-360-370~nm~\cite{scint_cutoff}). The first step in the scintillation
+360-370~nm~\cite{ChristophThesis}). The first step in the scintillation
 process is the transfer of energy deposited by the primary
 particles from the scintillator's solvent to the solute. The time
 constant of this energy transfer accounts for a rise time in
@@ -47,26 +47,27 @@ levels of the solute and are measured to be $\tau_{d1}$ = 6.9~ns and
 $\tau_{d2}$ = 8.8~ns with relative weights of 0.87 and 0.13 for the
 KamLAND scintillator~\cite{tajimaThesis}. In a detector of this size,
 chromatic dispersion, wherein red light traveling faster than blue due to the
-wavelength-dependent index of refraction, enhances the separation but
-is not the dominant effect.
+wavelength-dependent index of refraction, enhances the separation.
+% but is not the dominant effect. 
+%(AE: it is dominant for central events, see Aberle2014)
 
 The inner sphere surface is used as the photodetector. It is treated
 as fully absorbing with no reflections and with 100\% photocathode
-coverage~\cite{Juno_coverage}. As in the case of optical scattering,
+coverage. As in the case of optical scattering,
 reflections at the sphere are a small effect that would create a small
 tail at longer times and, hence, does not affect the identification of the
 early Cherenkov light. The assumed quantum efficiency (QE) is that
 of a typical bialkali photocathode (Hamamatsu R7081
-PMT~\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}). 
-%% this is a natural place to state the assumed QE
+PMT~\cite{Hamamatsu_R7081}, see also Ref.~\cite{dctwo}), which is 12\% for 
+Cherenkov light and 23\% for scintillation light.
 We note that the KamLAND 17-inch PMTs use the same photocathode type with similar
 quantum efficiency; photocathodes with higher efficiencies are now
 starting to become better understood theoretically and may become
 commercially available~\cite{Photonis, Smedley, Cultrera}.  In order to
 neglect the effect of the transit-time-spread (TTS) of the
-photodetectors, we use a TTS of 0.1~ns ($\sigma$), which can be
+photodetectors, we use a TTS of 100~ps ($\sigma$), which, for example, can be
 achieved with large area picosecond photodetectors
-(LAPPDs)~\cite{anode_paper,PSEC4_paper,RSI_paper,Vienna2013,Ceramic_paper1,HV_paper,Timing_paper,Incom_paper}.
+(LAPPDs)~\cite{Timing_paper}.
 We neglect the (small) threshold effects in the photodetector readout
 electronics, spatial resolution of the photoelectron hit positions,
 and contributions to time resolution other than the photodetector TTS.
